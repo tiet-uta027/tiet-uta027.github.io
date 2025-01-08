@@ -7,8 +7,9 @@
 
 **Instructors**:
 
-1. Raghav B. Venkataramaiyer (`bv.raghav`)
-2. Stuti Chug (`stuti.chug`)
+1. Raghav B. Venkataramaiyer `<bv.raghav>`
+2. Stuti Chug `<stuti.chug>`
+3. Parteek Saini `<psaini_phd24>`
 
 <div class="annotate" markdown>
 
