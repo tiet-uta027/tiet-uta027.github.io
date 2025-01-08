@@ -56,7 +56,8 @@
 See also: [A01][A01]{: target="_blank" }
 
 ### The Graphical Standpoint **[MST]  [EST]**{: .htag } ###
-1. Graph Theory + BFS/DFS.
+1. [:simple-googleslides: Graph Theory][L03]  +
+   [:simple-googleslides: BFS/DFS][L04].
 2. Dijkstra’s Algorithm for Shortest Path amongst all
    pairs.
 3. Problems from a graphical stand point.
@@ -131,7 +132,7 @@ See also: [A01][A01]{: target="_blank" }
 
 [L00]: https://docs.google.com/presentation/d/12eAv6piSBUGpidoTGguA8UnAvAQFPv9pX7HfcBJXFt8/edit?usp=sharing "UTA027 L00"
 [L01]: https://docs.google.com/presentation/d/1T1BeU8iz2cfsM0yxdm8oT1Ly06R3n_xD4Rc6m3iAhCQ/edit?usp=sharing "UTA027 L01"
-[L02]:
-https://docs.google.com/presentation/d/1Epx9WmYS15h8wfcPc0Ij_DS-3-M1R-6_ZcJFBdfyZZw/edit?usp=sharing
-"UTA027 L02"
+[L02]: https://docs.google.com/presentation/d/1Epx9WmYS15h8wfcPc0Ij_DS-3-M1R-6_ZcJFBdfyZZw/edit?usp=sharing "UTA027 L02"
 [A01]: https://tiet-uta027.github.io/a01
+[L03]: https://docs.google.com/presentation/d/1I-lOezmSW7KrdlxKjhwePbKwvGyb7_r7hnG0QDt4odY/edit?usp=sharing "UTA027 L03"
+[L04]: https://docs.google.com/presentation/d/14PY-Sc50QsFxdUqZk7GlYVwwEXzO38rg9z9KKx5ti0k/edit?usp=sharing "UTA027 L04"
