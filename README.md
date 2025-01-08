@@ -19,10 +19,7 @@
 
 1. Requires `thapar.edu` login
 
-<iframe
-src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Asia%2FKolkata&showPrint=0&src=Y18wZjhmMWI1OWFiOGI2YzdhN2NmMzg4YTRhZTRjYWE1NmQyYWFlYzBiODJhMjVhNjVlYTRkM2VhMWVjNjZhODU4QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23C0CA33"
-style="border:solid 1px #777" width="800" height="600"
-frameborder="0" scrolling="no"></iframe>
+<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Asia%2FKolkata&mode=AGENDA&src=Y18wNDFiZjNjZGU2MTc2OGNjYTQzMTFlNDZhNDdiNGExNTZiM2JhMjIzNTZkYTRhMjU3NGNhMDhlNDI5OGNjZTI5QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y181MWMwYmJjZmRiMWVkYTI4ZDIzYzIwNDUxYjA4ZDM1ZjVhMDA0M2UzYzgxOTFlMzZkOTY0YzA5Mzc3MWQyNGZmQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y18wZjhmMWI1OWFiOGI2YzdhN2NmMzg4YTRhZTRjYWE1NmQyYWFlYzBiODJhMjVhNjVlYTRkM2VhMWVjNjZhODU4QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23795548&color=%23D81B60&color=%23C0CA33" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 
 ## Course Syllabus [:material-file-pdf-box:](assets/uta027-syllabus-nba.pdf) ##
 
