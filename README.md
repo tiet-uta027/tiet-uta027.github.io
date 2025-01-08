@@ -43,18 +43,19 @@ frameborder="0" scrolling="no"></iframe>
 ## Schedule of Lectures ##
 
 ### Orientation ###
-1. [:simple-googleslides:](https://docs.google.com/presentation/d/12eAv6piSBUGpidoTGguA8UnAvAQFPv9pX7HfcBJXFt8/edit?usp=sharing)
+1. [:simple-googleslides:][L00]{: target="_blank" }
    Overview and administrative details.
 
 ### Predicate Calculus **[MST]  [EST]**{: .htag } ###
-1. [:simple-googleslides:](https://docs.google.com/presentation/d/1T1BeU8iz2cfsM0yxdm8oT1Ly06R3n_xD4Rc6m3iAhCQ/edit?usp=sharing)
+1. [:simple-googleslides:][L01]{: target="_blank" }
    Introduction to Predicate Logic and Representation
    of Knowledge and Heuristics
-2. Application (in breadth)
+2. [:simple-googleslides:][L02]{: target="_blank" }
+   Application (in breadth)
 3. Application to Knowledge Graphs and Lifecycle of a
    research problem
 
-See also: [A01](/a01)
+See also: [A01][A01]{: target="_blank" }
 
 ### The Graphical Standpoint **[MST]  [EST]**{: .htag } ###
 1. Graph Theory + BFS/DFS.
@@ -105,18 +106,18 @@ See also: [A01](/a01)
 
 ## Schedule of Assignments[^2][^5][^6] ##
 
-| S.No. | Desc/Link                        | Deadline            |
-|-------|----------------------------------|---------------------|
-| A01   | [Predicate Calculus](/a01)       | 20-01-2025 0500 IST |
-| A02   | Graph Methods                    | 27-01-2025 0500 IST |
-| A03   | Linear Regression                | 03-02-2025 0500 IST |
-| A04   | Neural Regression                | 10-02-2025 0500 IST |
-| A05   | Sequence-to-Sequence Translation | 17-02-2025 0500 IST |
-| A06   | Classify Sketches                | 01-04-2025 0500 IST |
-| A07   | Segment Sketches                 | 14-04-2025 0500 IST |
-| A08   | Visual Object Detection          | 21-04-2025 0500 IST |
-| A09   | GAN based Generative AI          | 28-04-2025 0500 IST |
-| A10   | Proposals                        | 05-05-2025 0500 IST |
+| S.No. | Desc/Link                                     | Deadline            |
+|-------|-----------------------------------------------|---------------------|
+| A01   | [Predicate Calculus][A01]{: target="_blank" } | 20-01-2025 0500 IST |
+| A02   | Graph Methods                                 | 27-01-2025 0500 IST |
+| A03   | Linear Regression                             | 03-02-2025 0500 IST |
+| A04   | Neural Regression                             | 10-02-2025 0500 IST |
+| A05   | Sequence-to-Sequence Translation              | 17-02-2025 0500 IST |
+| A06   | Classify Sketches                             | 01-04-2025 0500 IST |
+| A07   | Segment Sketches                              | 14-04-2025 0500 IST |
+| A08   | Visual Object Detection                       | 21-04-2025 0500 IST |
+| A09   | GAN based Generative AI                       | 28-04-2025 0500 IST |
+| A10   | Proposals                                     | 05-05-2025 0500 IST |
 
 [^2]: Each assignment carries weightage of 2 marks
 
@@ -129,3 +130,10 @@ See also: [A01](/a01)
     as `SESS#A2 (MM:10)`.
 
 *[CE]: Continuous Evaluation
+
+[L00]: https://docs.google.com/presentation/d/12eAv6piSBUGpidoTGguA8UnAvAQFPv9pX7HfcBJXFt8/edit?usp=sharing "UTA027 L00"
+[L01]: https://docs.google.com/presentation/d/1T1BeU8iz2cfsM0yxdm8oT1Ly06R3n_xD4Rc6m3iAhCQ/edit?usp=sharing "UTA027 L01"
+[L02]:
+https://docs.google.com/presentation/d/1Epx9WmYS15h8wfcPc0Ij_DS-3-M1R-6_ZcJFBdfyZZw/edit?usp=sharing
+"UTA027 L02"
+[A01]: https://tiet-uta027.github.io/a01
