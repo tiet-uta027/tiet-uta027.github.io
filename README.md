@@ -41,8 +41,9 @@
 ## Schedule of Lectures ##
 
 ### Orientation ###
-1. [:simple-googleslides: Overview][L00]{:
-   target="_blank" } and administrative details.
+1. [:simple-googleslides: 
+   Overview][L00]{: target="_blank" } and
+   administrative details. 
 
 ### Predicate Calculus **[MST]  [EST]**{: .htag } ###
 1. [:simple-googleslides:][L01]{: target="_blank" }
