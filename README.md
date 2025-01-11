@@ -29,14 +29,14 @@
 
 ## Evaluation ##
 
-| Code     | Title                                       | Date                | Weightage |
-|----------|---------------------------------------------|---------------------|-----------|
-| SESS#A1  | [Assignment 1](#schedule-of-assignments123) | CE                  | 10        |
-| SESS#A2  | [Assignment 2](#schedule-of-assignments123) | CE                  | 10        |
-| SESS#QZ1 | Quiz 1                                      | 18-02-2025 1730 IST | 05        |
-| MST      | Mid Sem Exam                                | TBA                 | 25        |
-| SESS#QZ2 | Quiz 2                                      | 06-05-2025 1730 IST | 05        |
-| EST      | End Sem                                     | TBA                 | 45        |
+| Code     | Title                                    | Date                | Weightage |
+|----------|------------------------------------------|---------------------|-----------|
+| SESS#A1  | [Assignment 1](#schedule-of-assignments) | CE                  | 10        |
+| SESS#A2  | [Assignment 2](#schedule-of-assignments) | CE                  | 10        |
+| SESS#QZ1 | Quiz 1                                   | 18-02-2025 1730 IST | 05        |
+| MST      | Mid Sem Exam                             | TBA                 | 25        |
+| SESS#QZ2 | Quiz 2                                   | 06-05-2025 1730 IST | 05        |
+| EST      | End Sem                                  | TBA                 | 45        |
 
 ## Schedule of Lectures ##
 
@@ -56,10 +56,10 @@
 See also: [A01][A01]{: target="_blank" }
 
 ### The Graphical Standpoint **[MST]  [EST]**{: .htag } ###
-1. [:simple-googleslides: Graph Theory][L03]  +
+1. [:simple-googleslides: Graph Theory][L03] +
    [:simple-googleslides: BFS/DFS][L04].
-2. Dijkstra’s Algorithm for Shortest Path amongst all
-   pairs.
+2. [:simple-googleslides: Dijkstra’s Algorithm][L05]
+   for Single-Source Shortest Path.
 3. Problems from a graphical stand point.
 
 ### Classical ML **[MST]  [EST]**{: .htag } ###
@@ -136,3 +136,4 @@ See also: [A01][A01]{: target="_blank" }
 [A01]: https://tiet-uta027.github.io/a01
 [L03]: https://docs.google.com/presentation/d/1I-lOezmSW7KrdlxKjhwePbKwvGyb7_r7hnG0QDt4odY/edit?usp=sharing "UTA027 L03"
 [L04]: https://docs.google.com/presentation/d/14PY-Sc50QsFxdUqZk7GlYVwwEXzO38rg9z9KKx5ti0k/edit?usp=sharing "UTA027 L04"
+[L05]: https://docs.google.com/presentation/d/1ByOn7TYDUs6tBKCE8WBUXLNdog4XnqtqqxVfyNzkI68/edit?usp=sharing "UTA027 L05"
