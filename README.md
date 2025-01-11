@@ -41,8 +41,8 @@
 ## Schedule of Lectures ##
 
 ### Orientation ###
-1. [:simple-googleslides:][L00]{: target="_blank" }
-   Overview and administrative details.
+1. [:simple-googleslides: Overview][L00]{:
+   target="_blank" } and administrative details.
 
 ### Predicate Calculus **[MST]  [EST]**{: .htag } ###
 1. [:simple-googleslides:][L01]{: target="_blank" }
@@ -56,10 +56,12 @@
 See also: [A01][A01]{: target="_blank" }
 
 ### The Graphical Standpoint **[MST]  [EST]**{: .htag } ###
-1. [:simple-googleslides: Graph Theory][L03] +
-   [:simple-googleslides: BFS/DFS][L04].
-2. [:simple-googleslides: Dijkstra’s Algorithm][L05]
-   for Single-Source Shortest Path.
+1. [:simple-googleslides: 
+   Graph Theory][L03]{: target="_blank" } + 
+   [:simple-googleslides: BFS/DFS][L04]{: target="_blank" }.
+2. [:simple-googleslides: Dijkstra’s 
+   Algorithm][L05]{: target="_blank" } for
+   Single-Source Shortest Path. 
 3. Problems from a graphical stand point.
 
 ### Classical ML **[MST]  [EST]**{: .htag } ###
