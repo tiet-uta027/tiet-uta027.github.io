@@ -41,15 +41,17 @@
 ## Schedule of Lectures ##
 
 ### Orientation ###
-1. [:simple-googleslides: Overview][L00]{:
-   target="_blank" } and administrative details.
+1. [:simple-googleslides: 
+   Overview][L00]{: target="_blank" } and
+   administrative details. 
 
 ### Predicate Calculus **[MST]  [EST]**{: .htag } ###
-1. [:simple-googleslides:][L01]{: target="_blank" }
+1. [:simple-googleslides:
+   Predicate Calculus][L01]{: target="_blank" }  
    Introduction to Predicate Logic and Representation
    of Knowledge and Heuristics
-2. [:simple-googleslides:][L02]{: target="_blank" }
-   Application (in breadth)
+2. [:simple-googleslides: Reasoning][L02]{: target="_blank" }
+   (Predicate Calculus)
 3. Application to Knowledge Graphs and Lifecycle of a
    research problem
 
