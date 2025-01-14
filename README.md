@@ -7,9 +7,10 @@
 
 **Instructors**:
 
-1. Raghav B. Venkataramaiyer `<bv.raghav>`
-2. Stuti Chug `<stuti.chug>`
-3. Parteek Saini `<psaini_phd24>`
+1. `(  RGB)` Raghav B. Venkataramaiyer `<bv.raghav>`
+2. `(  STT)` Stuti Chug `<stuti.chug>`
+3. `(  ABJ)` Anu Bajaj `<anu.bajaj>`
+3. `(PTKRA)` Parteek Saini `<psaini_phd24>`
 
 <div class="annotate" markdown>
 
@@ -20,7 +21,7 @@
 
 1. Requires `thapar.edu` login
 
-<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Asia%2FKolkata&mode=AGENDA&src=Y18wNDFiZjNjZGU2MTc2OGNjYTQzMTFlNDZhNDdiNGExNTZiM2JhMjIzNTZkYTRhMjU3NGNhMDhlNDI5OGNjZTI5QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y181MWMwYmJjZmRiMWVkYTI4ZDIzYzIwNDUxYjA4ZDM1ZjVhMDA0M2UzYzgxOTFlMzZkOTY0YzA5Mzc3MWQyNGZmQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y18wZjhmMWI1OWFiOGI2YzdhN2NmMzg4YTRhZTRjYWE1NmQyYWFlYzBiODJhMjVhNjVlYTRkM2VhMWVjNjZhODU4QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23795548&color=%23D81B60&color=%23C0CA33" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Asia%2FKolkata&mode=AGENDA&src=Y18wNDFiZjNjZGU2MTc2OGNjYTQzMTFlNDZhNDdiNGExNTZiM2JhMjIzNTZkYTRhMjU3NGNhMDhlNDI5OGNjZTI5QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y181MWMwYmJjZmRiMWVkYTI4ZDIzYzIwNDUxYjA4ZDM1ZjVhMDA0M2UzYzgxOTFlMzZkOTY0YzA5Mzc3MWQyNGZmQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y180YWU5NGJkYmJkNWM5YjY1NzNjNjljMmMxNTdlNTU1NzFiMmZiNWUyOTc0MTEwMTE0Y2EwOGEyMGY0ZWVlNTg3QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y18wZjhmMWI1OWFiOGI2YzdhN2NmMzg4YTRhZTRjYWE1NmQyYWFlYzBiODJhMjVhNjVlYTRkM2VhMWVjNjZhODU4QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23795548&color=%23D81B60&color=%233F51B5&color=%23C0CA33" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 
 ## Course Syllabus [:material-file-pdf-box:](assets/uta027-syllabus-nba.pdf) ##
 
