@@ -110,18 +110,18 @@ See also: [A01][A01]{: target="_blank" }
 
 ## Schedule of Assignments[^2][^5][^6] ##
 
-| S.No. | Desc/Link                                     | Deadline            |
-|-------|-----------------------------------------------|---------------------|
-| A01   | [Predicate Calculus][A01]{: target="_blank" } | 20-01-2025 0500 IST |
-| A02   | Graph Methods                                 | 27-01-2025 0500 IST |
-| A03   | Linear Regression                             | 03-02-2025 0500 IST |
-| A04   | Neural Regression                             | 10-02-2025 0500 IST |
-| A05   | Sequence-to-Sequence Translation              | 17-02-2025 0500 IST |
-| A06   | Classify Sketches                             | 01-04-2025 0500 IST |
-| A07   | Segment Sketches                              | 14-04-2025 0500 IST |
-| A08   | Visual Object Detection                       | 21-04-2025 0500 IST |
-| A09   | GAN based Generative AI                       | 28-04-2025 0500 IST |
-| A10   | Proposals                                     | 05-05-2025 0500 IST |
+| S.No. | Desc/Link                                                  | Deadline            |
+|-------|------------------------------------------------------------|---------------------|
+| A01   | [Predicate Calculus][A01]{: target="_blank" }              | 20-01-2025 0500 IST |
+| A02   | Graph Methods (TBA) Practice: [Python][PY] and [Algos][GA] | 27-01-2025 0500 IST |
+| A03   | Linear Regression                                          | 03-02-2025 0500 IST |
+| A04   | Neural Regression                                          | 10-02-2025 0500 IST |
+| A05   | Sequence-to-Sequence Translation                           | 17-02-2025 0500 IST |
+| A06   | Classify Sketches                                          | 01-04-2025 0500 IST |
+| A07   | Segment Sketches                                           | 14-04-2025 0500 IST |
+| A08   | Visual Object Detection                                    | 21-04-2025 0500 IST |
+| A09   | GAN based Generative AI                                    | 28-04-2025 0500 IST |
+| A10   | Proposals                                                  | 05-05-2025 0500 IST |
 
 [^2]: Each assignment carries weightage of 2 marks
 
@@ -138,7 +138,9 @@ See also: [A01][A01]{: target="_blank" }
 [L00]: https://docs.google.com/presentation/d/12eAv6piSBUGpidoTGguA8UnAvAQFPv9pX7HfcBJXFt8/edit?usp=sharing "UTA027 L00"
 [L01]: https://docs.google.com/presentation/d/1T1BeU8iz2cfsM0yxdm8oT1Ly06R3n_xD4Rc6m3iAhCQ/edit?usp=sharing "UTA027 L01"
 [L02]: https://docs.google.com/presentation/d/1Epx9WmYS15h8wfcPc0Ij_DS-3-M1R-6_ZcJFBdfyZZw/edit?usp=sharing "UTA027 L02"
-[A01]: https://tiet-uta027.github.io/a01
+[A01]: https://tiet-uta027.github.io/a01 "UTA027 A01"
 [L03]: https://docs.google.com/presentation/d/1I-lOezmSW7KrdlxKjhwePbKwvGyb7_r7hnG0QDt4odY/edit?usp=sharing "UTA027 L03"
 [L04]: https://docs.google.com/presentation/d/14PY-Sc50QsFxdUqZk7GlYVwwEXzO38rg9z9KKx5ti0k/edit?usp=sharing "UTA027 L04"
 [L05]: https://docs.google.com/presentation/d/1ByOn7TYDUs6tBKCE8WBUXLNdog4XnqtqqxVfyNzkI68/edit?usp=sharing "UTA027 L05"
+[PY]: https://gist.github.com/bvraghav/7bd132bf4a93dfb4179673a377b324db
+[GA]: https://gist.github.com/bvraghav/f2e910d7d30a2b8a0b9c288d61dd6bd9
