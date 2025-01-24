@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "tiet-uta027.github.io"
-version = "0.0.8"               # May be automated using CI/CD
+version = "0.0.9"
 authors = [
   { name="Raghav B. Venkataramaiyer", email="bv.raghav@thapar.edu" },
 ]

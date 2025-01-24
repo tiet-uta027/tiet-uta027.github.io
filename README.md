@@ -123,6 +123,47 @@ See also: [A01][A01]{: target="_blank" }
 | A09   | GAN based Generative AI                                    | 28-04-2025 0500 IST |
 | A10   | Proposals                                                  | 05-05-2025 0500 IST |
 
+
+## Resources ##
+
+1. **[CL]**{: .htag } The Central Library
+   [(Link)](https://cl.thapar.edu/)
+2. **[RR]**{: .htag } RefRead
+   [(Link)](https://tiet.refread.com/)
+2. **[TB]**{: .htag} **[CL]**{: .htag } **[RR]**{: .htag } 
+   Luger, G. F. & others. (1998). Artificial
+   intelligence: Structures and strategies for complex
+   problem solving (Sixth). Pearson Education
+   India. `ISBN: 9788131743744`
+2. **[RB]**{: .htag} **[CL]**{: .htag } Cormen, T. H.,
+   Leiserson, C. E., Rivest, R. L., & Stein,
+   C. (2022). Introduction to Algorithms (Fourth). MIT
+   Press. `ISBN: 9788120340077`
+3. **[RB]**{: .htag} **[CL]**{: .htag } Bishop,
+   C. M. (2006). Pattern recognition and machine
+   learning. Springer. `ISBN: 9788132209065`
+4. **[RB]**{: .htag} **[CL]**{: .htag } Gareth James,
+   Daniela Witten, Trevor Hastie, & Robert
+   Tibshirani. (2013). An Introduction to Statistical
+   Learning (1st ed.). Springer. `DOI:
+   10.1007/978-1-4614-7138-7` `ISBN: 9781461471387`
+   [(Link)][ISLP]
+5. **[RB]**{: .htag } **[CL]**{: .htag } MacKay,
+   D. J. C. (2003). Information theory, inference and
+   learning algorithms. Cambridge University
+   Press. `ISBN: 9780521670517` [(Link)][ITILA]
+6. **[RB]**{: .htag } Bertsekas, D., & Tsitsiklis,
+   J. N. (2008). Introduction to probability
+   (Vol. 1). Athena Scientific. `ISBN: 9781886529236`
+   [(Google Scholar)][ITPB]
+7. **[YT]**{: .htag } **[MOOC]**{: .htag } Introduction
+   to Probability. [(MIT-OCW)][MIT-OCW-ITP] [(Archive
+   2011)][ITPB-YT1] [(Archive 2018)][ITPB-YT2]
+
+
+
+
+
 [^2]: Each assignment carries weightage of 2 marks
 
 [^5]: Some of the assignments are competition and
@@ -135,6 +176,18 @@ See also: [A01][A01]{: target="_blank" }
 
 *[CE]: Continuous Evaluation
 
+*[TB]: Text Book
+
+*[RB]: Reference Book
+
+*[CL]: Accessible through the Central Library.
+
+*[RR]: RefRead subscription accessible through TIET.
+
+*[YT]: Youtube Video/Playlist
+
+*[MOOC]: Online Course (or a part of it)
+
 [L00]: https://docs.google.com/presentation/d/12eAv6piSBUGpidoTGguA8UnAvAQFPv9pX7HfcBJXFt8/edit?usp=sharing "UTA027 L00"
 [L01]: https://docs.google.com/presentation/d/1T1BeU8iz2cfsM0yxdm8oT1Ly06R3n_xD4Rc6m3iAhCQ/edit?usp=sharing "UTA027 L01"
 [L02]: https://docs.google.com/presentation/d/1Epx9WmYS15h8wfcPc0Ij_DS-3-M1R-6_ZcJFBdfyZZw/edit?usp=sharing "UTA027 L02"
@@ -144,3 +197,9 @@ See also: [A01][A01]{: target="_blank" }
 [L05]: https://docs.google.com/presentation/d/1ByOn7TYDUs6tBKCE8WBUXLNdog4XnqtqqxVfyNzkI68/edit?usp=sharing "UTA027 L05"
 [PY]: https://gist.github.com/bvraghav/7bd132bf4a93dfb4179673a377b324db
 [GA]: https://gist.github.com/bvraghav/f2e910d7d30a2b8a0b9c288d61dd6bd9
+[ITILA]: http://www.inference.org.uk/mackay/itila/book.html "ITILA Website"
+[ISLP]: https://www.statlearning.com/ "ISLP Website"
+[ITPB]: https://scholar.google.com/scholar?q=bertsekas+introduction+to+probability "Search for ITP"
+[MIT-OCW-ITP]: https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/ "MIT OpenCourseWare"
+[ITPB-YT1]: https://www.youtube.com/playlist?list=PLmPcD-wiF4Ea_Doghiw3ya6XaLrmGrLUU "2011 Archive of Course Introduction to Probability by Bertsekas/Tsitsiklis"
+[ITPB-YT2]: https://www.youtube.com/playlist?list=PLUl4u3cNGP60hI9ATjSFgLZpbNJ7myAg6 "2018 Archive of Course Introduction to Probability by Tsitsiklis/Jaillet"
