@@ -159,8 +159,9 @@ See also: [A01][A01]{: target="_blank" }
 7. **[YT]**{: .htag } **[MOOC]**{: .htag } Introduction
    to Probability. [(MIT-OCW)][MIT-OCW-ITP] [(Archive
    2011)][ITPB-YT1] [(Archive 2018)][ITPB-YT2]
-
-
+8. **[YT]**{: .htag } **[MOOC]**{: .htag } Algorithms
+   Illuminated. by Tim Roughgarden [Part 1 Basics][TRG-BASICS]
+   [Part 2 Graphs][TRG-GRAPHS]
 
 
 
@@ -204,3 +205,5 @@ See also: [A01][A01]{: target="_blank" }
 [ITPB-YT1]: https://www.youtube.com/playlist?list=PLmPcD-wiF4Ea_Doghiw3ya6XaLrmGrLUU "2011 Archive of Course Introduction to Probability by Bertsekas/Tsitsiklis"
 [ITPB-YT2]: https://www.youtube.com/playlist?list=PLUl4u3cNGP60hI9ATjSFgLZpbNJ7myAg6 "2018 Archive of Course Introduction to Probability by Tsitsiklis/Jaillet"
 [A02]: https://tiet-uta027.github.io/a02/ "UTA027 A02"
+[TRG-BASICS]: https://youtube.com/playlist?list=PLEGCF-WLh2RLHqXx6-GZr_w7LgqKDXxN_ "Roughgarden’s Playlist: Algorithms Basics"
+[TRG-GRAPHS]: https://youtube.com/playlist?list=PLEGCF-WLh2RJ5W-pt-KE9GUArTDzVwL1P "Roughgarden’s Playlist: Algorithms Graphs"
