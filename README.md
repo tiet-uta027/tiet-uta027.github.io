@@ -113,10 +113,10 @@ See also: [A01][A01]{: target="_blank" }
 | S.No. | Desc/Link                                                  | Deadline            |
 |-------|------------------------------------------------------------|---------------------|
 | A01   | [Predicate Calculus][A01]{: target="_blank" }              | 20-01-2025 0500 IST |
-| A02   | Graph Methods (TBA) Practice: [Python][PY] and [Algos][GA] | 27-01-2025 0500 IST |
-| A03   | Linear Regression                                          | 03-02-2025 0500 IST |
-| A04   | Neural Regression                                          | 10-02-2025 0500 IST |
-| A05   | Sequence-to-Sequence Translation                           | 17-02-2025 0500 IST |
+| A02   | [Graph Methods][A02] (TBA) Practice: [Python][PY] and [Algos][GA] | 10-02-2025 0500 IST |
+| A03   | Linear Regression                                          | ~03-02-2025 0500 IST~ |
+| A04   | Neural Regression                                          | ~10-02-2025 0500 IST~ |
+| A05   | Sequence-to-Sequence Translation                           | ~17-02-2025 0500 IST~ |
 | A06   | Classify Sketches                                          | 01-04-2025 0500 IST |
 | A07   | Segment Sketches                                           | 14-04-2025 0500 IST |
 | A08   | Visual Object Detection                                    | 21-04-2025 0500 IST |
@@ -203,3 +203,4 @@ See also: [A01][A01]{: target="_blank" }
 [MIT-OCW-ITP]: https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/ "MIT OpenCourseWare"
 [ITPB-YT1]: https://www.youtube.com/playlist?list=PLmPcD-wiF4Ea_Doghiw3ya6XaLrmGrLUU "2011 Archive of Course Introduction to Probability by Bertsekas/Tsitsiklis"
 [ITPB-YT2]: https://www.youtube.com/playlist?list=PLUl4u3cNGP60hI9ATjSFgLZpbNJ7myAg6 "2018 Archive of Course Introduction to Probability by Tsitsiklis/Jaillet"
+[A02]: https://tiet-uta027.github.io/a02/ "UTA027 A02"
