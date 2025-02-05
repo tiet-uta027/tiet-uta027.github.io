@@ -68,10 +68,9 @@ See also: [A01][A01]{: target="_blank" }
 3. Problems from a graphical stand point.
 
 ### Classical ML **[MST]  [EST]**{: .htag } ###
-1. Introduction to ML
-2. Linear Regression
-3. Decision Theory and Classification
-4. Information Theory and Classification
+1. [:simple-googleslides: Introduction to ML][L06]{: target="_blank" }
+2. [:simple-googleslides: Linear Regression][L07]{: target="_blank" }
+3. [:simple-googleslides: Classification and Logistic Regression][L08]{: target="_blank" }
 5. Support Vector Machines
 
 ### Neural Methods **[MST]  [EST]**{: .htag } ###
@@ -160,8 +159,17 @@ See also: [A01][A01]{: target="_blank" }
    to Probability. [(MIT-OCW)][MIT-OCW-ITP] [(Archive
    2011)][ITPB-YT1] [(Archive 2018)][ITPB-YT2]
 8. **[YT]**{: .htag } **[MOOC]**{: .htag } Algorithms
-   Illuminated. by Tim Roughgarden [Part 1 Basics][TRG-BASICS]
-   [Part 2 Graphs][TRG-GRAPHS]
+   Illuminated. by Tim Roughgarden [Videos: Part 1
+   Basics][TRG-BASICS], [Videos: Part 2
+   Graphs][TRG-GRAPHS] and [Official Website][TRG-WEB]
+9. **[RB]**{: .htag } **[CL]**{: .htag } Jurafsky, D.,
+   & Martin, J. H. (2025, January). Speech and Language
+   Processing: An Introduction to Natural Language
+   Processing, Computational Linguistics, and Speech
+   Recognition. `ISBN: 9789332518414` [(The
+   Book)][JM24-BOOK], [(The Chapter on Logistic
+   Regression)][JM24-C5], [(Official
+   Website)][JM24-WEB]
 
 
 
@@ -207,3 +215,10 @@ See also: [A01][A01]{: target="_blank" }
 [A02]: https://tiet-uta027.github.io/a02/ "UTA027 A02"
 [TRG-BASICS]: https://youtube.com/playlist?list=PLEGCF-WLh2RLHqXx6-GZr_w7LgqKDXxN_ "Roughgarden’s Playlist: Algorithms Basics"
 [TRG-GRAPHS]: https://youtube.com/playlist?list=PLEGCF-WLh2RJ5W-pt-KE9GUArTDzVwL1P "Roughgarden’s Playlist: Algorithms Graphs"
+[TRG-WEB]: https://www.algorithmsilluminated.org/ "Roughgarden’s Website"
+[JM24-BOOK]: https://web.stanford.edu/~jurafsky/slp3/ed3book_Jan25.pdf "SLP Book"
+[JM24-C5]: https://web.stanford.edu/~jurafsky/slp3/slides/5_LR_Apr_7_2021.pdf "SLP Chap 5: Logistic Regression"
+[JM24-WEB]: https://web.stanford.edu/~jurafsky/slp3/ "SLP Website"
+[L08]: https://docs.google.com/presentation/d/1yXqhpDXUvQwDPCr2DWO9kVT6WbHN5LJWGh-NVl_jw38/edit "UTA027 L08"
+[L07]: https://docs.google.com/presentation/d/1reC3s9I9jV-NaiqZLHElbcEhc8XhNs9ooJ7DdgP1Yfk/edit "UTA027 L07"
+[L06]: https://docs.google.com/presentation/d/1QPZ8WuCghOzjrcJfuJtUsCNkp1FgNY1tkpWFkW2w3II/edit "UTA027 L06"
