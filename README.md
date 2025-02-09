@@ -134,13 +134,13 @@ See also: [A01][A01]{: target="_blank" }
    intelligence: Structures and strategies for complex
    problem solving (Sixth). Pearson Education
    India. `ISBN: 9788131743744`
+3. **[TB]**{: .htag} **[CL]**{: .htag } Bishop,
+   C. M. (2006). Pattern recognition and machine
+   learning. Springer. `ISBN: 9788132209065`
 2. **[RB]**{: .htag} **[CL]**{: .htag } Cormen, T. H.,
    Leiserson, C. E., Rivest, R. L., & Stein,
    C. (2022). Introduction to Algorithms (Fourth). MIT
    Press. `ISBN: 9788120340077`
-3. **[RB]**{: .htag} **[CL]**{: .htag } Bishop,
-   C. M. (2006). Pattern recognition and machine
-   learning. Springer. `ISBN: 9788132209065`
 4. **[RB]**{: .htag} **[CL]**{: .htag } Gareth James,
    Daniela Witten, Trevor Hastie, & Robert
    Tibshirani. (2013). An Introduction to Statistical
@@ -170,6 +170,8 @@ See also: [A01][A01]{: target="_blank" }
    Book)][JM24-BOOK], [(The Chapter on Logistic
    Regression)][JM24-C5], [(Official
    Website)][JM24-WEB]
+10. **[MOOC]**{: .htag } [Illinois Institute Page on
+    Logistic Regression][ILL-LOG-REG].
 
 
 
@@ -222,3 +224,4 @@ See also: [A01][A01]{: target="_blank" }
 [L08]: https://docs.google.com/presentation/d/1yXqhpDXUvQwDPCr2DWO9kVT6WbHN5LJWGh-NVl_jw38/edit "UTA027 L08"
 [L07]: https://docs.google.com/presentation/d/1reC3s9I9jV-NaiqZLHElbcEhc8XhNs9ooJ7DdgP1Yfk/edit "UTA027 L07"
 [L06]: https://docs.google.com/presentation/d/1QPZ8WuCghOzjrcJfuJtUsCNkp1FgNY1tkpWFkW2w3II/edit "UTA027 L06"
+[ILL-LOG-REG]: https://exploration.stat.illinois.edu/learn/Logistic-Regression/Classification-with-Logistic-Regression/ "IIT Chicago Logistic Regression Page"
