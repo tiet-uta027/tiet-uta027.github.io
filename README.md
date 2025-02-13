@@ -1,4 +1,4 @@
-![Tiet Logo](assets/tiet-logo.svg){ .tiet-logo }
+﻿![Tiet Logo](assets/tiet-logo.svg){ .tiet-logo }
 
 **UTA027: Artificial Intelligence**  
 **TIET Patiala**
@@ -109,18 +109,18 @@ See also: [A01][A01]{: target="_blank" }
 
 ## Schedule of Assignments[^2][^5][^6] ##
 
-| S.No. | Desc/Link                                                  | Deadline            |
-|-------|------------------------------------------------------------|---------------------|
-| A01   | [Predicate Calculus][A01]{: target="_blank" }              | 20-01-2025 0500 IST |
-| A02   | [Graph Methods][A02] (TBA) Practice: [Python][PY] and [Algos][GA] | 10-02-2025 0500 IST |
-| A03   | Linear Regression                                          | ~03-02-2025 0500 IST~ |
-| A04   | Neural Regression                                          | ~10-02-2025 0500 IST~ |
-| A05   | Sequence-to-Sequence Translation                           | ~17-02-2025 0500 IST~ |
-| A06   | Classify Sketches                                          | 01-04-2025 0500 IST |
-| A07   | Segment Sketches                                           | 14-04-2025 0500 IST |
-| A08   | Visual Object Detection                                    | 21-04-2025 0500 IST |
-| A09   | GAN based Generative AI                                    | 28-04-2025 0500 IST |
-| A10   | Proposals                                                  | 05-05-2025 0500 IST |
+| S.No. | Desc/Link                                                         | Deadline              |
+|-------|-------------------------------------------------------------------|-----------------------|
+| A01   | [Predicate Calculus][A01]{: target="_blank" }                     | 20-01-2025 0500 IST   |
+| A02   | [Graph Methods][A02] (TBA) Practice: [Python][PY] and [Algos][GA] | 10-02-2025 0500 IST   |
+| A03   | [Linear Regression][A03]                                          | 24-02-2025 0500 IST   |
+| A04   | Neural Regression                                                 | ~10-02-2025 0500 IST~ |
+| A05   | Sequence-to-Sequence Translation                                  | ~17-02-2025 0500 IST~ |
+| A06   | Classify Sketches                                                 | 01-04-2025 0500 IST   |
+| A07   | Segment Sketches                                                  | 14-04-2025 0500 IST   |
+| A08   | Visual Object Detection                                           | 21-04-2025 0500 IST   |
+| A09   | GAN based Generative AI                                           | 28-04-2025 0500 IST   |
+| A10   | Proposals                                                         | 05-05-2025 0500 IST   |
 
 
 ## Resources ##
@@ -225,3 +225,4 @@ See also: [A01][A01]{: target="_blank" }
 [L07]: https://docs.google.com/presentation/d/1reC3s9I9jV-NaiqZLHElbcEhc8XhNs9ooJ7DdgP1Yfk/edit "UTA027 L07"
 [L06]: https://docs.google.com/presentation/d/1QPZ8WuCghOzjrcJfuJtUsCNkp1FgNY1tkpWFkW2w3II/edit "UTA027 L06"
 [ILL-LOG-REG]: https://exploration.stat.illinois.edu/learn/Logistic-Regression/Classification-with-Logistic-Regression/ "IIT Chicago Logistic Regression Page"
+[A03]: https://www.kaggle.com/t/ac97fdc3cbef4a429b87dd4504b7afdb "A03"
