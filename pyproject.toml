@@ -1,11 +1,11 @@
-
+﻿
 [build-system]
 requires = ["hatchling","hatch-vcs"]
 build-backend = "hatchling.build"
 
 [project]
 name = "tiet-uta027.github.io"
-version = "0.0.11"
+version = "0.0.12"
 authors = [
   { name="Raghav B. Venkataramaiyer", email="bv.raghav@thapar.edu" },
 ]
