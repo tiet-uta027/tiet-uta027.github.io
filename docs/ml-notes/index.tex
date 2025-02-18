@@ -1,4 +1,4 @@
-﻿% Created 2025-02-13 Thu 06:45
+﻿% Created 2025-02-18 Tue 08:21
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8x]{inputenc}
@@ -30,7 +30,7 @@
 \maketitle
 
 \section{Setup}
-\label{sec:org81bc0b5}
+\label{sec:org05ff19d}
 
 \begin{enumerate}
 \item Given is a set of paired observations \(\mathcal{D}\)
@@ -67,10 +67,10 @@ predictions \(\mathcal{F}_{\boldsymbol{\theta}}
 \end{enumerate}
 
 \section{Linear Regression}
-\label{sec:org4937dfb}
+\label{sec:org832ad40}
 
 \subsection{In 2D}
-\label{sec:orgb7b6340}
+\label{sec:org276fb2d}
 \begin{align*}
   y \approx \mathcal{F}_{w,b}(x)
   &= wx+b \\
@@ -98,7 +98,7 @@ The analytical solution yields,
 \end{align*}
 
 \subsection{In Higher Dimensions}
-\label{sec:orgf3a4778}
+\label{sec:orgbc0048a}
 
 \begin{align*}
   y \approx \mathcal{F}_{\mathbf{w}}(\mathbf{x})
@@ -139,20 +139,20 @@ The analytical solution yields,
 \end{align*}
 
 \subsection{Implementation}
-\label{sec:org67103e8}
+\label{sec:org5affadd}
 
 \subsubsection{In Spreadsheet}
-\label{sec:org209d777}
+\label{sec:org921f605}
 This \href{https://docs.google.com/spreadsheets/d/1MrwsA75WUano\_aKpeOibALiCOumbdiQv-609A6fEC-c/edit?usp=sharing}{(Google Sheet)} will help understand and practice
 computing the solution manually for the case in 2D.
 \subsubsection{In Code}
-\label{sec:org7da3954}
+\label{sec:orgc8a6169}
 This \href{https://gist.github.com/bvraghav/4b81c850cd7f3c9784493a465ba592ca}{(Gist)} is a reference python implementation of the
 analytical solution.
 
 
 \section{Logistic Regression}
-\label{sec:org1a5d668}
+\label{sec:orgf76aa50}
 
 (Binary Classification)
 
@@ -190,7 +190,7 @@ iterative update,
 \end{align*}
 
 \section{Support Vector Machine}
-\label{sec:orgccaa349}
+\label{sec:orgcd7d461}
 
 \begin{figure}[!h]
 \LARGE
@@ -295,7 +295,7 @@ or \(1/\gamma^{2}\), or \(4/\gamma^{2} =
 
 
 \subsection{Training}
-\label{sec:org9657c8d}
+\label{sec:org292b2f0}
 
 Formally speaking, we need to find the parameters
 \(\mathbf{w},b\) in order to
@@ -306,7 +306,7 @@ Formally speaking, we need to find the parameters
 \end{align*}
 
 \subsection{Inference}
-\label{sec:orgcc94428}
+\label{sec:org4ab5ec3}
 
 For all unseen points, \(\mathbf{x}\), the estimated
 label \(\widehat{y}\) is given as,
@@ -316,7 +316,7 @@ label \(\widehat{y}\) is given as,
 \end{align}
 
 \subsection{Implementation}
-\label{sec:org7cb663d}
+\label{sec:org64d1067}
 
 Check out \href{https://gist.github.com/bvraghav/7d413048aaea04912a1e3d8872c0c8c4}{this gist}
 \end{document}

@@ -65,13 +65,20 @@ See also: [A01][A01]{: target="_blank" }
 2. [:simple-googleslides: Dijkstra’s 
    Algorithm][L05]{: target="_blank" } for
    Single-Source Shortest Path. 
-3. Problems from a graphical stand point.
+3. [:simple-googleslides: Problem solving from a
+   graphical stand point][L11]{: target="_blank" }
+
 
 ### Classical ML **[MST]  [EST]**{: .htag } ###
 1. [:simple-googleslides: Introduction to ML][L06]{: target="_blank" }
 2. [:simple-googleslides: Linear Regression][L07]{: target="_blank" }
-3. [:simple-googleslides: Classification and Logistic Regression][L08]{: target="_blank" }
-5. Support Vector Machines
+3. [:simple-googleslides: Classification and Logistic
+   Regression][L08]{: target="_blank" }
+5. [:simple-googleslides: Support Vector
+   Machines][L09]{: target="_blank" }
+   
+See Also: [ML Notes](./ml-notes/) or, [Download
+:material-file-pdf-box:](./ml-notes/index.pdf)
 
 ### Neural Methods **[MST]  [EST]**{: .htag } ###
 1. Neuron and it application in Regression/ Classification
@@ -172,6 +179,8 @@ See also: [A01][A01]{: target="_blank" }
    Website)][JM24-WEB]
 10. **[MOOC]**{: .htag } [Illinois Institute Page on
     Logistic Regression][ILL-LOG-REG].
+11. **[YT]**{: .htag } Late Prof. Winston’s Lecture on
+    SVM (MIT-OCW) [Video by MIT-OCW][MIT-OCW-SVM]
 
 
 
@@ -226,3 +235,6 @@ See also: [A01][A01]{: target="_blank" }
 [L06]: https://docs.google.com/presentation/d/1QPZ8WuCghOzjrcJfuJtUsCNkp1FgNY1tkpWFkW2w3II/edit "UTA027 L06"
 [ILL-LOG-REG]: https://exploration.stat.illinois.edu/learn/Logistic-Regression/Classification-with-Logistic-Regression/ "IIT Chicago Logistic Regression Page"
 [A03]: https://www.kaggle.com/t/ac97fdc3cbef4a429b87dd4504b7afdb "A03"
+[L11]: https://docs.google.com/presentation/d/1FpumMJ1xjKUA9v6lHyXEPNs59z4wMamz5UHc52r9vp0/edit?usp=sharing "Problem Solving through Search"
+[L09]: https://docs.google.com/presentation/d/1ppeEjAraHZVvuQsS_J165oMpPBl_KYF2lZxosBqbcZY/edit?usp=sharing "ML: SVM"
+[MIT-OCW-SVM]: https://www.youtube.com/watch?v=_PwhiWxHK8o "Late Prof. Winston’s Lecture on SVM (MIT-OCW)"
