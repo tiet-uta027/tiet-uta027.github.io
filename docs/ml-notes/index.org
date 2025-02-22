@@ -37,8 +37,6 @@
                         0 t))
 #+end_src
 
-#+RESULTS:
-
 * Setup
 
 1. Given is a set of paired observations $\mathcal{D}$
@@ -160,11 +158,11 @@ analytical solution.
   y \approx \widetilde{y} = \mathcal{F}_{\mathbf{w}}(\mathbf{x})
   &= \sigma(\mathbf{x}^{\top}\mathbf{w}) \\
   \Delta\left(y, \widetilde{y} \right)
-  &= y\ln \widetilde{y} + (1-y)
-    \ln (1-\widetilde{y}) \\
+  &= -\left(y\ln \widetilde{y} + (1-y)
+    \ln (1-\widetilde{y})\right) \\
   \frac{\partial \Delta(y,\widetilde{y})} {\partial
   \mathbf{w}}
-  &= (y-\widetilde{y})\mathbf{x}
+  &= -(y-\widetilde{y})\mathbf{x}
 \end{align*}
 
 The objective is to find $\mathbf{w}=\mathbf{w}_*$ in
@@ -184,10 +182,19 @@ iterative update,
 \begin{align*}
   \mathbf{w} &\gets \mathbf{w} -\lambda \frac {\partial
                \mathcal{L}} {\partial \mathbf{w}} \\
-  &= \mathbf{w} -\lambda \, \underset{y, \mathbf{x}
-    \sim \mathcal{D}} {\mathbb{E}} \left[
-    (y-\widetilde{y}) \mathbf{x} \right] 
+             &= \mathbf{w} + \lambda \, \underset{y,
+               \mathbf{x} \sim \mathcal{D}}
+               {\mathbb{E}} \left[(y-\widetilde{y})
+               \mathbf{x} \right]
 \end{align*}
+
+*Corrigendum 2025-02-22* \\
+1. Typo in Binary Cross Entropy Loss.  Earlier
+   mentioned: $\Delta=y\ln\widetilde{y}+\cdots$.  This
+   has been corrected now.
+2. By cascading effect, $\partial \Delta/\partial
+   \mathbf{w}$, and the update step for gradient
+   descent algorithm also have been corrected.
 
 * Support Vector Machine
 
@@ -298,7 +305,7 @@ Formally speaking, we need to find the parameters
 $\mathbf{w},b$ in order to
 \begin{align*}
   \text{minimise} &\quad\|\mathbf{w}\|_2^2 \\
-  \text{such that,} &\quad y(\mathbf{w}\cdot\mathbf{x}
+  \text{subject to,} &\quad y(\mathbf{w}\cdot\mathbf{x}
                       + b) \geqslant 1
 \end{align*}
 
