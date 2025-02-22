@@ -1,4 +1,4 @@
-﻿% Created 2025-02-18 Tue 08:21
+﻿% Created 2025-02-22 Sat 19:10
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8x]{inputenc}
@@ -30,7 +30,7 @@
 \maketitle
 
 \section{Setup}
-\label{sec:org05ff19d}
+\label{sec:orgbee2913}
 
 \begin{enumerate}
 \item Given is a set of paired observations \(\mathcal{D}\)
@@ -67,10 +67,10 @@ predictions \(\mathcal{F}_{\boldsymbol{\theta}}
 \end{enumerate}
 
 \section{Linear Regression}
-\label{sec:org832ad40}
+\label{sec:orge4c1ae4}
 
 \subsection{In 2D}
-\label{sec:org276fb2d}
+\label{sec:org9868f49}
 \begin{align*}
   y \approx \mathcal{F}_{w,b}(x)
   &= wx+b \\
@@ -98,7 +98,7 @@ The analytical solution yields,
 \end{align*}
 
 \subsection{In Higher Dimensions}
-\label{sec:orgbc0048a}
+\label{sec:org8058f55}
 
 \begin{align*}
   y \approx \mathcal{F}_{\mathbf{w}}(\mathbf{x})
@@ -139,20 +139,20 @@ The analytical solution yields,
 \end{align*}
 
 \subsection{Implementation}
-\label{sec:org5affadd}
+\label{sec:org1575a7a}
 
 \subsubsection{In Spreadsheet}
-\label{sec:org921f605}
+\label{sec:org3220788}
 This \href{https://docs.google.com/spreadsheets/d/1MrwsA75WUano\_aKpeOibALiCOumbdiQv-609A6fEC-c/edit?usp=sharing}{(Google Sheet)} will help understand and practice
 computing the solution manually for the case in 2D.
 \subsubsection{In Code}
-\label{sec:orgc8a6169}
+\label{sec:orge84ca64}
 This \href{https://gist.github.com/bvraghav/4b81c850cd7f3c9784493a465ba592ca}{(Gist)} is a reference python implementation of the
 analytical solution.
 
 
 \section{Logistic Regression}
-\label{sec:orgf76aa50}
+\label{sec:orga38d2a2}
 
 (Binary Classification)
 
@@ -160,11 +160,11 @@ analytical solution.
   y \approx \widetilde{y} = \mathcal{F}_{\mathbf{w}}(\mathbf{x})
   &= \sigma(\mathbf{x}^{\top}\mathbf{w}) \\
   \Delta\left(y, \widetilde{y} \right)
-  &= y\ln \widetilde{y} + (1-y)
-    \ln (1-\widetilde{y}) \\
+  &= -\left(y\ln \widetilde{y} + (1-y)
+    \ln (1-\widetilde{y})\right) \\
   \frac{\partial \Delta(y,\widetilde{y})} {\partial
   \mathbf{w}}
-  &= (y-\widetilde{y})\mathbf{x}
+  &= -(y-\widetilde{y})\mathbf{x}
 \end{align*}
 
 The objective is to find \(\mathbf{w}=\mathbf{w}_*\) in
@@ -184,13 +184,24 @@ iterative update,
 \begin{align*}
   \mathbf{w} &\gets \mathbf{w} -\lambda \frac {\partial
                \mathcal{L}} {\partial \mathbf{w}} \\
-  &= \mathbf{w} -\lambda \, \underset{y, \mathbf{x}
-    \sim \mathcal{D}} {\mathbb{E}} \left[
-    (y-\widetilde{y}) \mathbf{x} \right] 
+             &= \mathbf{w} + \lambda \, \underset{y,
+               \mathbf{x} \sim \mathcal{D}}
+               {\mathbb{E}} \left[(y-\widetilde{y})
+               \mathbf{x} \right]
 \end{align*}
 
+\textbf{Corrigendum 2025-02-22} \\[0pt]
+\begin{enumerate}
+\item Typo in Binary Cross Entropy Loss.  Earlier
+mentioned: \(\Delta=y\ln\widetilde{y}+\cdots\).  This
+has been corrected now.
+\item By cascading effect, \(\partial \Delta/\partial
+   \mathbf{w}\), and the update step for gradient
+descent algorithm also have been corrected.
+\end{enumerate}
+
 \section{Support Vector Machine}
-\label{sec:orgcd7d461}
+\label{sec:org182c5bd}
 
 \begin{figure}[!h]
 \LARGE
@@ -295,18 +306,18 @@ or \(1/\gamma^{2}\), or \(4/\gamma^{2} =
 
 
 \subsection{Training}
-\label{sec:org292b2f0}
+\label{sec:orgd6f2039}
 
 Formally speaking, we need to find the parameters
 \(\mathbf{w},b\) in order to
 \begin{align*}
   \text{minimise} &\quad\|\mathbf{w}\|_2^2 \\
-  \text{such that,} &\quad y(\mathbf{w}\cdot\mathbf{x}
+  \text{subject to,} &\quad y(\mathbf{w}\cdot\mathbf{x}
                       + b) \geqslant 1
 \end{align*}
 
 \subsection{Inference}
-\label{sec:org4ab5ec3}
+\label{sec:orgc2e474c}
 
 For all unseen points, \(\mathbf{x}\), the estimated
 label \(\widehat{y}\) is given as,
@@ -316,7 +327,7 @@ label \(\widehat{y}\) is given as,
 \end{align}
 
 \subsection{Implementation}
-\label{sec:org64d1067}
+\label{sec:org5ce2eb2}
 
 Check out \href{https://gist.github.com/bvraghav/7d413048aaea04912a1e3d8872c0c8c4}{this gist}
 \end{document}
