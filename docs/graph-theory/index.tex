@@ -1,0 +1,455 @@
+﻿% Created 2025-03-06 Thu 18:00
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage{parskip}
+\setcounter{secnumdepth}{3}
+\author{Raghav B. Venkataramaiyer}
+\date{Feb '25}
+\title{Practice Questions for Graph Theory\\\medskip
+\large Representation, Search Algorithms, and Variants for Problem Solving}
+\hypersetup{
+ pdfauthor={Raghav B. Venkataramaiyer},
+ pdftitle={Practice Questions for Graph Theory},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 29.4 (Org mode 9.6.24)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+
+\section{Graph Representations}
+\label{sec:org6cfe53f}
+
+\subsection{Vertex Insertion}
+\label{sec:org0ddad32}
+\paragraph*{Question}
+\label{sec:org0454258}
+
+\(\overline{\mathit{ABCD}}\) is a closed quadrilateral.
+A new vertex \(E\) is introduced between \(B\) and \(C\).
+Show the adjacency lists before and after the
+introduction of \(E\).  Hence, write an algorithm/
+pseudocode in order to introduce a new vertex between
+an existing edge.
+
+\paragraph*{Interpretation}
+\label{sec:orgf312fc8}
+Given a closed quadrilateral
+\(\overline{\mathit{ABCD}}\), the adjacency list in
+1-indexed format is given as:
+
+\begin{verbatim}
+V = [A, B, C, D]
+Adj = [[2, 4],                  # 1 is connected to 2 and 4
+       [1, 3],                  # 2 is connected to 1 and 3
+       [2, 4],                  # and so forth
+       [1, 3]]
+\end{verbatim}
+
+Here the edge \(\overline{\mathit{BC}}\) is defined in
+two entries of the adjacency list, \emph{i.e.} as vertex \texttt{3}
+in \texttt{Adj[2]} and vertex \texttt{2} in \texttt{Adj[3]}.
+
+\paragraph*{Solution}
+\label{sec:org8c697a3}
+
+In order to introduce a new vertex \(E\) between edge
+\(\overline{\mathit{BC}}\),
+
+\subparagraph*{Step 1}
+\label{sec:org277e327}
+Append vertex \(E\) to the vertex list \(V\) and get its
+index.
+
+\begin{verbatim}
+V = [A, B, C, D, E]             # Add E as V[5]
+\end{verbatim}
+
+\subparagraph*{Step 2}
+\label{sec:org04a83b9}
+Remove the edge  \(\overline{\mathit{BC}}\)
+\begin{verbatim}
+V = [A, B, C, D, E]
+Adj = [[2, 4],
+       [1],                     # remove 3 from Adj[2]
+       [4],                     # remove 2 from Adj[3]
+       [1, 3],
+       []]                      # add empty Adj[5]
+\end{verbatim}
+
+\subparagraph*{Step 3}
+\label{sec:org48f714d}
+Add edges \(\overline{\mathit{BEC}}\)
+\begin{verbatim}
+V = [A, B, C, D, E]
+Adj = [[2, 4],
+       [1, 5],                  # add 5 to Adj[2]
+       [4, 5],                  # add 5 to Adj[3]
+       [1, 3],
+       [2, 3]]                  # add 2, 3 to Adj[5]
+\end{verbatim}
+
+\subparagraph*{Algorithm}
+\label{sec:org40de976}
+
+To introduce a vertex \(W\) between an edge \((u,v)\),
+
+\begin{verbatim}
+GRAPH_ADD_VERTEX_BW(G,W,u,v) :
+  w = G.V.append(W)             # Insert W into list of
+                                # vertices and store the
+                                # last appended index.
+
+  G.Adj[u].remove(v)            # Remove v from Adj[u]
+  G.Adj[v].remove(u)            # Remove u from Adj[v]
+
+  G.Adj[u].append(w)            # Append w into Adj[u]
+  G.Adj[v].append(w)            # Append w into Adj[v]
+
+  G.Adj[w].append(u)            # Append u into Adj[w]
+  G.Adj[w].append(v)            # Append v into Adj[w]
+\end{verbatim}
+
+\textbf{PS}: Here, \(W\) in uppercase refers to a variable
+(\emph{i.e.} vertex information like coordinates of a point
+etc.) that needs to appended into the list of verts
+\(G.V\). And \((u,v)\) represent the indices of the pair of
+verts that constitute and edge.  We are interested in
+the Adjacency List (as required by the question,) hence
+the use of \(G.Adj\)
+
+\subsection{Transpose Graph}
+\label{sec:org99c4fac}
+
+\paragraph*{Question}
+\label{sec:orga737397}
+Given a graph \(G(V,M)\), \(M\) being the adjacency matrix.
+A transpose graph would be the one with same set of
+vertices, but a transposed adjacency matrix, \emph{i.e.}
+\(G^{\top}(V,M^{\top})\). \\[0pt]
+What does a transpose graph represent?  Illustrate with
+a drawing to support your answer.
+
+\paragraph*{Interpretation}
+\label{sec:orgf3a6cdf}
+Recall that,
+\begin{enumerate}
+\item In an adjacency matrix \(A\), the component at
+\(i^{\text{th}}\) row, and \(j^{\text{th}}\) column is
+given as \(a_{ij}\) and it represents whether the edge
+\(v_{i}\to v_{j}\) exists.
+\item A transpose graph \(G^{\top}(V,M^{\top})\) would be
+any different \emph{iff} \(M\ne M^{\top}\).  In other
+words, if \(G\) is a directed graph.
+\item The components in the transposed matrix are mirrored
+across the diagonal.  Hence, if \(B = A^{\top}\), then
+\(b_{ij} = a_{ji}\).
+\end{enumerate}
+
+\paragraph*{Solution}
+\label{sec:org21ad9e5}
+
+Each edge \(v_{i}\to v_{j}\) in \(G\), transforms to
+\(v_{j}\to v_{i}\) in the transpose graph \(G^{\top}\).
+In other words, the edges are reversed.
+
+This would be any different only in case of a directed
+graph.  Since for an undirected graph \(M=M^{\top}\)
+
+Hence, the transpose graph \(G^{\top}(V,M^{\top})\)
+represents \(G(V,M)\) with edges reversed.
+
+\paragraph*{Illustration}
+\label{sec:orgb295938}
+
+[TODO]
+
+\subsection{(In/Out)-degree}
+\label{sec:org8f88daf}
+
+\paragraph*{Question}
+\label{sec:org3cb4fc6}
+What is the average in-degree of a graph \(G(V,E)\),
+where \(E\) is the set of edges in \(G\)?
+
+\paragraph*{Solution}
+\label{sec:orgc391b90}
+In-degree of a vertex is defined as the number of
+edges leading onto itself.
+
+Let \(d_{\mathrm{in}}(v)\) represent the in-degree of
+vertex \(v\).  Then the average in-degree is given as the
+sum of in-degrees divided by the size of number of
+verts,
+
+\begin{align*}
+  \mathbb{E}[d_{\mathrm{in}}(v)]
+  &= \frac{\sum_{v\in V}d_{\mathrm{in}}(v)} {|V|}
+\end{align*}
+
+Intuitively speaking, the sum of all in-degrees is the
+same as the number of edges. Hence,
+
+\begin{align*}
+  \mathbb{E}[d_{\mathrm{in}}(v)]
+  &= \frac{|E|} {|V|}
+\end{align*}
+
+\paragraph*{In further detail}
+\label{sec:orgd1eb5be}
+
+In-degree of a vertex is the same as counting the
+non-zeros in one (specific) column of an adjacency
+matrix representation \(M\) for the set of edges \(E\).
+
+Similarly, the sum \(\sum_{v\in V}d_{\mathrm{in}}(v)\) is
+equivalent to
+
+\begin{itemize}
+\item Counting the non-zeros for every the column of \(M\),
+\item \emph{i.e.} Counting all the non-zeros in \(M\),
+\item \emph{i.e.} The number of edges.
+\end{itemize}
+
+Hence,
+
+\begin{align*}
+  \sum_{v\in V} d_{\mathrm{in}}(v)
+    &= |E|
+\end{align*}
+
+
+
+\subsection{Representation}
+\label{sec:orgc198721}
+
+\paragraph*{Question}
+\label{sec:org968ac14}
+Provide an adjacency list as well as the adjacency matrix
+representation for trees A and B in the following figure.
+
+\begin{figure}[!h]
+\centering
+\begin{minipage}{0.4\textwidth}
+\centering
+\includegraphics[width=\linewidth]{./images/treeA.png}
+\subcaption{\label{fig:treeA} Tree A}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\centering
+\includegraphics[width=\linewidth]{./images/treeB.png}
+\subcaption{\label{fig:treeB} Tree B}
+\end{minipage}
+\end{figure}
+
+\paragraph*{Solution}
+\label{sec:org2c26073}
+
+\subparagraph*{Tree A}
+\label{sec:orgb5caaf5}
+\begin{verbatim}
+Adj = [[2 3] 
+       [1 4 5] 
+       [1 6 7] 
+       [2]
+       [2]
+       [3]
+       [3]]
+
+M = [[0 1 1 0 0 0 0]
+     [1 0 1 1 0 0 0]
+     [1 0 0 0 1 1 0]
+     [0 1 0 0 0 0 0]
+     [0 1 0 0 0 0 0]
+     [0 0 1 0 0 0 0]
+     [0 0 1 0 0 0 0]]
+\end{verbatim}
+
+\subparagraph*{Tree B}
+\label{sec:orgf54b6dd}
+\begin{verbatim}
+Adj = [[2]
+       [1 3 4]
+       [2]
+       [2 6]
+       [6]
+       [4 5 7]
+       [6]]
+M = [[0 1 0 0 0 0 0]
+     [1 0 1 1 0 0 0]
+     [0 1 0 0 0 0 0]
+     [0 1 0 0 0 1 0]
+     [0 0 0 0 0 1 0]
+     [0 0 0 1 1 0 1]
+     [0 0 0 0 0 1 0]]
+\end{verbatim}
+
+\subparagraph*{PS}
+\label{sec:org71650d4}
+The Adjacency matrix of Tree B is bi-symmetric.
+
+\section{Elementary Algorithms}
+\label{sec:orgadc1872}
+
+\subsection{BFS}
+\label{sec:org88e9de3}
+
+\paragraph*{Question}
+\label{sec:orgb80aeca}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.5\linewidth]{images/graphA.png}
+\caption{\label{fig:graphA}Graph A}
+\end{figure}
+With reference to Graph A (see
+Fig~\ref{fig:graphA}) \textbf{Determine algorithmically},
+
+\begin{enumerate}
+\item The shortest path weight \(\delta(u,j)\) for the pair
+\((u,j)\) of vertices.
+\item A shortest path between the pair \((u,j)\) of
+vertices.
+\item All shortest-paths originating from vertex \(u\).
+\end{enumerate}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{images/bfsOnGraphA.png}
+\caption{\label{fig:bfsOnGraphA}BFS on Graph A}
+\end{figure}
+\paragraph*{Key Insight}
+\label{sec:org11ff5a9}
+All the three questions here speak about a shortest
+path originating from vertex \(u\).  This is a uniformly
+weighted undirected graph, \emph{i.e.} all edges are equally
+weighted.  The solution for shortest path will follow a
+BFS in such a case.
+
+\paragraph*{Solution}
+\label{sec:org3c771a9}
+\begin{enumerate}
+\item Running a BFS on the graph gives us the figure, “BFS
+on Graph A” (Fig~\ref{fig:bfsOnGraphA})
+upon termination.
+\item The numbers marked are discovery times of the nodes \\[0pt]
+\(v\cdot d \ \forall v\in V\).
+\item For part (1) the shortest path weight is given as
+\(\delta(u,j) = j\cdot d - u\cdot d\).  Computing from
+the figure, \(\delta(u,j) = 4-0 = 4\).
+\item For part (2) we may pick any one path such that each
+successive node is from successive level.  \emph{i.e.}
+one of,
+\begin{enumerate}
+\item \(\langle u,v,h,i,j\rangle\),
+\item \(\langle u,v,w,y,j\rangle\), or
+\item \(\langle u,v,x,y,j\rangle\).
+\end{enumerate}
+
+Recall, that only one of these is, and not all of
+them are, the required shortest path (\emph{i.e.}
+discovered in one run).
+
+\item For part (3), a BFS tree is required.  It’s been
+left that upon the reader to exercise and present as
+necessary.  An easy way out would be to use the
+adjoining graph
+(Fig~\ref{fig:bfsOnGraphA}) and
+additionally mark each connection from “parent” to
+“child” as descended during the BFS.  Note that the
+arrow would be a manifestation of line \texttt{v.PI = u} in
+the algorithm \href{https://docs.google.com/presentation/d/14PY-Sc50QsFxdUqZk7GlYVwwEXzO38rg9z9KKx5ti0k/edit\#slide=id.g32a7028b731\_0\_60}{(link to the slide)}.  Recall that
+there may be only one parent to a child, not many,
+and that the discovery time of the parent is always
+less than that of the child.
+\end{enumerate}
+
+\subsection{DFS}
+\label{sec:org96155c5}
+
+\paragraph*{Question}
+\label{sec:orgd71dadb}
+Given that there are 10 courses in a programme, and
+corresponding pre-requisites are listed as under,
+\textbf{determine algorithmically} If the programme may be
+completed successfully by a candidate?
+
+\begin{enumerate}
+\setcounter{enumi}{3}
+\item depends upon 1 and 2;
+\item depends upon 1, 3 and 10;
+\item depends upon 2 and 3;
+\item depends upon 2, 4 and 5;
+\item depends upon 1 and 4;
+\item depends upon 5 and 6; and
+\item depends upon 3 and 7.
+\end{enumerate}
+
+\paragraph*{Key Insight}
+\label{sec:org7f9c803}
+We define a relationship \(u\to v\) if course \(u\) depends
+upon \(v\).  Then we get a dependency graph (\emph{i.e.} a
+directed graph where relationship is defined when the
+parent is dependent upon the child).
+
+A topological order \(T\equiv\langle v_{1},\ldots,v_{k}
+\rangle\) of such a graph means that all ancestors of
+\(v_{i}\) have been listed before \(v_{i}\) itself \(\forall
+v_{i}\in V\).  In simple words, the topological order is
+one possible order of courses to complete the
+programme.
+
+However, the topological order is not always possible.
+From \href{https://docs.google.com/presentation/d/14PY-Sc50QsFxdUqZk7GlYVwwEXzO38rg9z9KKx5ti0k/edit\#slide=id.g32a7028b731\_0\_377}{our slides}, we know that topological order is only
+defined for directed acyclic graph (DAG).  \textbf{Hence, one
+may complete the programme if the dependency graph is
+acyclic.}
+
+And \textbf{a graph is acyclic if and only if there are no
+back edges.}
+
+\paragraph*{Solution}
+\label{sec:org604310f}
+\begin{enumerate}
+\item Run a DFS on Dependency Graph;
+\item Maintain a list \(T\) for Topological Order;
+\item Upon finishing the visit to a node, insert the node
+to the front of the list;
+\item Exit “abnormally,” if encountered a “back edge.”
+\end{enumerate}
+
+If exited abnormally, the graph is acyclic; and the
+programme can not be completed successfully.
+
+Otherwise, \(T\) contains an order of courses that
+successfully completes the programme.
+
+In figure “DFS on Dependency Graph,”
+(Fig~\ref{fig:dfsOnDependencyGraph}) nodes
+have been mentioned with discovery and finish times;
+and edges has been labelled as B,C,F,T for back edges,
+cross edges, forward edges and tree edges respectively.
+
+The algorithm terminated upon visiting the edge \(7\to
+5\) which is a back edge (labelled B).
+
+\textbf{Hence the programme can not be completed.}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.9\linewidth]{images/dfsOnDependencyGraph.png}
+\caption{\label{fig:dfsOnDependencyGraph}DFS on Dependency Graph}
+\end{figure}
+\end{document}
