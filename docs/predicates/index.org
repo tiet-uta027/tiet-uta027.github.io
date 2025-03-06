@@ -1,6 +1,6 @@
 ﻿#+options: toc:nil num:3 h:6
-#+TITLE: Practice Questions for Graph Theory
-#+SUBTITLE: Representation, Search Algorithms, and Variants for Problem Solving
+#+TITLE: Practice Predicates
+#+SUBTITLE: Language, Representation and Interpretationg
 #+AUTHOR: Raghav B. Venkataramaiyer
 #+DATE: Feb '25
 #+latex_header_extra: \usepackage{parskip}
