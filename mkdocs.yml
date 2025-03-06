@@ -1,4 +1,4 @@
-site_name: "UTA027: Artificial Intelligence"
+﻿site_name: "UTA027: Artificial Intelligence"
 
 plugins:
 - search
@@ -97,3 +97,6 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.tilde
   # - mkdocs-click
+  - toc:
+      toc_depth: 4
+  - sane_lists

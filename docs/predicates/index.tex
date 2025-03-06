@@ -1,0 +1,480 @@
+﻿% Created 2025-03-06 Thu 18:11
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage{parskip}
+\setcounter{secnumdepth}{3}
+\author{Raghav B. Venkataramaiyer}
+\date{Feb '25}
+\title{Practice Questions for Graph Theory\\\medskip
+\large Representation, Search Algorithms, and Variants for Problem Solving}
+\hypersetup{
+ pdfauthor={Raghav B. Venkataramaiyer},
+ pdftitle={Practice Questions for Graph Theory},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 29.4 (Org mode 9.6.24)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+
+\section{Predicate No. \texttt{290e}}
+\label{sec:orgc0b116c}
+
+\paragraph*{Well Formed Expression}
+\label{sec:orga8dcfc7}
+
+\(\forall X (\text{student?}(X) \rightarrow \exists Y (\text{book?}(Y) \land \text{has\_read?}(X, Y)))\)
+
+\paragraph*{Interpretation in Natural Language}
+\label{sec:org9cac9d1}
+
+Every student has read some book.
+
+
+
+\section{Predicate No. \texttt{d9e2}}
+\label{sec:orgb1ae8ad}
+
+\paragraph*{Well Formed Expression}
+\label{sec:org0bc7920}
+
+\(\forall \mathit{Feature} (\exists \mathit{Library} (\mathrm{depends\_on?}(\mathit{Feature}, \mathit{Library})) \rightarrow (\neg \mathrm{compatible\_with?}(\mathit{Feature}, \mathit{Library}) \land \mathrm{deprecated?}(\mathit{Library})))\)
+
+\paragraph*{Interpretation in Natural Language}
+\label{sec:org9fd2e9e}
+
+Every feature depends upon some incompatible and deprecated library.
+
+
+
+\section{Predicate No. \texttt{4f1g}}
+\label{sec:org947336f}
+
+\paragraph*{Well Formed Expression}
+\label{sec:orgc11f343}
+
+\(\exists \mathit{TranscriptionFactor} \exists \mathit{ActivatorProtein} \forall \mathit{TargetGene} ((\mathrm{transcription\_factor?}(\mathit{TranscriptionFactor}) \rightarrow \mathrm{activates?}(\mathit{ActivatorProtein}, \mathit{TargetGene})) \land \neg \mathrm{co\_located?}(\mathit{TranscriptionFactor}, \mathit{TargetGene}))\)
+
+\paragraph*{Interpretation in Natural Language}
+\label{sec:org9c9316f}
+
+A protein may activate all genes that aren't co-located with a specific transcription factor.
+
+
+
+\section{Predicate No. \texttt{3d4e}}
+\label{sec:orgdd0e374}
+
+\paragraph*{Well Formed Expression}
+\label{sec:org166f35f}
+
+\(\exists \mathit{Fluid} \exists \mathit{Pipe} (\neg \mathrm{incompressible?}(\mathit{Fluid}) \land \mathrm{flows\_through?}(\mathit{Fluid}, \mathit{Pipe}) \rightarrow \mathrm{pressure\_drop?}(\mathit{Pipe}))\)
+
+\paragraph*{Interpretation in Natural Language}
+\label{sec:org0ebe054}
+
+If a compressible fluid flows through a pipe, then the pipe experiences pressure drop.
+
+
+
+\section{Predicate No. \texttt{9i0j}}
+\label{sec:orga379484}
+
+\paragraph*{Well Formed Expression}
+\label{sec:org590202f}
+
+\(\exists \mathit{Gene}\ \exists \mathit{Protein}\ \forall \mathit{DNARegion}\ ((\mathrm{inhibits\_proliferation?}(\mathit{Gene}) \,\land\, \mathrm{binds\_to?}(\mathit{Protein}, \mathit{DNARegion})) \rightarrow \neg \mathrm{regulates\_binding?}(\mathit{Gene}, \mathit{Protein}, \mathit{DNARegion}))\)
+
+\paragraph*{Interpretation in Natural Language}
+\label{sec:org92ab63c}
+
+A gene that stops cell growth and a protein exist where the gene never regulates the protein binding to DNA.
+
+
+
+\section{Predicate No. \texttt{6q7r}}
+\label{sec:org40ffe2d}
+
+\paragraph*{Well Formed Expression}
+\label{sec:org5095a80}
+
+\(\forall \mathit{System} \forall \mathit{VibrationDamper} \forall \mathit{StandardComponent} (\mathrm{vibration\_sensitive?}(\mathit{System}) \rightarrow (\mathrm{vibration\_damper?}(\mathit{VibrationDamper}) \land \neg \mathrm{replaced\_by?}(\mathit{StandardComponent}, \mathit{VibrationDamper})))\)
+
+\paragraph*{Interpretation in Natural Language}
+\label{sec:org15df037}
+
+In a vibration-sensitive system, a vibration damper is used without replacing any standard component.
+
+
+
+\section{Predicate No. \texttt{9j0k}}
+\label{sec:orgeb52115}
+
+\paragraph*{Well Formed Expression}
+\label{sec:org94b2095}
+
+\(\exists \mathit{Reactor} \forall \mathit{Condition} (\neg \mathrm{cstr?}(\mathit{Reactor}) \lor (\mathrm{high\_pressure?}(\mathit{Condition}) \rightarrow \mathrm{suitable\_for?}(\mathit{Reactor}, \mathit{Condition})))\)
+
+\paragraph*{Interpretation in Natural Language}
+\label{sec:org2b78ac0}
+
+A reactor exists that either isn't a continuous stirred-tank reactor (CSTR), or is suitable for all high pressure conditions.
+
+
+
+\section{Predicate No. \texttt{2e3f}}
+\label{sec:org8f3fcc9}
+
+\paragraph*{Well Formed Expression}
+\label{sec:org567fb99}
+
+\(\forall \mathit{Protein} (\neg \mathrm{membrane\_bound\_receptor?}(\mathit{Protein}) \lor \exists \mathit{Molecule} (\mathrm{interacts\_with?}(\mathit{Protein}, \mathit{Molecule}) \land \neg \mathrm{signaling\_molecule?}(\mathit{Molecule})))\)
+
+\paragraph*{Interpretation in Natural Language}
+\label{sec:org8ad00d2}
+
+Every protein is either not a membrane-bound receptor, or it interacts with a molecule that is not a signaling molecule.
+
+
+
+\section{Predicate No. \texttt{f3a9}}
+\label{sec:org22b7b99}
+
+\paragraph*{Well Formed Expression}
+\label{sec:org0eaa212}
+
+\(\forall \mathit{Course} \exists \mathit{Module} (\neg \mathrm{mandatory?}(\mathit{Course}) \lor (\mathrm{advanced?}(\mathit{Module}) \rightarrow \neg \mathrm{requires?}(\mathit{Course}, \mathit{Module})))\)
+
+\paragraph*{Interpretation in Natural Language}
+\label{sec:org41a46eb}
+
+Either a course is optional, or it doesn't require advanced modules.
+
+
+
+\section{Predicate No. \texttt{6d7e}}
+\label{sec:org5c51742}
+
+\paragraph*{Well Formed Expression}
+\label{sec:orge7e7574}
+
+\(\exists \mathit{GrowthProtein} \forall \mathit{Receptor} (\mathrm{receptor?}(\mathit{Receptor}) \rightarrow (\mathrm{growth\_protein?}(\mathit{GrowthProtein}) \lor \neg \mathrm{inhibits?}(\mathit{GrowthProtein}, \mathit{Receptor})))\)
+
+\paragraph*{Interpretation in Natural Language}
+\label{sec:org77ee72c}
+
+A protein involved in cell growth exists that does not inhibit any receptor protein.
+
+
+
+\section{Predicate No. \texttt{1b2c}}
+\label{sec:orge1d3370}
+
+\paragraph*{Well Formed Expression}
+\label{sec:org8c231f2}
+
+\(\exists \mathit{Process}\ \forall \mathit{Material}\ (\neg \mathrm{corrosive?}(\mathit{Material}) \land (\mathrm{high\_temperature?}(\mathit{Process}) \rightarrow \mathrm{compatible?}(\mathit{Process}, \mathit{Material})))\)
+
+\paragraph*{Interpretation in Natural Language}
+\label{sec:org87fc962}
+
+A high-temperature process exists that is compatible with all non-corrosive materials.
+
+
+
+\section{Predicate No. \texttt{2b91}}
+\label{sec:org1764bc2}
+
+\paragraph*{Well Formed Expression}
+\label{sec:orgff4c0f1}
+
+\(\exists \mathit{PortCity} \exists \mathit{ExportCountry} \forall \mathit{DestinationCity} (\mathrm{major\_port?}(\mathit{PortCity}) \land \mathrm{located\_in?}(\mathit{PortCity},\mathit{ExportCountry}) \land \mathrm{exports\_to?}(\mathit{ExportCountry}, \mathit{DestinationCity}) \land \neg \mathrm{located\_in?}(\mathit{DestinationCity},\mathit{ExportCountry}))\)
+
+\paragraph*{Interpretation in Natural Language}
+\label{sec:org1db55dd}
+
+A country with a major port may ship to any city outside its borders.
+
+
+
+\section{Predicate No. \texttt{1l2m}}
+\label{sec:org6773af5}
+
+\paragraph*{Well Formed Expression}
+\label{sec:org760159a}
+
+\(\exists \mathit{Reaction} \forall \mathit{Product} \forall \mathit{Impurity} (\mathrm{high\_yield?}(\mathit{Reaction}) \rightarrow (\neg \mathrm{contains\_impurity?}(\mathit{Product}, \mathit{Impurity}) \land \mathrm{produces?}(\mathit{Reaction}, \mathit{Product})))\)
+
+\paragraph*{Interpretation in Natural Language}
+\label{sec:org1e0ef02}
+
+Some high-yield reaction produces products that contain no impurities.
+
+
+
+\section{Predicate No. \texttt{8h9i}}
+\label{sec:org146fe5d}
+
+\paragraph*{Well Formed Expression}
+\label{sec:org53d278d}
+
+\(\forall \mathit{Protein} \exists \mathit{NLS} (\neg \mathrm{nuclear\_protein?}(\mathit{Protein}) \lor (\mathrm{nls?}(\mathit{NLS}) \rightarrow \neg \mathrm{contains\_nls?}(\mathit{Protein}, \mathit{NLS})))\)
+
+\paragraph*{Interpretation in Natural Language}
+\label{sec:org261cdc7}
+
+All proteins either aren't nuclear, or they don't have a nuclear signal.
+
+
+
+\section{Predicate No. \texttt{8a9b}}
+\label{sec:org2d91a63}
+
+\paragraph*{Well Formed Expression}
+\label{sec:org05149e3}
+
+\(\exists \mathit{Drug} \exists \mathit{Target} \forall \mathit{Inhibitor} (\mathrm{therapeutic\_effect?}(\mathit{Drug}, \mathit{Target}) \land (\mathrm{known\_inhibitor?}(\mathit{Inhibitor}) \rightarrow \neg \mathrm{inhibited\_by?}(\mathit{Target}, \mathit{Inhibitor})))\)
+
+\paragraph*{Interpretation in Natural Language}
+\label{sec:orgec4bb9a}
+
+A drug works with a target that isn't blocked by any known inhibitor.
+
+
+
+\section{Predicate No. \texttt{4e5f}}
+\label{sec:orgeb06b1c}
+
+\paragraph*{Well Formed Expression}
+\label{sec:org0530c50}
+
+\(\forall \mathit{Fluid1} \forall \mathit{Fluid2} (\neg \mathrm{miscible?}(\mathit{Fluid1}, \mathit{Fluid2}) \rightarrow (\mathrm{liquid?}(\mathit{Fluid1}) \lor \mathrm{gas?}(\mathit{Fluid2})))\)
+
+\paragraph*{Interpretation in Natural Language}
+\label{sec:org55ce793}
+
+If two fluids don't mix, then one is a liquid, and the other is a gas.
+
+
+
+\section{Predicate No. \texttt{7h8i}}
+\label{sec:org958200f}
+
+\paragraph*{Well Formed Expression}
+\label{sec:orgc0b3088}
+
+\(\exists \mathit{Reaction} \exists \mathit{Inhibitor} (\mathrm{first\_order\_reaction?}(\mathit{Reaction}) \land \neg \mathrm{catalyst?}(\mathit{Inhibitor}) \rightarrow \mathrm{inhibited\_by?}(\mathit{Reaction}, \mathit{Inhibitor}))\)
+
+\paragraph*{Interpretation in Natural Language}
+\label{sec:org79aa544}
+
+Some first-order reaction is inhibited by a non-catalyst compound.
+
+
+
+\section{Predicate No. \texttt{d93a}}
+\label{sec:org93fc8fa}
+
+\paragraph*{Well Formed Expression}
+\label{sec:org12fd61b}
+
+\(\forall X \exists Y (\neg \text{man?}(X) \lor (\text{word?}(Y) \rightarrow \text{do\_honour?}(X, Y)))\)
+
+\paragraph*{Interpretation in Natural Language}
+\label{sec:org57049f2}
+
+Either you are not a man enough or you’d honour your word.
+
+
+
+\section{Predicate No. \texttt{b8d3}}
+\label{sec:org15fff8a}
+
+\paragraph*{Well Formed Expression}
+\label{sec:org9f5f1cc}
+
+\(\forall X \forall Y (\text{likes?}(X, Y) \rightarrow \exists Z (\text{knows?}(X, Z) \land \text{vouch?}(Z, Y)))\)
+
+\paragraph*{Interpretation in Natural Language}
+\label{sec:org061ad2e}
+
+If someone likes another, they know someone who'd vouch for them.
+
+
+
+\section{Predicate No. \texttt{2w3x}}
+\label{sec:org42b83f4}
+
+\paragraph*{Well Formed Expression}
+\label{sec:orgd8942f5}
+
+\(\forall \mathit{Component} \forall \mathit{Condition} (\mathrm{precision\_machined?}(\mathit{Component}) \land \neg \mathrm{high\_temperature?}(\mathit{Condition}) \rightarrow \mathrm{suitable\_for?}(\mathit{Component}, \mathit{Condition}))\)
+
+\paragraph*{Interpretation in Natural Language}
+\label{sec:org41824f6}
+
+All precision-machined components are suitable for non-high-temperature operating conditions.
+
+
+
+\section{Predicate No. \texttt{5c8d}}
+\label{sec:org45af05e}
+
+\paragraph*{Well Formed Expression}
+\label{sec:org2555bc7}
+
+\(\forall \mathit{Protein} \exists \mathit{Ligand} (\neg \mathrm{signaling\_protein?}(\mathit{Protein}) \lor (\mathrm{ligand?}(\mathit{Ligand}) \rightarrow \mathrm{binds\_to?}(\mathit{Protein}, \mathit{Ligand})))\)
+
+\paragraph*{Interpretation in Natural Language}
+\label{sec:org858018e}
+
+Every protein either isn't a signaling protein, or it binds to some ligand.
+
+
+
+\section{Predicate No. \texttt{4o5p}}
+\label{sec:orgc9ae528}
+
+\paragraph*{Well Formed Expression}
+\label{sec:org1bd779f}
+
+\(\forall \mathit{Material} \forall \mathit{Process} (\mathrm{ductile?}(\mathit{Material}) \land \neg \mathrm{casting\_process?}(\mathit{Process}) \rightarrow \mathrm{suitable\_for?}(\mathit{Material}, \mathit{Process}))\)
+
+\paragraph*{Interpretation in Natural Language}
+\label{sec:org1c48ef8}
+
+All ductile materials are suitable for any non-casting manufacturing process.
+
+
+
+\section{Predicate No. \texttt{7d6f}}
+\label{sec:orgc25b242}
+
+\paragraph*{Well Formed Expression}
+\label{sec:orgc843864}
+
+\(\exists \mathit{City} \forall \mathit{Destination} (\mathrm{tourist\_destination?}(\mathit{Destination}) \rightarrow (\mathrm{coastal\_city?}(\mathit{City}) \lor \neg \mathrm{more\_popular?}(\mathit{City}, \mathit{Destination})))\)
+
+\paragraph*{Interpretation in Natural Language}
+\label{sec:orgcec3ae4}
+
+There is a city that is either a coastal city, or it's less popular than all tourist destinations.
+
+
+
+\section{Predicate No. \texttt{c4b2}}
+\label{sec:org8633f21}
+
+\paragraph*{Well Formed Expression}
+\label{sec:org8df946d}
+
+\(\exists X \forall Y \forall Z (\text{teacher?}(X) \land \text{student\_subject?}(Y, Z) \rightarrow \text{teaches?}(X, Y, Z))\)
+
+\paragraph*{Interpretation in Natural Language}
+\label{sec:org5096ad1}
+
+There is a teacher who teaches every student every subject.
+
+
+
+\section{Predicate No. \texttt{5f6g}}
+\label{sec:org94c1d87}
+
+\paragraph*{Well Formed Expression}
+\label{sec:orgf7b706c}
+
+\(\exists \mathit{Reaction} \forall \mathit{Product} \forall \mathit{Inhibitor} (\mathrm{produces?}(\mathit{Reaction}, \mathit{Product}) \land \neg \mathrm{inhibited\_by?}(\mathit{Product}, \mathit{Inhibitor}))\)
+
+\paragraph*{Interpretation in Natural Language}
+\label{sec:org1e2dffc}
+
+A reaction exists where all products it makes are not inhibited by any inhibitor.
+
+
+
+\section{Predicate No. \texttt{2m3n}}
+\label{sec:org89e4df3}
+
+\paragraph*{Well Formed Expression}
+\label{sec:org1879229}
+
+\(\forall \mathit{Machine} (\neg \mathrm{precision\_instrument?}(\mathit{Machine}) \lor \exists \mathit{Component} (\mathrm{high\_strength\_alloy?}(\mathit{Component}) \land \mathrm{uses?}(\mathit{Machine}, \mathit{Component})))\)
+
+\paragraph*{Interpretation in Natural Language}
+\label{sec:orgf2dc46c}
+
+All machines either aren't precision instruments, or they use a high-strength alloy component.
+
+
+
+\section{Predicate No. \texttt{1b4c}}
+\label{sec:org4f63bd9}
+
+\paragraph*{Well Formed Expression}
+\label{sec:org562d268}
+
+\(\forall \mathit{Restaurant} (\mathrm{popular?}(\mathit{Restaurant}) \rightarrow \exists \mathit{Dish} (\mathrm{vegetarian?}(\mathit{Dish}) \land \mathrm{serves?}(\mathit{Restaurant}, \mathit{Dish})))\)
+
+\paragraph*{Interpretation in Natural Language}
+\label{sec:orge97940b}
+
+Every popular restaurant serves at least one vegetarian dish.
+
+
+
+\section{Predicate No. \texttt{8s9t}}
+\label{sec:orga76a2e4}
+
+\paragraph*{Well Formed Expression}
+\label{sec:orgd612996}
+
+\(\forall \mathit{Machine} \exists \mathit{Component} (\neg \mathrm{requires\_maintenance?}(\mathit{Machine}, \mathit{Component}) \lor (\mathrm{high\_wear?}(\mathit{Component}) \rightarrow \mathrm{high\_maintenance\_frequency?}(\mathit{Machine})))\)
+
+\paragraph*{Interpretation in Natural Language}
+\label{sec:orgbec1841}
+
+Every machine either has a component it rarely maintains, or it needs frequent maintenance due to some high-wear component.
+
+
+
+\section{Predicate No. \texttt{3n4o}}
+\label{sec:org74233ca}
+
+\paragraph*{Well Formed Expression}
+\label{sec:orgc5c5463}
+
+\(\forall \mathit{Component} \exists \mathit{AssemblyStation} \exists \mathit{Tool} (\mathrm{compatible?}(\mathit{Tool}, \mathit{Component}) \land \mathrm{uses\_tool?}(\mathit{AssemblyStation}, \mathit{Tool}, \mathit{Component}))\)
+
+\paragraph*{Interpretation in Natural Language}
+\label{sec:orgfa82711}
+
+All components are controlled by an assembly station through a compatible tool.
+
+
+
+\section{Predicate No. \texttt{0u1v}}
+\label{sec:org2d157b3}
+
+\paragraph*{Well Formed Expression}
+\label{sec:org1137c8c}
+
+\(\forall \mathit{QualityControlSystem} \exists \mathit{CriticalDefect} \forall \mathit{Sensor} (\mathrm{automated?}(\mathit{QualityControlSystem}) \rightarrow (\mathrm{critical?}(\mathit{CriticalDefect}) \land \neg \mathrm{detects?}(\mathit{Sensor}, \mathit{CriticalDefect})))\)
+
+\paragraph*{Interpretation in Natural Language}
+\label{sec:org12714ca}
+
+Automated quality control systems have blind spots for critical defects.
+\end{document}
