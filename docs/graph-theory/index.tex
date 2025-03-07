@@ -1,4 +1,4 @@
-﻿% Created 2025-03-06 Thu 18:00
+﻿% Created 2025-03-07 Fri 10:53
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8x]{inputenc}
@@ -31,12 +31,12 @@
 \maketitle
 
 \section{Graph Representations}
-\label{sec:org6cfe53f}
+\label{sec:org26d5fc6}
 
 \subsection{Vertex Insertion}
-\label{sec:org0ddad32}
+\label{sec:org5d963ae}
 \paragraph*{Question}
-\label{sec:org0454258}
+\label{sec:orgb4a887b}
 
 \(\overline{\mathit{ABCD}}\) is a closed quadrilateral.
 A new vertex \(E\) is introduced between \(B\) and \(C\).
@@ -46,7 +46,7 @@ pseudocode in order to introduce a new vertex between
 an existing edge.
 
 \paragraph*{Interpretation}
-\label{sec:orgf312fc8}
+\label{sec:orgad54504}
 Given a closed quadrilateral
 \(\overline{\mathit{ABCD}}\), the adjacency list in
 1-indexed format is given as:
@@ -64,13 +64,13 @@ two entries of the adjacency list, \emph{i.e.} as vertex \texttt{3}
 in \texttt{Adj[2]} and vertex \texttt{2} in \texttt{Adj[3]}.
 
 \paragraph*{Solution}
-\label{sec:org8c697a3}
+\label{sec:org677ea84}
 
 In order to introduce a new vertex \(E\) between edge
 \(\overline{\mathit{BC}}\),
 
 \subparagraph*{Step 1}
-\label{sec:org277e327}
+\label{sec:orga8db44c}
 Append vertex \(E\) to the vertex list \(V\) and get its
 index.
 
@@ -79,7 +79,7 @@ V = [A, B, C, D, E]             # Add E as V[5]
 \end{verbatim}
 
 \subparagraph*{Step 2}
-\label{sec:org04a83b9}
+\label{sec:orge6753e5}
 Remove the edge  \(\overline{\mathit{BC}}\)
 \begin{verbatim}
 V = [A, B, C, D, E]
@@ -91,7 +91,7 @@ Adj = [[2, 4],
 \end{verbatim}
 
 \subparagraph*{Step 3}
-\label{sec:org48f714d}
+\label{sec:org9682198}
 Add edges \(\overline{\mathit{BEC}}\)
 \begin{verbatim}
 V = [A, B, C, D, E]
@@ -103,7 +103,7 @@ Adj = [[2, 4],
 \end{verbatim}
 
 \subparagraph*{Algorithm}
-\label{sec:org40de976}
+\label{sec:org5efff81}
 
 To introduce a vertex \(W\) between an edge \((u,v)\),
 
@@ -132,10 +132,10 @@ the Adjacency List (as required by the question,) hence
 the use of \(G.Adj\)
 
 \subsection{Transpose Graph}
-\label{sec:org99c4fac}
+\label{sec:orgd582205}
 
 \paragraph*{Question}
-\label{sec:orga737397}
+\label{sec:orgcb1fbcf}
 Given a graph \(G(V,M)\), \(M\) being the adjacency matrix.
 A transpose graph would be the one with same set of
 vertices, but a transposed adjacency matrix, \emph{i.e.}
@@ -144,7 +144,7 @@ What does a transpose graph represent?  Illustrate with
 a drawing to support your answer.
 
 \paragraph*{Interpretation}
-\label{sec:orgf3a6cdf}
+\label{sec:orgd879822}
 Recall that,
 \begin{enumerate}
 \item In an adjacency matrix \(A\), the component at
@@ -160,7 +160,7 @@ across the diagonal.  Hence, if \(B = A^{\top}\), then
 \end{enumerate}
 
 \paragraph*{Solution}
-\label{sec:org21ad9e5}
+\label{sec:org42d8faf}
 
 Each edge \(v_{i}\to v_{j}\) in \(G\), transforms to
 \(v_{j}\to v_{i}\) in the transpose graph \(G^{\top}\).
@@ -173,20 +173,20 @@ Hence, the transpose graph \(G^{\top}(V,M^{\top})\)
 represents \(G(V,M)\) with edges reversed.
 
 \paragraph*{Illustration}
-\label{sec:orgb295938}
+\label{sec:org4a71694}
 
 [TODO]
 
 \subsection{(In/Out)-degree}
-\label{sec:org8f88daf}
+\label{sec:org4430ce5}
 
 \paragraph*{Question}
-\label{sec:org3cb4fc6}
+\label{sec:orgb3e5583}
 What is the average in-degree of a graph \(G(V,E)\),
 where \(E\) is the set of edges in \(G\)?
 
 \paragraph*{Solution}
-\label{sec:orgc391b90}
+\label{sec:org62eb70d}
 In-degree of a vertex is defined as the number of
 edges leading onto itself.
 
@@ -209,7 +209,7 @@ same as the number of edges. Hence,
 \end{align*}
 
 \paragraph*{In further detail}
-\label{sec:orgd1eb5be}
+\label{sec:org3c0ea53}
 
 In-degree of a vertex is the same as counting the
 non-zeros in one (specific) column of an adjacency
@@ -234,10 +234,10 @@ Hence,
 
 
 \subsection{Representation}
-\label{sec:orgc198721}
+\label{sec:org632ead9}
 
 \paragraph*{Question}
-\label{sec:org968ac14}
+\label{sec:orgdb29d41}
 Provide an adjacency list as well as the adjacency matrix
 representation for trees A and B in the following figure.
 
@@ -256,10 +256,10 @@ representation for trees A and B in the following figure.
 \end{figure}
 
 \paragraph*{Solution}
-\label{sec:org2c26073}
+\label{sec:org1858132}
 
 \subparagraph*{Tree A}
-\label{sec:orgb5caaf5}
+\label{sec:org63e8faa}
 \begin{verbatim}
 Adj = [[2 3] 
        [1 4 5] 
@@ -279,7 +279,7 @@ M = [[0 1 1 0 0 0 0]
 \end{verbatim}
 
 \subparagraph*{Tree B}
-\label{sec:orgf54b6dd}
+\label{sec:org9cd4e32}
 \begin{verbatim}
 Adj = [[2]
        [1 3 4]
@@ -298,23 +298,24 @@ M = [[0 1 0 0 0 0 0]
 \end{verbatim}
 
 \subparagraph*{PS}
-\label{sec:org71650d4}
+\label{sec:orgaddd6ba}
 The Adjacency matrix of Tree B is bi-symmetric.
 
 \section{Elementary Algorithms}
-\label{sec:orgadc1872}
+\label{sec:orgad771f7}
 
 \subsection{BFS}
-\label{sec:org88e9de3}
+\label{sec:org3bcff1c}
 
 \paragraph*{Question}
-\label{sec:orgb80aeca}
+\label{sec:orgbe78de8}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.5\linewidth]{images/graphA.png}
 \caption{\label{fig:graphA}Graph A}
 \end{figure}
+
 With reference to Graph A (see
 Fig~\ref{fig:graphA}) \textbf{Determine algorithmically},
 
@@ -332,7 +333,7 @@ vertices.
 \caption{\label{fig:bfsOnGraphA}BFS on Graph A}
 \end{figure}
 \paragraph*{Key Insight}
-\label{sec:org11ff5a9}
+\label{sec:orgda76ea4}
 All the three questions here speak about a shortest
 path originating from vertex \(u\).  This is a uniformly
 weighted undirected graph, \emph{i.e.} all edges are equally
@@ -340,7 +341,7 @@ weighted.  The solution for shortest path will follow a
 BFS in such a case.
 
 \paragraph*{Solution}
-\label{sec:org3c771a9}
+\label{sec:orgb02b5ab}
 \begin{enumerate}
 \item Running a BFS on the graph gives us the figure, “BFS
 on Graph A” (Fig~\ref{fig:bfsOnGraphA})
@@ -378,30 +379,33 @@ less than that of the child.
 \end{enumerate}
 
 \subsection{DFS}
-\label{sec:org96155c5}
+\label{sec:org36858ac}
 
 \paragraph*{Question}
-\label{sec:orgd71dadb}
+\label{sec:orgaca0187}
 Given that there are 10 courses in a programme, and
 corresponding pre-requisites are listed as under,
 \textbf{determine algorithmically} If the programme may be
 completed successfully by a candidate?
 
 \begin{enumerate}
-\setcounter{enumi}{3}
-\item depends upon 1 and 2;
-\item depends upon 1, 3 and 10;
 \item depends upon 2 and 3;
-\item depends upon 2, 4 and 5;
-\item depends upon 1 and 4;
-\item depends upon 5 and 6; and
-\item depends upon 3 and 7.
+\item depends upon 3 and 4;
+\item depends upon none;
+\item depends upon none;
+\item depends upon 4 and 6;
+\item depends upon none;
+\item depends upon 5 and 8;
+\item depends upon 4, 6 and 10;
+\item depends upon 2, 4 and 8;
+\item depends upon 6 and 9.
 \end{enumerate}
 
 \paragraph*{Key Insight}
-\label{sec:org7f9c803}
+\label{sec:orgd5236bb}
 We define a relationship \(u\to v\) if course \(u\) depends
-upon \(v\).  Then we get a dependency graph (\emph{i.e.} a
+upon \(v\) (\emph{i.e.} if course \(v\) is a pre-requisite of
+course \(u\)).  Then we get a dependency graph (\emph{i.e.} a
 directed graph where relationship is defined when the
 parent is dependent upon the child).
 
@@ -413,16 +417,16 @@ one possible order of courses to complete the
 programme.
 
 However, the topological order is not always possible.
-From \href{https://docs.google.com/presentation/d/14PY-Sc50QsFxdUqZk7GlYVwwEXzO38rg9z9KKx5ti0k/edit\#slide=id.g32a7028b731\_0\_377}{our slides}, we know that topological order is only
-defined for directed acyclic graph (DAG).  \textbf{Hence, one
-may complete the programme if the dependency graph is
-acyclic.}
+From \href{https://docs.google.com/presentation/d/14PY-Sc50QsFxdUqZk7GlYVwwEXzO38rg9z9KKx5ti0k/edit\#slide=id.g32a7028b731\_0\_377}{our slides}, we know that topological order is
+defined only for a directed acyclic graph (DAG).
+\textbf{Hence, one may complete the programme iff the
+dependency graph is acyclic.}
 
 And \textbf{a graph is acyclic if and only if there are no
 back edges.}
 
 \paragraph*{Solution}
-\label{sec:org604310f}
+\label{sec:org4d08a6b}
 \begin{enumerate}
 \item Run a DFS on Dependency Graph;
 \item Maintain a list \(T\) for Topological Order;
@@ -431,20 +435,21 @@ to the front of the list;
 \item Exit “abnormally,” if encountered a “back edge.”
 \end{enumerate}
 
-If exited abnormally, the graph is acyclic; and the
+If exited abnormally, the graph has a cycle; and the
 programme can not be completed successfully.
 
-Otherwise, \(T\) contains an order of courses that
-successfully completes the programme.
+Otherwise, the graph is acyclic, and \(T\) contains an
+order of courses that successfully completes the
+programme.
 
 In figure “DFS on Dependency Graph,”
 (Fig~\ref{fig:dfsOnDependencyGraph}) nodes
 have been mentioned with discovery and finish times;
-and edges has been labelled as B,C,F,T for back edges,
+and edges have been labelled as B,C,F,T for back edges,
 cross edges, forward edges and tree edges respectively.
 
-The algorithm terminated upon visiting the edge \(7\to
-5\) which is a back edge (labelled B).
+The algorithm terminated upon visiting the edge \(9\to
+8\) which is a back edge (labelled B).
 
 \textbf{Hence the programme can not be completed.}
 \begin{figure}[htbp]
@@ -452,4 +457,97 @@ The algorithm terminated upon visiting the edge \(7\to
 \includegraphics[width=.9\linewidth]{images/dfsOnDependencyGraph.png}
 \caption{\label{fig:dfsOnDependencyGraph}DFS on Dependency Graph}
 \end{figure}
+
+
+
+\section{Problem Solving}
+\label{sec:orgd7116bd}
+
+\subsection{Three jug problem}
+\label{sec:org168740a}
+
+\paragraph*{Question}
+\label{sec:org253665e}
+
+There are three unmarked jugs \(A,B,C\) with a capacity
+of 8, 5 and 3 units respectively.  Possible moves may
+either empty a can into another or fill the other,
+whichever occurs earlier.  Starting with \(A8,B0,C0\),
+\textbf{determine algorithmically} if and how we can reach to
+a split of \(A4,B4,C0\).
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=.9\linewidth]{images/bfsOnStateGraph.png}
+\caption{\label{fig:bfsOnStateGraph}BFS on State Graph}
+\end{figure}
+
+\paragraph*{Key Insight}
+\label{sec:orgf02d0b9}
+\begin{enumerate}
+\item The jugs are unmarked.  Hence, there is no way to
+determine any intermediate quantity while pouring.
+\item For every state reachable from any other state, at
+least one of the jugs is either empty or full.  This
+is a direct consequence of a \emph{possible move}
+(action,) as defined in the problem.
+\item Each jug may be poured into the other two, so there
+may be 6 actions.  But at every state, at least one
+jug is empty or full; the number of actions is
+limited to 4.
+\item Some moves are reversible, \emph{e.g.} \(A8,B0,C0
+   \rightleftharpoons A3,B5,C0\).  As a consequence, the
+resultant state graph is cyclic in nature.
+\end{enumerate}
+
+\paragraph*{Solution}
+\label{sec:orgeb7dfcc}
+
+\begin{description}
+\item[{State Space}] is a 3-vector \(\mathbf{v} \equiv
+  Aa,Bb,Cc\) that satisfies,
+
+\begin{align*}
+\boldsymbol{0}
+  \leqslant \begin{bmatrix}a&b&c \end{bmatrix}^{\top}
+  & \leqslant \begin{bmatrix}8&5&3 \end{bmatrix}^{\top}
+  \\
+  a+b+c &= 8
+\end{align*}
+
+\item[{Start State}] \(\mathbf{s}=A8,B0,C0\)
+
+\item[{Actions}] Pour from jug, until the latter is full,
+or else empty the former.
+\end{description}
+
+Since the state graph is cyclic in nature, our solution
+is based out of BFS. See 
+Fig.~\ref{fig:bfsOnStateGraph}.
+
+\subsection{Three jug problem 2}
+\label{sec:orgdbf07a5}
+\paragraph*{Question}
+\label{sec:org0327c2b}
+There are three unmarked jugs \(A,B,C\) with a capacity
+of 8, 5 and 3 units respectively.  Possible moves may
+either empty a can into another or fill the other,
+whichever occurs earlier.  Starting with \(A8,B0,C0\),
+can we can reach to a split of \(A4,B3,C1\).
+
+\paragraph*{Solution}
+\label{sec:org5a0e26a}
+
+\emph{(This is a logical deduction, not an algorithmic
+solution.)}
+
+From our key insights \emph{(earlier)},
+
+\begin{quote}
+For every state reachable from any other state, at
+least one of the jugs is either empty or full.
+\end{quote}
+
+The state \(A4,B3,C1\) has neither of the jugs empty, nor
+full!  \textbf{Hence this is not a reachable state!}
 \end{document}

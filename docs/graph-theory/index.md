@@ -297,7 +297,11 @@ The Adjacency matrix of Tree B is bi-symmetric.
 
 ![img](images/graphA.png "Graph A")
 
+<p style="text-align:center" markdown>
+
 _Graph A_
+
+</p>
 
 </div>
 
@@ -321,7 +325,11 @@ With reference to Graph A  **Determine algorithmically**,
 
 ![img](images/bfsOnGraphA.png "BFS on Graph A")
 
+<p style="text-align:center" markdown>
+
 _BFS on Graph A_
+
+</p>
 
 </div>
 
@@ -387,19 +395,23 @@ corresponding pre-requisites are listed as under,
 **determine algorithmically** If the programme may be
 completed successfully by a candidate?
 
-4.  depends upon 1 and 2;
-5.  depends upon 1, 3 and 10;
-6.  depends upon 2 and 3;
-7.  depends upon 2, 4 and 5;
-8.  depends upon 1 and 4;
-9.  depends upon 5 and 6; and
-10. depends upon 3 and 7.
+1.  depends upon 2 and 3;
+2.  depends upon 3 and 4;
+3.  depends upon none;
+4.  depends upon none;
+5.  depends upon 4 and 6;
+6.  depends upon none;
+7.  depends upon 5 and 8;
+8.  depends upon 4, 6 and 10;
+9.  depends upon 2, 4 and 8;
+10. depends upon 6 and 9.
 
 
 ##### Key Insight
 
 We define a relationship $u\to v$ if course $u$ depends
-upon $v$.  Then we get a dependency graph (*i.e.* a
+upon $v$ (*i.e.* if course $v$ is a pre-requisite of
+course $u$).  Then we get a dependency graph (*i.e.* a
 directed graph where relationship is defined when the
 parent is dependent upon the child).
 
@@ -411,10 +423,10 @@ one possible order of courses to complete the
 programme.
 
 However, the topological order is not always possible.
-From [our slides](https://docs.google.com/presentation/d/14PY-Sc50QsFxdUqZk7GlYVwwEXzO38rg9z9KKx5ti0k/edit#slide=id.g32a7028b731_0_377), we know that topological order is only
-defined for directed acyclic graph (DAG).  **Hence, one
-may complete the programme if the dependency graph is
-acyclic.**
+From [our slides](https://docs.google.com/presentation/d/14PY-Sc50QsFxdUqZk7GlYVwwEXzO38rg9z9KKx5ti0k/edit#slide=id.g32a7028b731_0_377), we know that topological order is
+defined only for a directed acyclic graph (DAG).
+**Hence, one may complete the programme iff the
+dependency graph is acyclic.**
 
 And **a graph is acyclic if and only if there are no
 back edges.**
@@ -432,20 +444,21 @@ back edges.**
     to the front of the list;
 4.  Exit “abnormally,” if encountered a “back edge.”
 
-If exited abnormally, the graph is acyclic; and the
+If exited abnormally, the graph has a cycle; and the
 programme can not be completed successfully.
 
-Otherwise, $T$ contains an order of courses that
-successfully completes the programme.
+Otherwise, the graph is acyclic, and $T$ contains an
+order of courses that successfully completes the
+programme.
 
 In figure “DFS on Dependency Graph,”
  nodes
 have been mentioned with discovery and finish times;
-and edges has been labelled as B,C,F,T for back edges,
+and edges have been labelled as B,C,F,T for back edges,
 cross edges, forward edges and tree edges respectively.
 
-The algorithm terminated upon visiting the edge $7\to
-5$ which is a back edge (labelled B).
+The algorithm terminated upon visiting the edge $9\to
+8$ which is a back edge (labelled B).
 
 **Hence the programme can not be completed.**
 
@@ -455,9 +468,103 @@ The algorithm terminated upon visiting the edge $7\to
 
 ![img](images/dfsOnDependencyGraph.png "DFS on Dependency Graph")
 
+<p style="text-align:center" markdown>
+
 _DFS on the Dependency Graph_
 
+</p>
+
 </div>
 
 </div>
+
+
+## Problem Solving
+
+
+### Three jug problem
+
+
+##### Question
+
+There are three unmarked jugs $A,B,C$ with a capacity
+of 8, 5 and 3 units respectively.  Possible moves may
+either empty a can into another or fill the other,
+whichever occurs earlier.  Starting with $A8,B0,C0$,
+**determine algorithmically** if and how we can reach to
+a split of $A4,B4,C0$.
+
+![img](images/bfsOnStateGraph.png "BFS on State Graph")
+
+<p style="text-align:center" markdown>
+
+_BFS on State Graph_
+
+</p>
+
+
+##### Key Insight
+
+1.  The jugs are unmarked.  Hence, there is no way to
+    determine any intermediate quantity while pouring.
+2.  For every state reachable from any other state, at
+    least one of the jugs is either empty or full.  This
+    is a direct consequence of a *possible move*
+    (action,) as defined in the problem.
+3.  Each jug may be poured into the other two, so there
+    may be 6 actions.  But at every state, at least one
+    jug is empty or full; the number of actions is
+    limited to 4.
+4.  Some moves are reversible, *e.g.* $A8,B0,C0
+       \rightleftharpoons A3,B5,C0$.  As a consequence, the
+    resultant state graph is cyclic in nature.
+
+
+##### Solution
+
+-   **State Space:** is a 3-vector $\mathbf{v} \equiv
+      Aa,Bb,Cc$ that satisfies,
+    
+    \begin{align*}
+    \boldsymbol{0}
+      \leqslant \begin{bmatrix}a&b&c \end{bmatrix}^{\top}
+      & \leqslant \begin{bmatrix}8&5&3 \end{bmatrix}^{\top}
+      \\
+      a+b+c &= 8
+    \end{align*}
+
+-   **Start State:** $\mathbf{s}=A8,B0,C0$
+
+-   **Actions:** Pour from jug, until the latter is full,
+    or else empty the former.
+
+Since the state graph is cyclic in nature, our solution
+is based out of BFS. See the figure titled, “BFS
+on State Graph.”
+
+
+### Three jug problem 2
+
+
+##### Question
+
+There are three unmarked jugs $A,B,C$ with a capacity
+of 8, 5 and 3 units respectively.  Possible moves may
+either empty a can into another or fill the other,
+whichever occurs earlier.  Starting with $A8,B0,C0$,
+can we can reach to a split of $A4,B3,C1$.
+
+
+##### Solution
+
+*(This is a logical deduction, not an algorithmic
+solution.)*
+
+From our key insights *(earlier)*,
+
+> For every state reachable from any other state, at
+> least one of the jugs is either empty or full.
+
+The state $A4,B3,C1$ has neither of the jugs empty, nor
+full!  **Hence this is not a reachable state!**
 
