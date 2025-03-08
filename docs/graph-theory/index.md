@@ -1,7 +1,61 @@
-﻿[:material-file-pdf-box: Download this page as PDF](./index.pdf)
+﻿<style>
+
+.bvr-full-height-image-wrapper img {max-height: 30em}
+
+</style>
+
+[:material-file-pdf-box: Download this page as PDF](./index.pdf)
 
 
 ## Graph Representations
+
+
+### Fundamentals
+
+(See [slides](https://docs.google.com/presentation/d/1I-lOezmSW7KrdlxKjhwePbKwvGyb7_r7hnG0QDt4odY/edit?usp=sharing))
+
+
+##### Question 1
+
+Are graphs useful in real world?  Support your answer
+with examples from your domain.
+
+
+##### Question 2
+
+What is the difference between adjacency list and
+adjacency matrix?  Cite real world examples of usage.
+
+*Hint:* List is compact, whereas Matrix is detailed.
+List makes more sense in sparse graphs, and Matrix in
+dense ones.
+
+
+##### Question 3
+
+If $G(V,M)$ represents a given graph $G$ with a set of
+vertices $V$ and adjacency matrix $M$, what is the
+significance of a transpose graph
+$G^{\top}(V,M^{\top})$?  Cite examples from your domain
+for emphasis.
+
+*Hint:* The edges in $G^{\top}$ are reversed when
+compared against those in $G$.  (See also: [this
+question](#transpose-graph)
+)
+
+
+##### Question 4
+
+Comment on the nature of graph $G(V,M+M^{\top})$ where
+$M$ is a square matrix with empty diagonals.
+
+*Hint:* If $M$ consists of forward edges, then it
+follows that $M^{\top}$ corresponding are reverse
+edges; hence $M+M^{\top}$ consists of bi-directional
+edges.  (See also: [this
+question](#transpose-graph)
+)
 
 
 ### Vertex Insertion
@@ -107,9 +161,9 @@ the use of $G.Adj$
 Given a graph $G(V,M)$, $M$ being the adjacency matrix.
 A transpose graph would be the one with same set of
 vertices, but a transposed adjacency matrix, *i.e.*
-$G^{\top}(V,M^{\top})$.   
-What does a transpose graph represent?  Illustrate with
-a drawing to support your answer.
+$G^{\top}(V,M^{\top})$.  What does a transpose graph
+represent?  Illustrate with a drawing to support your
+answer.
 
 
 ##### Interpretation
@@ -121,7 +175,7 @@ Recall that,
     given as $a_{ij}$ and it represents whether the edge
     $v_{i}\to v_{j}$ exists.
 2.  A transpose graph $G^{\top}(V,M^{\top})$ would be
-    any different *iff* $M\ne M^{\top}$.  In other
+    any different, *iff* $M\ne M^{\top}$.  In other
     words, if $G$ is a directed graph.
 3.  The components in the transposed matrix are mirrored
     across the diagonal.  Hence, if $B = A^{\top}$, then
@@ -134,16 +188,31 @@ Each edge $v_{i}\to v_{j}$ in $G$, transforms to
 $v_{j}\to v_{i}$ in the transpose graph $G^{\top}$.
 In other words, the edges are reversed.
 
-This would be any different only in case of a directed
-graph.  Since for an undirected graph $M=M^{\top}$
-
+This would be any different, only in case of a directed
+graph.  Since for an undirected graph $M=M^{\top}$.
 Hence, the transpose graph $G^{\top}(V,M^{\top})$
 represents $G(V,M)$ with edges reversed.
 
 
 ##### Illustration
 
-[TODO]
+\begin{align*}
+  M = \begin{bmatrix}
+    0&1&0\\0&0&1\\1&0&0
+  \end{bmatrix}\quad M^{\top} = \begin{bmatrix}
+    0&0&1\\1&0&0\\0&1&0
+  \end{bmatrix}\quad M+M^{\top} = \begin{bmatrix}
+    0&1&1\\1&0&1\\1&1&0
+  \end{bmatrix}
+\end{align*}
+
+![img](images/transpose-graphs.png "Graph and its Transpose")
+
+<p style="text-align:center" markdown>
+
+_Graph and its Transpose_
+
+</p>
 
 
 ### (In/Out)-degree
@@ -280,16 +349,95 @@ The Adjacency matrix of Tree B is bi-symmetric.
 ## Elementary Algorithms
 
 
+### Fundamentals
+
+
+##### Question 1
+
+Cite examples to highlight the difference between when
+and why to prioritise the use of BFS in stead of DFS,
+and vice-versa.
+
+
+##### Question 2
+
+What operations are performed while visiting a vertex
+$v$ during BFS.  How are they different from visiting a
+vertex $v$ during DFS?
+
+*Hint:* One iteration of while loop is a visit during
+BFS, whereas visit in a DFS finishes only after all
+successors have been visited.
+
+*PS:* The answer to this question is also the
+difference between stacked and queued operations in
+general.
+
+
+##### Question 3
+
+Visiting a vertex in BFS assigns three vertex
+properties.  Describe them highlighting their
+importance in problem solving in general.
+
+*Hint:* Discovery time is also the distance from
+source; and following the parent is the shortest path
+to source.
+
+
+##### Question 4
+
+How is DFS useful in real world?  Emphasise the
+significance of discovery and finish times in your
+example?
+
+
+##### Question 5
+
+At any instant, during the DFS, how does the colour of
+a node, help determining the edge classification?
+
+*Hint:* See [this slide](https://docs.google.com/presentation/d/14PY-Sc50QsFxdUqZk7GlYVwwEXzO38rg9z9KKx5ti0k/edit#slide=id.g32a7028b731_0_422)
+
+
+##### Question 6
+
+How can DFS be used to detect cycles in a graph?
+Comment.
+
+
+##### Question 7
+
+How can parenthesis structure of a DFS help determine
+dependencies and relationships?
+
+*Variants:*
+
+1.  A project is subdivided into tasks, and it has been
+    understood that some tasks are dependent upon
+    others.  How would you determine if one task must be
+    completed before another?  Write an algorithm/
+    pseudocode for the same.
+    
+    *Hint:* \`\`One task must be completed before another&rsquo;&rsquo;
+    implies an order.
+
+2.  Given a large family database, with parent-child
+    relationships between individuals, how would you
+    determine if at all related (directly), Jaspreet is
+    ancestor/descendant of Dilraj?
+    
+    *Hint:* Parenthesis structure exhibits direct
+    relationships.
+
+*See Also:*  [this
+question](#dfs-parenthesis-structure)
+
+
 ### BFS
 
 
 ##### Question
-
-<style>
-
-.bvr-full-height-image-wrapper img {max-height: 30em}
-
-</style>
 
 <div class="grid" markdown>
 
@@ -477,6 +625,31 @@ _DFS on the Dependency Graph_
 </div>
 
 </div>
+
+
+### DFS Parenthesis Structure
+
+
+##### Question
+
+In DFS, discovery and finishing times are indicators of
+ancestry.  Comment.
+
+
+##### Solution
+
+1.  When DFS discovers a vertex $u$, it marks the
+    discovery time $u\cdot d$ (the left parenthesis).
+2.  When DFS finishes visit to all the neighbours of
+    $u$, it marks the finishing time $u\cdot f$ (the
+    right parenthesis).
+3.  If $u$ is an ancestor of vertex $v$ in the DFS tree, then,
+    -   $u$ was discovered before $v$, *i.e.* $u\cdot d <
+             v\cdot d$;
+    -   The visit of $u$ was finished after that of $v$,
+        *i.e.* $v\cdot f < u\cdot f$; and
+    -   Thus, discovery/finish interval of $u$ completely
+        encloses that of $v$.
 
 
 ## Problem Solving
