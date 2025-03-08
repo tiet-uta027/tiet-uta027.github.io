@@ -1,4 +1,4 @@
-﻿% Created 2025-03-07 Fri 10:53
+﻿% Created 2025-03-08 Sat 17:10
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8x]{inputenc}
@@ -14,6 +14,8 @@
 \usepackage{hyperref}
 \usepackage{minted}
 \usepackage{parskip}
+\usepackage[labelformat=simple]{subcaption}
+\renewcommand\thesubfigure{(\alph{subfigure})}
 \setcounter{secnumdepth}{3}
 \author{Raghav B. Venkataramaiyer}
 \date{Feb '25}
@@ -31,12 +33,53 @@
 \maketitle
 
 \section{Graph Representations}
-\label{sec:org26d5fc6}
+\label{sec:org2912b19}
+
+\subsection{Fundamentals}
+\label{sec:org25f41f3}
+
+
+\paragraph*{Question 1}
+\label{sec:org48ec970}
+Are graphs useful in real world?  Support your answer
+with examples from your domain.
+
+\paragraph*{Question 2}
+\label{sec:orgc48ae40}
+What is the difference between adjacency list and
+adjacency matrix?  Cite real world examples of usage.
+
+\emph{Hint:} List is compact, whereas Matrix is detailed.
+List makes more sense in sparse graphs, and Matrix in
+dense ones.
+
+\paragraph*{Question 3}
+\label{sec:orga3771f0}
+If \(G(V,M)\) represents a given graph \(G\) with a set of
+vertices \(V\) and adjacency matrix \(M\), what is the
+significance of a transpose graph
+\(G^{\top}(V,M^{\top})\)?  Cite examples from your domain
+for emphasis.
+
+\emph{Hint:} The edges in \(G^{\top}\) are reversed when
+compared against those in \(G\).  (See also: 
+\S~\ref{sec:transpose-graph})
+
+\paragraph*{Question 4}
+\label{sec:orgd03eb36}
+Comment on the nature of graph \(G(V,M+M^{\top})\) where
+\(M\) is a square matrix with empty diagonals.
+
+\emph{Hint:} If \(M\) consists of forward edges, then it
+follows that \(M^{\top}\) corresponding are reverse
+edges; hence \(M+M^{\top}\) consists of bi-directional
+edges.  (See also: 
+\S~\ref{sec:transpose-graph})
 
 \subsection{Vertex Insertion}
-\label{sec:org5d963ae}
+\label{sec:org8908407}
 \paragraph*{Question}
-\label{sec:orgb4a887b}
+\label{sec:org1209108}
 
 \(\overline{\mathit{ABCD}}\) is a closed quadrilateral.
 A new vertex \(E\) is introduced between \(B\) and \(C\).
@@ -46,7 +89,7 @@ pseudocode in order to introduce a new vertex between
 an existing edge.
 
 \paragraph*{Interpretation}
-\label{sec:orgad54504}
+\label{sec:org3e6b2bc}
 Given a closed quadrilateral
 \(\overline{\mathit{ABCD}}\), the adjacency list in
 1-indexed format is given as:
@@ -64,13 +107,13 @@ two entries of the adjacency list, \emph{i.e.} as vertex \texttt{3}
 in \texttt{Adj[2]} and vertex \texttt{2} in \texttt{Adj[3]}.
 
 \paragraph*{Solution}
-\label{sec:org677ea84}
+\label{sec:org0d5868c}
 
 In order to introduce a new vertex \(E\) between edge
 \(\overline{\mathit{BC}}\),
 
 \subparagraph*{Step 1}
-\label{sec:orga8db44c}
+\label{sec:org14d35fb}
 Append vertex \(E\) to the vertex list \(V\) and get its
 index.
 
@@ -79,7 +122,7 @@ V = [A, B, C, D, E]             # Add E as V[5]
 \end{verbatim}
 
 \subparagraph*{Step 2}
-\label{sec:orge6753e5}
+\label{sec:orgf0437b0}
 Remove the edge  \(\overline{\mathit{BC}}\)
 \begin{verbatim}
 V = [A, B, C, D, E]
@@ -91,7 +134,7 @@ Adj = [[2, 4],
 \end{verbatim}
 
 \subparagraph*{Step 3}
-\label{sec:org9682198}
+\label{sec:org50e54e7}
 Add edges \(\overline{\mathit{BEC}}\)
 \begin{verbatim}
 V = [A, B, C, D, E]
@@ -103,7 +146,7 @@ Adj = [[2, 4],
 \end{verbatim}
 
 \subparagraph*{Algorithm}
-\label{sec:org5efff81}
+\label{sec:org205e505}
 
 To introduce a vertex \(W\) between an edge \((u,v)\),
 
@@ -132,19 +175,18 @@ the Adjacency List (as required by the question,) hence
 the use of \(G.Adj\)
 
 \subsection{Transpose Graph}
-\label{sec:orgd582205}
-
+\label{sec:transpose-graph}
 \paragraph*{Question}
-\label{sec:orgcb1fbcf}
+\label{sec:org5637b57}
 Given a graph \(G(V,M)\), \(M\) being the adjacency matrix.
 A transpose graph would be the one with same set of
 vertices, but a transposed adjacency matrix, \emph{i.e.}
-\(G^{\top}(V,M^{\top})\). \\[0pt]
-What does a transpose graph represent?  Illustrate with
-a drawing to support your answer.
+\(G^{\top}(V,M^{\top})\).  What does a transpose graph
+represent?  Illustrate with a drawing to support your
+answer.
 
 \paragraph*{Interpretation}
-\label{sec:orgd879822}
+\label{sec:org44ce834}
 Recall that,
 \begin{enumerate}
 \item In an adjacency matrix \(A\), the component at
@@ -152,7 +194,7 @@ Recall that,
 given as \(a_{ij}\) and it represents whether the edge
 \(v_{i}\to v_{j}\) exists.
 \item A transpose graph \(G^{\top}(V,M^{\top})\) would be
-any different \emph{iff} \(M\ne M^{\top}\).  In other
+any different, \emph{iff} \(M\ne M^{\top}\).  In other
 words, if \(G\) is a directed graph.
 \item The components in the transposed matrix are mirrored
 across the diagonal.  Hence, if \(B = A^{\top}\), then
@@ -160,33 +202,47 @@ across the diagonal.  Hence, if \(B = A^{\top}\), then
 \end{enumerate}
 
 \paragraph*{Solution}
-\label{sec:org42d8faf}
+\label{sec:org3ec361b}
 
 Each edge \(v_{i}\to v_{j}\) in \(G\), transforms to
 \(v_{j}\to v_{i}\) in the transpose graph \(G^{\top}\).
 In other words, the edges are reversed.
 
-This would be any different only in case of a directed
-graph.  Since for an undirected graph \(M=M^{\top}\)
-
+This would be any different, only in case of a directed
+graph.  Since for an undirected graph \(M=M^{\top}\).
 Hence, the transpose graph \(G^{\top}(V,M^{\top})\)
 represents \(G(V,M)\) with edges reversed.
 
 \paragraph*{Illustration}
-\label{sec:org4a71694}
+\label{sec:orgd5bf782}
 
-[TODO]
+\begin{align*}
+  M = \begin{bmatrix}
+    0&1&0\\0&0&1\\1&0&0
+  \end{bmatrix}\quad M^{\top} = \begin{bmatrix}
+    0&0&1\\1&0&0\\0&1&0
+  \end{bmatrix}\quad M+M^{\top} = \begin{bmatrix}
+    0&1&1\\1&0&1\\1&1&0
+  \end{bmatrix}
+\end{align*}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.9\linewidth]{images/transpose-graphs.png}
+\caption{\label{fig:transposeGraph}Graph and its Transpose}
+\end{figure}
+
 
 \subsection{(In/Out)-degree}
-\label{sec:org4430ce5}
+\label{sec:org4c57af4}
 
 \paragraph*{Question}
-\label{sec:orgb3e5583}
+\label{sec:org930561b}
 What is the average in-degree of a graph \(G(V,E)\),
 where \(E\) is the set of edges in \(G\)?
 
 \paragraph*{Solution}
-\label{sec:org62eb70d}
+\label{sec:org8daa2e0}
 In-degree of a vertex is defined as the number of
 edges leading onto itself.
 
@@ -209,7 +265,7 @@ same as the number of edges. Hence,
 \end{align*}
 
 \paragraph*{In further detail}
-\label{sec:org3c0ea53}
+\label{sec:org94bddb6}
 
 In-degree of a vertex is the same as counting the
 non-zeros in one (specific) column of an adjacency
@@ -234,10 +290,10 @@ Hence,
 
 
 \subsection{Representation}
-\label{sec:org632ead9}
+\label{sec:org94cc111}
 
 \paragraph*{Question}
-\label{sec:orgdb29d41}
+\label{sec:org10e36c4}
 Provide an adjacency list as well as the adjacency matrix
 representation for trees A and B in the following figure.
 
@@ -256,10 +312,10 @@ representation for trees A and B in the following figure.
 \end{figure}
 
 \paragraph*{Solution}
-\label{sec:org1858132}
+\label{sec:orgb14f9e1}
 
 \subparagraph*{Tree A}
-\label{sec:org63e8faa}
+\label{sec:org07614f1}
 \begin{verbatim}
 Adj = [[2 3] 
        [1 4 5] 
@@ -279,7 +335,7 @@ M = [[0 1 1 0 0 0 0]
 \end{verbatim}
 
 \subparagraph*{Tree B}
-\label{sec:org9cd4e32}
+\label{sec:org5d0634f}
 \begin{verbatim}
 Adj = [[2]
        [1 3 4]
@@ -298,17 +354,104 @@ M = [[0 1 0 0 0 0 0]
 \end{verbatim}
 
 \subparagraph*{PS}
-\label{sec:orgaddd6ba}
+\label{sec:org69d9c2a}
 The Adjacency matrix of Tree B is bi-symmetric.
 
 \section{Elementary Algorithms}
-\label{sec:orgad771f7}
+\label{sec:org845571d}
+
+\subsection{Fundamentals}
+\label{sec:orgf27a83c}
+
+\paragraph*{Question 1}
+\label{sec:orgb90c209}
+
+Cite examples to highlight the difference between when
+and why to prioritise the use of BFS in stead of DFS,
+and vice-versa.
+
+\paragraph*{Question 2}
+\label{sec:org148745a}
+
+What operations are performed while visiting a vertex
+\(v\) during BFS.  How are they different from visiting a
+vertex \(v\) during DFS?
+
+\emph{Hint:} One iteration of while loop is a visit during
+BFS, whereas visit in a DFS finishes only after all
+successors have been visited.
+
+\emph{PS:} The answer to this question is also the
+difference between stacked and queued operations in
+general.
+
+\paragraph*{Question 3}
+\label{sec:org70450cb}
+
+Visiting a vertex in BFS assigns three vertex
+properties.  Describe them highlighting their
+importance in problem solving in general.
+
+\emph{Hint:} Discovery time is also the distance from
+source; and following the parent is the shortest path
+to source.
+
+\paragraph*{Question 4}
+\label{sec:org7ffd991}
+
+How is DFS useful in real world?  Emphasise the
+significance of discovery and finish times in your
+example?
+
+\paragraph*{Question 5}
+\label{sec:org9cbaaad}
+
+At any instant, during the DFS, how does the colour of
+a node, help determining the edge classification?
+
+\emph{Hint:} See \href{https://docs.google.com/presentation/d/14PY-Sc50QsFxdUqZk7GlYVwwEXzO38rg9z9KKx5ti0k/edit\#slide=id.g32a7028b731\_0\_422}{this slide}
+
+\paragraph*{Question 6}
+\label{sec:orgdf69cab}
+
+How can DFS be used to detect cycles in a graph?
+Comment.
+
+\paragraph*{Question 7}
+\label{sec:org48f1b74}
+
+How can parenthesis structure of a DFS help determine
+dependencies and relationships?
+
+\emph{Variants:}
+
+\begin{enumerate}
+\item A project is subdivided into tasks, and it has been
+understood that some tasks are dependent upon
+others.  How would you determine if one task must be
+completed before another?  Write an algorithm/
+pseudocode for the same.
+
+\emph{Hint:} ``One task must be completed before another''
+implies an order.
+
+\item Given a large family database, with parent-child
+relationships between individuals, how would you
+determine if at all related (directly), Jaspreet is
+ancestor/descendant of Dilraj?
+
+\emph{Hint:} Parenthesis structure exhibits direct
+relationships.
+\end{enumerate}
+
+\emph{See Also:} 
+\S~\ref{sec:dfs-parenthesis-structure}
 
 \subsection{BFS}
-\label{sec:org3bcff1c}
+\label{sec:orgc32bee0}
 
 \paragraph*{Question}
-\label{sec:orgbe78de8}
+\label{sec:orgf01a2f3}
 
 \begin{figure}[htbp]
 \centering
@@ -333,7 +476,7 @@ vertices.
 \caption{\label{fig:bfsOnGraphA}BFS on Graph A}
 \end{figure}
 \paragraph*{Key Insight}
-\label{sec:orgda76ea4}
+\label{sec:org4e87020}
 All the three questions here speak about a shortest
 path originating from vertex \(u\).  This is a uniformly
 weighted undirected graph, \emph{i.e.} all edges are equally
@@ -341,10 +484,10 @@ weighted.  The solution for shortest path will follow a
 BFS in such a case.
 
 \paragraph*{Solution}
-\label{sec:orgb02b5ab}
+\label{sec:org6762907}
 \begin{enumerate}
-\item Running a BFS on the graph gives us the figure, “BFS
-on Graph A” (Fig~\ref{fig:bfsOnGraphA})
+\item Running a BFS on the graph gives us the figure, ``BFS
+on Graph A'' (Fig~\ref{fig:bfsOnGraphA})
 upon termination.
 \item The numbers marked are discovery times of the nodes \\[0pt]
 \(v\cdot d \ \forall v\in V\).
@@ -364,13 +507,13 @@ Recall, that only one of these is, and not all of
 them are, the required shortest path (\emph{i.e.}
 discovered in one run).
 
-\item For part (3), a BFS tree is required.  It’s been
+\item For part (3), a BFS tree is required.  It's been
 left that upon the reader to exercise and present as
 necessary.  An easy way out would be to use the
 adjoining graph
 (Fig~\ref{fig:bfsOnGraphA}) and
-additionally mark each connection from “parent” to
-“child” as descended during the BFS.  Note that the
+additionally mark each connection from ``parent'' to
+``child'' as descended during the BFS.  Note that the
 arrow would be a manifestation of line \texttt{v.PI = u} in
 the algorithm \href{https://docs.google.com/presentation/d/14PY-Sc50QsFxdUqZk7GlYVwwEXzO38rg9z9KKx5ti0k/edit\#slide=id.g32a7028b731\_0\_60}{(link to the slide)}.  Recall that
 there may be only one parent to a child, not many,
@@ -379,10 +522,10 @@ less than that of the child.
 \end{enumerate}
 
 \subsection{DFS}
-\label{sec:org36858ac}
+\label{sec:org8d2e1a9}
 
 \paragraph*{Question}
-\label{sec:orgaca0187}
+\label{sec:org0cbff93}
 Given that there are 10 courses in a programme, and
 corresponding pre-requisites are listed as under,
 \textbf{determine algorithmically} If the programme may be
@@ -402,7 +545,7 @@ completed successfully by a candidate?
 \end{enumerate}
 
 \paragraph*{Key Insight}
-\label{sec:orgd5236bb}
+\label{sec:org5a39456}
 We define a relationship \(u\to v\) if course \(u\) depends
 upon \(v\) (\emph{i.e.} if course \(v\) is a pre-requisite of
 course \(u\)).  Then we get a dependency graph (\emph{i.e.} a
@@ -426,13 +569,13 @@ And \textbf{a graph is acyclic if and only if there are no
 back edges.}
 
 \paragraph*{Solution}
-\label{sec:org4d08a6b}
+\label{sec:orgae5a43e}
 \begin{enumerate}
 \item Run a DFS on Dependency Graph;
 \item Maintain a list \(T\) for Topological Order;
 \item Upon finishing the visit to a node, insert the node
 to the front of the list;
-\item Exit “abnormally,” if encountered a “back edge.”
+\item Exit ``abnormally,'' if encountered a ``back edge.''
 \end{enumerate}
 
 If exited abnormally, the graph has a cycle; and the
@@ -442,7 +585,7 @@ Otherwise, the graph is acyclic, and \(T\) contains an
 order of courses that successfully completes the
 programme.
 
-In figure “DFS on Dependency Graph,”
+In figure ``DFS on Dependency Graph,''
 (Fig~\ref{fig:dfsOnDependencyGraph}) nodes
 have been mentioned with discovery and finish times;
 and edges have been labelled as B,C,F,T for back edges,
@@ -460,14 +603,41 @@ The algorithm terminated upon visiting the edge \(9\to
 
 
 
+\subsection{DFS Parenthesis Structure}
+\label{sec:dfs-parenthesis-structure}
+\paragraph*{Question}
+\label{sec:org96310ef}
+
+In DFS, discovery and finishing times are indicators of
+ancestry.  Comment.
+
+\paragraph*{Solution}
+\label{sec:org600d85f}
+
+\begin{enumerate}
+\item When DFS discovers a vertex \(u\), it marks the
+discovery time \(u\cdot d\) (the left parenthesis).
+\item When DFS finishes visit to all the neighbours of
+\(u\), it marks the finishing time \(u\cdot f\) (the
+right parenthesis).
+\item If \(u\) is an ancestor of vertex \(v\) in the DFS tree, then,
+\begin{itemize}
+\item \(u\) was discovered before \(v\), \emph{i.e.} \(u\cdot d <
+     v\cdot d\);
+\item The visit of \(u\) was finished after that of \(v\),
+\emph{i.e.} \(v\cdot f < u\cdot f\); and
+\item Thus, discovery/finish interval of \(u\) completely
+encloses that of \(v\).
+\end{itemize}
+\end{enumerate}
 \section{Problem Solving}
-\label{sec:orgd7116bd}
+\label{sec:org07c09cd}
 
 \subsection{Three jug problem}
-\label{sec:org168740a}
+\label{sec:org341c016}
 
 \paragraph*{Question}
-\label{sec:org253665e}
+\label{sec:org1d3aefa}
 
 There are three unmarked jugs \(A,B,C\) with a capacity
 of 8, 5 and 3 units respectively.  Possible moves may
@@ -483,7 +653,7 @@ a split of \(A4,B4,C0\).
 \end{figure}
 
 \paragraph*{Key Insight}
-\label{sec:orgf02d0b9}
+\label{sec:org86f692f}
 \begin{enumerate}
 \item The jugs are unmarked.  Hence, there is no way to
 determine any intermediate quantity while pouring.
@@ -501,7 +671,7 @@ resultant state graph is cyclic in nature.
 \end{enumerate}
 
 \paragraph*{Solution}
-\label{sec:orgeb7dfcc}
+\label{sec:org0261f3c}
 
 \begin{description}
 \item[{State Space}] is a 3-vector \(\mathbf{v} \equiv
@@ -526,9 +696,9 @@ is based out of BFS. See
 Fig.~\ref{fig:bfsOnStateGraph}.
 
 \subsection{Three jug problem 2}
-\label{sec:orgdbf07a5}
+\label{sec:org3b2338e}
 \paragraph*{Question}
-\label{sec:org0327c2b}
+\label{sec:org4b419c4}
 There are three unmarked jugs \(A,B,C\) with a capacity
 of 8, 5 and 3 units respectively.  Possible moves may
 either empty a can into another or fill the other,
@@ -536,7 +706,7 @@ whichever occurs earlier.  Starting with \(A8,B0,C0\),
 can we can reach to a split of \(A4,B3,C1\).
 
 \paragraph*{Solution}
-\label{sec:org5a0e26a}
+\label{sec:org566cf5a}
 
 \emph{(This is a logical deduction, not an algorithmic
 solution.)}
