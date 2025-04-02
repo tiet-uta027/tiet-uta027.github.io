@@ -1,4 +1,4 @@
-﻿% Created 2025-04-02 Wed 07:24
+﻿% Created 2025-04-02 Wed 07:43
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8x]{inputenc}
@@ -16,7 +16,7 @@
 \usepackage{parskip}
 \usepackage{svg}
 \svgpath{{../../assets/icons/}}
-\newcommand{\bvricon}[1]{\includesvg[width=10pt]{#1}}
+\newcommand{\bvricon}[1]{\includesvg[scale=0.7]{#1}}
 \author{Raghav B. Venkataramaiyer}
 \date{Mar '25}
 \title{Assignment 05 : Neural Regression (Iris Dataset)\\\medskip
@@ -36,17 +36,17 @@ Dataset Using PyTorch} \\[0pt]
 (07-Apr to 18-Apr)
 
 \section{Objective}
-\label{sec:org257352b}
+\label{sec:org1f3a00b}
 The goal of this assignment is to implement a
 multi-layer neural network (MLP) using PyTorch to
 classify the Iris dataset.
 \section{Question}
-\label{sec:org494eb57}
+\label{sec:org2f47a12}
 Design and implement a multi-layer neural network using
 PyTorch to classify the Iris dataset. Your
 implementation should follow these steps:
 \subsection{Dataset Preparation}
-\label{sec:orgc8d4264}
+\label{sec:orgcb1faac}
 \begin{itemize}
 \item Load the Iris dataset using
 sklearn.datasets.load\textsubscript{iris}.
@@ -56,7 +56,7 @@ sklearn.datasets.load\textsubscript{iris}.
 \item Normalize the feature values.
 \end{itemize}
 \subsection{Build the Neural Network Model}
-\label{sec:org411ac18}
+\label{sec:orge2a71b5}
 \begin{itemize}
 \item Implement an MLP with PyTorch using
 \texttt{torch.nn.Module}.
@@ -70,7 +70,7 @@ and softmax activation.
 \end{itemize}
 \end{itemize}
 \subsection{Train the Model}
-\label{sec:orgd824128}
+\label{sec:org164fcbb}
 \begin{itemize}
 \item Define the loss function (CrossEntropyLoss).
 \item Choose an optimizer (e.g., Adam or SGD).
@@ -79,29 +79,32 @@ and softmax activation.
 \item Track the loss during training.
 \end{itemize}
 \subsection{Evaluate the Model}
-\label{sec:org4121580}
+\label{sec:org8a2ff8a}
 Compute accuracy on the test set.  Generate a confusion
 matrix to visualize performance.
+
 \section{Theory}
-\label{sec:org8b06197}
+\label{sec:orgb13527f}
 \begin{itemize}
-\item \href{https://docs.google.com/presentation/d/1Y0N7jhqgCFR6K1e48iIxqRxBkzKXEe27QUDyQ9\_DGLc/edit?usp=sharing}{Neuron and it application in Regression/
-Classification For Latex}
+\item \href{https://docs.google.com/presentation/d/1Y0N7jhqgCFR6K1e48iIxqRxBkzKXEe27QUDyQ9\_DGLc/edit?usp=sharing}{\bvricon{simple/googleslides}
+  [Click here] Neuron
+and it application in Regression/ Classification.}
 \end{itemize}
+
 \section{Boilerplate Code}
-\label{sec:orgfcc4ab3}
+\label{sec:orgdce8c55}
 \begin{itemize}
-\item How to create a neural network module:
-\href{https://gist.github.com/bvraghav/3e28f1f44eaf0dc74842b3e2395e86bd}{\bvricon{simple/github} +
+\item \href{https://gist.github.com/bvraghav/3e28f1f44eaf0dc74842b3e2395e86bd}{\bvricon{simple/github} +
 \bvricon{simple/googlecolab}
-Python Notebook [Click here].}
-\item How to create a pytorch dataset from tensors:
-\href{https://gist.github.com/bvraghav/fdfeebb9c73f5d27aa98e74409adb38b}{\bvricon{simple/github} +
+  [Click here] How to create a neural network
+module.}
+\item \href{https://gist.github.com/bvraghav/fdfeebb9c73f5d27aa98e74409adb38b}{\bvricon{simple/github} +
 \bvricon{simple/googlecolab}
-Python Notebook [Click here].}
+  [Click here] How to create a pytorch dataset from
+tensors.}
 \end{itemize}
 \section{Evaluation Criterion}
-\label{sec:orgf57302e}
+\label{sec:orga97672c}
 
 This assignment shall be implemented by students and
 evaluated by the instructor in lab.
