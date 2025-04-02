@@ -4,7 +4,7 @@
 ### Icons
 ### ---------------------------------------------------
 ICONS_FOLDER	:= assets/icons
-ICONS		+= simple/github simple/googlecolab
+ICONS		+= simple/github simple/googlecolab simple/googleslides
 
 ### ---------------------------------------------------
 ### Make Documentation

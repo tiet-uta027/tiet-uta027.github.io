@@ -58,20 +58,18 @@ matrix to visualize performance.
 
 ## Theory
 
--   [Neuron and it application in Regression/
-    Classification For HTML](https://docs.google.com/presentation/d/1Y0N7jhqgCFR6K1e48iIxqRxBkzKXEe27QUDyQ9_DGLc/edit?usp=sharing)
+-   [:simple-googleslides: Neuron
+    and it application in Regression/ Classification.](https://docs.google.com/presentation/d/1Y0N7jhqgCFR6K1e48iIxqRxBkzKXEe27QUDyQ9_DGLc/edit?usp=sharing)
 
 
 ## Boilerplate Code
 
--   How to create a neural network module:
-    [:simple-github: +
-    :simple-googlecolab:
-    Python Notebook.](https://gist.github.com/bvraghav/3e28f1f44eaf0dc74842b3e2395e86bd)
--   How to create a pytorch dataset from tensors:
-    [:simple-github: +
-    :simple-googlecolab:
-    Python Notebook.](https://gist.github.com/bvraghav/fdfeebb9c73f5d27aa98e74409adb38b)
+-   [:simple-github: +
+    :simple-googlecolab: How to create a neural network
+    module.](https://gist.github.com/bvraghav/3e28f1f44eaf0dc74842b3e2395e86bd)
+-   [:simple-github: +
+    :simple-googlecolab: How to create a pytorch dataset from
+    tensors.](https://gist.github.com/bvraghav/fdfeebb9c73f5d27aa98e74409adb38b)
 
 
 ## Evaluation Criterion

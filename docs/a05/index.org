@@ -6,7 +6,7 @@
 #+latex_header_extra: \usepackage{parskip}
 #+latex_header_extra: \usepackage{svg}
 #+latex_header_extra: \svgpath{{../../assets/icons/}}
-#+latex_header_extra: \newcommand{\bvricon}[1]{\includesvg[width=10pt]{#1}}
+#+latex_header_extra: \newcommand{\bvricon}[1]{\includesvg[scale=0.7]{#1}}
 
 #+md: [:material-file-pdf-box: Download this page as PDF](./index.pdf)
 
@@ -79,18 +79,21 @@ implementation should follow these steps:
 ** Evaluate the Model
 Compute accuracy on the test set.  Generate a confusion
 matrix to visualize performance.
+
 * Theory
-+ [[https://docs.google.com/presentation/d/1Y0N7jhqgCFR6K1e48iIxqRxBkzKXEe27QUDyQ9_DGLc/edit?usp=sharing][Neuron and it application in Regression/
-  Classification @@latex:For Latex@@@@html:For HTML@@]]
++ [[https://docs.google.com/presentation/d/1Y0N7jhqgCFR6K1e48iIxqRxBkzKXEe27QUDyQ9_DGLc/edit?usp=sharing][@@latex:\bvricon{simple/googleslides}
+  [Click here]@@@@html::simple-googleslides:@@ Neuron
+  and it application in Regression/ Classification.]]
+
 * Boilerplate Code
-+ How to create a neural network module:
-  [[https://gist.github.com/bvraghav/3e28f1f44eaf0dc74842b3e2395e86bd][@@html::simple-github:@@@@latex:\bvricon{simple/github}@@ +
-  @@html::simple-googlecolab:@@@@latex:\bvricon{simple/googlecolab}@@
-  Python Notebook@@latex: [Click here]@@.]]
-+ How to create a pytorch dataset from tensors:
-  [[https://gist.github.com/bvraghav/fdfeebb9c73f5d27aa98e74409adb38b][@@html::simple-github:@@@@latex:\bvricon{simple/github}@@ +
-  @@html::simple-googlecolab:@@@@latex:\bvricon{simple/googlecolab}@@
-  Python Notebook@@latex: [Click here]@@.]]
++ [[https://gist.github.com/bvraghav/3e28f1f44eaf0dc74842b3e2395e86bd][@@html::simple-github:@@@@latex:\bvricon{simple/github}@@ +
+  @@html::simple-googlecolab:@@@@latex:\bvricon{simple/googlecolab}
+  [Click here]@@ How to create a neural network
+  module.]]
++ [[https://gist.github.com/bvraghav/fdfeebb9c73f5d27aa98e74409adb38b][@@html::simple-github:@@@@latex:\bvricon{simple/github}@@ +
+  @@html::simple-googlecolab:@@@@latex:\bvricon{simple/googlecolab}
+  [Click here]@@ How to create a pytorch dataset from
+  tensors.]]
 * Evaluation Criterion
 
 This assignment shall be implemented by students and
