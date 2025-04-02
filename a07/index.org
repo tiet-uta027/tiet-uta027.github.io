@@ -1,0 +1,42 @@
+﻿#+options: toc:nil
+#+TITLE: Assignment 07 : YOLO
+#+SUBTITLE: UTA027 : Artificial Intelligence
+#+AUTHOR: Raghav B. Venkataramaiyer
+#+DATE: Mar '25
+#+latex_header_extra: \usepackage{parskip}
+
+#+md: [:material-file-pdf-box: Download this page as PDF](./index.pdf)
+
+* COMMENT Auto Export to Md/Latex on save
+#+begin_src emacs-lisp
+  (cl-loop for hook in '(after-save-hook)
+           do (add-hook hook
+                        #'(lambda ()
+                            (org-latex-export-to-pdf t)
+                            (org-md-export-to-markdown)
+                            (with-current-buffer (find-file-noselect (expand-file-name "index.md" default-directory))
+                              (save-excursion
+                                (goto-char (point-min))
+                                (let* ((i 1)
+                                       (boreg (pos-bol i))
+                                       (eoreg (pos-eol i))
+                                       _s)
+                                  (while (not (eq boreg (point-max)))
+
+                                    (setq _s (buffer-substring-no-properties boreg (+ 1 boreg)))
+                                    (when (string= _s "#")
+                                      (save-excursion (goto-char boreg)
+                                                      (insert "#")))
+
+                                    (setq i (+ i 1)
+                                          boreg (pos-bol i)
+                                          eoreg (pos-eol i)))))
+                              (save-buffer)
+                              (kill-buffer))
+                            )
+                        0 t))
+#+end_src
+
+#+RESULTS:
+
+* Coming Soon

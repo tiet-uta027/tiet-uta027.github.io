@@ -1,0 +1,98 @@
+﻿% Created 2025-03-24 Mon 08:46
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage{parskip}
+\author{Raghav B. Venkataramaiyer}
+\date{Mar '25}
+\title{Assignment 04 : Artificial Neurons (Neural Nets)\\\medskip
+\large UTA027 : Artificial Neurons}
+\hypersetup{
+ pdfauthor={Raghav B. Venkataramaiyer},
+ pdftitle={Assignment 04 : Artificial Neurons (Neural Nets)},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 29.4 (Org mode 9.6.24)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+
+\section{Synthetic Dataset}
+\label{sec:orgb84b1c5}
+
+Define a synthetic dataset \(\mathcal{D}\) (in 2D) so
+that,
+
+\begin{align*}
+  y = ce^{ax} + \epsilon
+\end{align*}
+
+Where, \\[0pt]
+\(\epsilon\) is a random noise. \\[0pt]
+\(a,c\) are arbitrary constants, and \\[0pt]
+\(0 \leqslant x,y \leqslant 1\)
+
+\section{Neuron}
+\label{sec:org0878cf6}
+
+Define a neuron parameterised by weight \(w\), bias \(b\)
+and activation function \(\mathcal{A}\), so that
+
+\begin{align*}
+  f(x;w,b,\mathcal{A}) = \mathcal{A}(wx+b)
+\end{align*}
+
+\section{Gradient Descent}
+\label{sec:orgeb2fce5}
+
+Define a training loop for learning the parameters of a
+neural network (a neuron here) for regression.  Let the
+parameters be \(w,b\) and given are the dataset
+\(\mathcal{D}\) and activation function \(\mathcal{A}\).
+
+Pseudocode for Training Loop:
+
+\begin{verbatim}
+Given :
+  + X,Y :: Dataset
+  + A :: Activation Function
+  + dA :: Derivative of Activation Function
+  + l :: learning rate
+Initialise :
+  + w,b :: NN Params with random values.
+Loop until convergence:
+  Y_hat = [A(wx+b) Forall x in X]
+  Err = [(y_hat-y) Forall (y_hat,y) in {Y_hat,Y}]
+  L = average(Err^2)
+  dLdw = # TODO: compute dLdw here
+  dLdb = # TODO: compute dLdb here
+  w = w - l*dLdw
+  b = b - l*dLdb
+Return :
+  w,b,L
+\end{verbatim}
+
+\section{Radial Basis Activation}
+\label{sec:org7c506a7}
+
+Use the following activation function to learn the NN
+Params:
+
+\begin{align*}
+  \mathcal{A}(x) &= e^{-\frac{x^2}{2}} \\
+  \frac{\partial\mathcal{A}}{\partial x}(x)
+  &= -x\mathcal{A}(x)
+\end{align*}
+\end{document}
