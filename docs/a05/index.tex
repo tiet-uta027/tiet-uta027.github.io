@@ -1,4 +1,4 @@
-﻿% Created 2025-03-30 Sun 12:46
+﻿% Created 2025-04-02 Wed 05:31
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8x]{inputenc}
@@ -28,7 +28,61 @@
 \begin{document}
 
 \maketitle
+\textbf{Assignment 05: Multi-Layer Neural Network on the Iris
+Dataset Using PyTorch} \\[0pt]
+(07-Apr to 18-Apr)
 
-\section{Coming Soon}
-\label{sec:org98bce68}
+\section{Objective}
+\label{sec:org8c9d9e0}
+The goal of this assignment is to implement a
+multi-layer neural network (MLP) using PyTorch to
+classify the Iris dataset.
+\section{Question}
+\label{sec:orgd3013e3}
+Design and implement a multi-layer neural network using
+PyTorch to classify the Iris dataset. Your
+implementation should follow these steps:
+\subsection{Dataset Preparation}
+\label{sec:org82e1e6e}
+\begin{itemize}
+\item Load the Iris dataset using
+sklearn.datasets.load\textsubscript{iris}.
+\item Convert the dataset into PyTorch tensors.
+\item Split the dataset into training and test sets (e.g.,
+80\% training, 20\% testing).
+\item Normalize the feature values.
+\end{itemize}
+\subsection{Build the Neural Network Model}
+\label{sec:org9eab033}
+\begin{itemize}
+\item Implement an MLP with PyTorch using
+\texttt{torch.nn.Module}.
+\item The model should have:
+\begin{itemize}
+\item An input layer with 4 neurons (one for each
+feature).
+\item At least one hidden layer with ReLU activation.
+\item An output layer with 3 neurons (one for each class)
+and softmax activation.
+\end{itemize}
+\end{itemize}
+\subsection{Train the Model}
+\label{sec:orgc641951}
+\begin{itemize}
+\item Define the loss function (CrossEntropyLoss).
+\item Choose an optimizer (e.g., Adam or SGD).
+\item Train the model for a fixed number of epochs (e.g.,
+100 epochs).
+\item Track the loss during training.
+\end{itemize}
+\subsection{Evaluate the Model}
+\label{sec:org58d5b0e}
+Compute accuracy on the test set.  Generate a confusion
+matrix to visualize performance.
+
+\section{Evaluation Criterion}
+\label{sec:orgbf5dea9}
+
+This assignment shall be implemented by students and
+evaluated by the instructor in lab.
 \end{document}
