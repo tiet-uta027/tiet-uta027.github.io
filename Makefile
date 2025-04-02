@@ -1,6 +1,12 @@
 ﻿SHELL           := /usr/bin/zsh
 
 ### ---------------------------------------------------
+### Icons
+### ---------------------------------------------------
+ICONS_FOLDER	:= assets/icons
+ICONS		+= simple/github simple/googlecolab
+
+### ---------------------------------------------------
 ### Make Documentation
 ### ---------------------------------------------------
 ENV 		:= emacs
@@ -28,15 +34,23 @@ ADDR		:= $(and $(or $(HOST),$(PORT)),		\
 )
 ADDR_SWITCH	:= $(and $(ADDR),-a $(ADDR))
 
-docserve :
+docserve : icons
 	source $(CONDA_ROOT)/bin/activate $(ENV) ;	\
 	  PYTHONPATH=$${PYTHONPATH}:$${PWD}:$${PWD}/src	\
 	  mkdocs serve $(ADDR_SWITCH)
 
-docbuild :
+docbuild : icons
 	source $(CONDA_ROOT)/bin/activate $(ENV) ;	\
 	  PYTHONPATH=$${PYTHONPATH}:$${PWD}:$${PWD}/src	\
 	  mkdocs build
 
 docs : docserve
+
+icons : $(ICONS_FOLDER) ${ICONS:%=$(ICONS_FOLDER)/%.svg}
+$(ICONS_FOLDER)/simple/%.svg: $(ICONS_FOLDER)/simple
+	wget "https://simpleicons.org/icons/$(*).svg" 	\
+	  -O $(@)
+
+$(ICONS_FOLDER)/simple $(ICONS_FOLDER) :
+	mkdir -p $(@)
 ### ---------------------------------------------------
