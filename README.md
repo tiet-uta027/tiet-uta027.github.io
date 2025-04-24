@@ -80,39 +80,45 @@ See also: [A01][A01]{: target="_blank" }
 See Also: [ML Notes](./ml-notes/) or, [Download
 :material-file-pdf-box:](./ml-notes/index.pdf)
 
-### Neural Methods **[MST]  [EST]**{: .htag } ###
+### Neural Methods **~~[MST]~~  [EST]**{: .htag } ###
 1. [:simple-googleslides: Neuron and it application in
    Regression/ Classification][L13]{: target="_blank" }
-3. Deep Neural Networks
-4. Recurrent Neural Networks
-5. State Machines and Reinforcement Learning
+3. [:simple-googleslides: Deep Neural Networks][L14]{: target="_blank" }
+4. Deep Learning: Residuals, Gating and RNN’s
+5. ~~State Machines and Reinforcement Learning~~
 
-### Computer Vision (Classical) **[EST]**{: .htag } ###
-1. Overview and Problems; Visual Cognition
-2. Canny’s Edges & Harris’ Corners
-3. Template Matching
-3. Hough Transform
-4. Pictorial Structures
-5. Visual Bag of Words
-6. Haar Cascades
-7. HOG+SVM
+### Computer Vision **[EST]**{: .htag } ###
+1. [:simple-googleslides: Computer Vision Overview][L16]
+2. [:simple-googleslides: Computer Vision Problems][L17]
+3. Deep Learning in Computer Vision: Lecture Set 1,
+   Lecture Set 2.
 
-### Computer Vision (Deep Learning) **[EST]**{: .htag } ###
-1. Convolution and its Arithmetic
-9. Visual Object Classification (Sequential and
-   Residual Networks)
-10. Object Detection (Region Proposals and YOLO)
-11. Segmentation (U-Net)
-12. SLAM (Overview)
-12. Adversarial Learning
-13. Pix2Pix & Patch GAN
-1. StyleGAN (Progressive GAN, BiGAN)
+<!-- ### ~~Computer Vision (Classical)~~ ### -->
+<!-- 1. ~~Overview and Problems; Visual Cognition~~ -->
+<!-- 2. ~~Canny’s Edges & Harris’ Corners~~ -->
+<!-- 3. ~~Template Matching~~ -->
+<!-- 3. ~~Hough Transform~~ -->
+<!-- 4. ~~Pictorial Structures~~ -->
+<!-- 5. ~~Visual Bag of Words~~ -->
+<!-- 6. ~~Haar Cascades~~ -->
+<!-- 7. ~~HOG+SVM~~ -->
+
+<!-- ### ~~Computer Vision (Deep Learning)~~ ### -->
+<!-- 1. ~~Convolution and its Arithmetic~~ -->
+<!-- 9. ~~Visual Object Classification (Sequential and -->
+<!--    Residual Networks)~~ -->
+<!-- 10. ~~Object Detection (Region Proposals and YOLO)~~ -->
+<!-- 11. ~~Segmentation (U-Net)~~ -->
+<!-- 12. ~~SLAM (Overview)~~ -->
+<!-- 12. ~~Adversarial Learning~~ -->
+<!-- 13. ~~Pix2Pix & Patch GAN~~ -->
+<!-- 1. ~~StyleGAN (Progressive GAN, BiGAN)~~ -->
 
 ### Introduction to Advanced Topics  **[EST]**{: .htag } ###
 
-2. Attention
+1. Attention
 3. Diffusion
-4. Inverse Rendering
+4. ~~Inverse Rendering~~
 
 ## Schedule of Assignments[^2][^5][^6] ##
 
@@ -240,3 +246,6 @@ See Also: [ML Notes](./ml-notes/) or, [Download
 [L09]: https://docs.google.com/presentation/d/1ppeEjAraHZVvuQsS_J165oMpPBl_KYF2lZxosBqbcZY/edit?usp=sharing "ML: SVM"
 [MIT-OCW-SVM]: https://www.youtube.com/watch?v=_PwhiWxHK8o "Late Prof. Winston’s Lecture on SVM (MIT-OCW)"
 [L13]: https://docs.google.com/presentation/d/1Y0N7jhqgCFR6K1e48iIxqRxBkzKXEe27QUDyQ9_DGLc/edit?usp=sharing
+[L14]: https://docs.google.com/presentation/d/1KFQ3ztGe3x8qbO4NIzH70HzWeNYN86uedUQv-zfC0mw/edit?usp=sharing
+[L16]: https://docs.google.com/presentation/d/1EhaubS3KHKeyqSGbBWLxU1zQl9WbxQKGEoJdN4KVU8Y/edit?usp=sharing
+[L17]: https://docs.google.com/presentation/d/1AmYnJb1KzkuWEgvR0NJGY5V75znAuNqcmgsgKla7KA0/edit?usp=sharing
