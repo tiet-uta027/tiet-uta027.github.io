@@ -90,7 +90,8 @@ See Also: [ML Notes](./ml-notes/) or, [Download
 ### Computer Vision **[EST]**{: .htag } ###
 1. [:simple-googleslides: Computer Vision Overview][L16]
 2. [:simple-googleslides: Computer Vision Problems][L17]
-3. Deep Learning in Computer Vision: Lecture Set 1,
+3. Deep Learning in Computer Vision:
+   [:simple-googleslides: Lecture Set 1][L18]{: target="_blank" }, 
    Lecture Set 2.
 
 <!-- ### ~~Computer Vision (Classical)~~ ### -->
@@ -249,3 +250,4 @@ See Also: [ML Notes](./ml-notes/) or, [Download
 [L14]: https://docs.google.com/presentation/d/1KFQ3ztGe3x8qbO4NIzH70HzWeNYN86uedUQv-zfC0mw/edit?usp=sharing
 [L16]: https://docs.google.com/presentation/d/1EhaubS3KHKeyqSGbBWLxU1zQl9WbxQKGEoJdN4KVU8Y/edit?usp=sharing
 [L17]: https://docs.google.com/presentation/d/1AmYnJb1KzkuWEgvR0NJGY5V75znAuNqcmgsgKla7KA0/edit?usp=sharing
+[L18]: https://docs.google.com/presentation/d/1hSASwVI4EJd6ImJA-LFU6S4eSYcA-k0GDYmVdDGq77U/edit?usp=sharing
