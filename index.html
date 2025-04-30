@@ -1,0 +1,1022 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        <link rel="next" href="a04/">
+      
+      
+      <link rel="icon" href="assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+  <title>UTA027: Artificial Intelligence &bull; Raghav
+    B. Venkataramaiyer @TIET</title>
+
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%2020c-4.41%200-8-3.59-8-8s3.59-8%208-8%208%203.59%208%208-3.59%208-8%208m0-18A10%2010%200%200%200%202%2012a10%2010%200%200%200%2010%2010%2010%2010%200%200%200%2010-10A10%2010%200%200%200%2012%202m1%205h-2v4H7v2h4v4h2v-4h4v-2h-4z%22/%3E%3C/svg%3E');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="assets/stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#course-website" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="UTA027: Artificial Intelligence" class="md-header__button md-logo" aria-label="UTA027: Artificial Intelligence" data-md-component="logo">
+      
+  <img src="assets/tiet-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            UTA027: Artificial Intelligence
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/tiet-uta027/tiet-uta027.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    tiet-uta027/tiet-uta027.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="UTA027: Artificial Intelligence" class="md-nav__button md-logo" aria-label="UTA027: Artificial Intelligence" data-md-component="logo">
+      
+  <img src="assets/tiet-logo.svg" alt="logo">
+
+    </a>
+    UTA027: Artificial Intelligence
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/tiet-uta027/tiet-uta027.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    tiet-uta027/tiet-uta027.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1academic-calendar" class="md-nav__link">
+    <span class="md-ellipsis">
+      (1)Academic Calendar
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#course-syllabus" class="md-nav__link">
+    <span class="md-ellipsis">
+      Course Syllabus
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evaluation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schedule-of-lectures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schedule of Lectures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schedule of Lectures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#orientation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Orientation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#predicate-calculus-mst-est" class="md-nav__link">
+    <span class="md-ellipsis">
+      Predicate Calculus [MST] [EST]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-graphical-standpoint-mst-est" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Graphical Standpoint [MST] [EST]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classical-ml-mst-est" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classical ML [MST] [EST]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#neural-methods-mst-est" class="md-nav__link">
+    <span class="md-ellipsis">
+      Neural Methods [MST] [EST]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#computer-vision-est" class="md-nav__link">
+    <span class="md-ellipsis">
+      Computer Vision [EST]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#introduction-to-advanced-topics-est" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction to Advanced Topics [EST]
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schedule-of-assignments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schedule of Assignments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="a04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    A04
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="a05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    A05
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="a06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    A06
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="a07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    A07
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="graph-theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Graph theory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ml-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ml notes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="predicates/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Predicates
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<p><img alt="Tiet Logo" class="tiet-logo" src="assets/tiet-logo.svg" /></p>
+<p><strong>UTA027: Artificial Intelligence</strong><br />
+<strong>TIET Patiala</strong></p>
+<h1 id="course-website">Course Website</h1>
+<p><strong>Instructors</strong>:</p>
+<ol>
+<li><code>(  RGB)</code> Raghav B. Venkataramaiyer <code>&lt;bv.raghav&gt;</code></li>
+<li><code>(  STT)</code> Stuti Chug <code>&lt;stuti.chug&gt;</code></li>
+<li><code>(  ABJ)</code> Anu Bajaj <code>&lt;anu.bajaj&gt;</code></li>
+<li><code>(PTKRA)</code> Parteek Saini <code>&lt;psaini_phd24&gt;</code></li>
+</ol>
+<div class="annotate">
+<!-- ## Academic Calendar [:material-file-pdf-box:](assets/academic-calendar-ug2plus.pdf) ~^:material-information-outline:^~{ title="Requires thapar.edu login" } ## -->
+<h2 id="1academic-calendar"><sub><sup>(1)</sup></sub>Academic Calendar <a href="assets/academic-calendar-ug2plus.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span></a></h2>
+</div>
+<ol>
+<li>Requires <code>thapar.edu</code> login</li>
+</ol>
+<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Asia%2FKolkata&mode=AGENDA&src=Y18wNDFiZjNjZGU2MTc2OGNjYTQzMTFlNDZhNDdiNGExNTZiM2JhMjIzNTZkYTRhMjU3NGNhMDhlNDI5OGNjZTI5QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y181MWMwYmJjZmRiMWVkYTI4ZDIzYzIwNDUxYjA4ZDM1ZjVhMDA0M2UzYzgxOTFlMzZkOTY0YzA5Mzc3MWQyNGZmQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y180YWU5NGJkYmJkNWM5YjY1NzNjNjljMmMxNTdlNTU1NzFiMmZiNWUyOTc0MTEwMTE0Y2EwOGEyMGY0ZWVlNTg3QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y18wZjhmMWI1OWFiOGI2YzdhN2NmMzg4YTRhZTRjYWE1NmQyYWFlYzBiODJhMjVhNjVlYTRkM2VhMWVjNjZhODU4QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23795548&color=%23D81B60&color=%233F51B5&color=%23C0CA33" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
+<h2 id="course-syllabus">Course Syllabus <a href="assets/uta027-syllabus-nba.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span></a></h2>
+<p><a href="assets/uta027-syllabus-nba.pdf">Download
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span></a></p>
+<h2 id="evaluation">Evaluation</h2>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Title</th>
+<th>Date</th>
+<th>Weightage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SESS#A1</td>
+<td><a href="#schedule-of-assignments">Assignment 1</a></td>
+<td><abbr title="Continuous Evaluation">CE</abbr></td>
+<td>10</td>
+</tr>
+<tr>
+<td>SESS#A2</td>
+<td><a href="#schedule-of-assignments">Assignment 2</a></td>
+<td><abbr title="Continuous Evaluation">CE</abbr></td>
+<td>10</td>
+</tr>
+<tr>
+<td>SESS#QZ1</td>
+<td>Quiz 1</td>
+<td>18-02-2025 1730 IST</td>
+<td>05</td>
+</tr>
+<tr>
+<td>MST</td>
+<td>Mid Sem Exam</td>
+<td>TBA</td>
+<td>25</td>
+</tr>
+<tr>
+<td>SESS#QZ2</td>
+<td>Quiz 2</td>
+<td>06-05-2025 1730 IST</td>
+<td>05</td>
+</tr>
+<tr>
+<td>EST</td>
+<td>End Sem</td>
+<td>TBA</td>
+<td>45</td>
+</tr>
+</tbody>
+</table>
+<h2 id="schedule-of-lectures">Schedule of Lectures</h2>
+<h3 id="orientation">Orientation</h3>
+<ol>
+<li><a href="https://docs.google.com/presentation/d/12eAv6piSBUGpidoTGguA8UnAvAQFPv9pX7HfcBJXFt8/edit?usp=sharing" target="_blank" title="UTA027 L00"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.09 15.273H7.91v-4.637h8.18zm1.728-8.523h2.91v15.614c0 .904-.733 1.636-1.637 1.636H4.909a1.636 1.636 0 0 1-1.636-1.636V1.636C3.273.732 4.005 0 4.909 0h9.068v6.75zm-.363 2.523H6.545v7.363h10.91zm-2.728-5.979V6h6.001l-6-6v3.294z"/></svg></span> 
+   Overview</a> and
+   administrative details. </li>
+</ol>
+<h3 id="predicate-calculus-mst-est">Predicate Calculus <strong class="htag">[MST]  [EST]</strong></h3>
+<ol>
+<li><a href="https://docs.google.com/presentation/d/1T1BeU8iz2cfsM0yxdm8oT1Ly06R3n_xD4Rc6m3iAhCQ/edit?usp=sharing" target="_blank" title="UTA027 L01"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.09 15.273H7.91v-4.637h8.18zm1.728-8.523h2.91v15.614c0 .904-.733 1.636-1.637 1.636H4.909a1.636 1.636 0 0 1-1.636-1.636V1.636C3.273.732 4.005 0 4.909 0h9.068v6.75zm-.363 2.523H6.545v7.363h10.91zm-2.728-5.979V6h6.001l-6-6v3.294z"/></svg></span>
+   Predicate Calculus</a><br />
+   Introduction to Predicate Logic and Representation
+   of Knowledge and Heuristics</li>
+<li><a href="https://docs.google.com/presentation/d/1Epx9WmYS15h8wfcPc0Ij_DS-3-M1R-6_ZcJFBdfyZZw/edit?usp=sharing" target="_blank" title="UTA027 L02"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.09 15.273H7.91v-4.637h8.18zm1.728-8.523h2.91v15.614c0 .904-.733 1.636-1.637 1.636H4.909a1.636 1.636 0 0 1-1.636-1.636V1.636C3.273.732 4.005 0 4.909 0h9.068v6.75zm-.363 2.523H6.545v7.363h10.91zm-2.728-5.979V6h6.001l-6-6v3.294z"/></svg></span> Reasoning</a>
+   (Predicate Calculus)</li>
+<li>Application to Knowledge Graphs and Lifecycle of a
+   research problem</li>
+</ol>
+<p>See also: <a href="https://tiet-uta027.github.io/a01" target="_blank" title="UTA027 A01">A01</a></p>
+<h3 id="the-graphical-standpoint-mst-est">The Graphical Standpoint <strong class="htag">[MST]  [EST]</strong></h3>
+<ol>
+<li><a href="https://docs.google.com/presentation/d/1I-lOezmSW7KrdlxKjhwePbKwvGyb7_r7hnG0QDt4odY/edit?usp=sharing" target="_blank" title="UTA027 L03"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.09 15.273H7.91v-4.637h8.18zm1.728-8.523h2.91v15.614c0 .904-.733 1.636-1.637 1.636H4.909a1.636 1.636 0 0 1-1.636-1.636V1.636C3.273.732 4.005 0 4.909 0h9.068v6.75zm-.363 2.523H6.545v7.363h10.91zm-2.728-5.979V6h6.001l-6-6v3.294z"/></svg></span> 
+   Graph Theory</a> + 
+   <a href="https://docs.google.com/presentation/d/14PY-Sc50QsFxdUqZk7GlYVwwEXzO38rg9z9KKx5ti0k/edit?usp=sharing" target="_blank" title="UTA027 L04"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.09 15.273H7.91v-4.637h8.18zm1.728-8.523h2.91v15.614c0 .904-.733 1.636-1.637 1.636H4.909a1.636 1.636 0 0 1-1.636-1.636V1.636C3.273.732 4.005 0 4.909 0h9.068v6.75zm-.363 2.523H6.545v7.363h10.91zm-2.728-5.979V6h6.001l-6-6v3.294z"/></svg></span> BFS/DFS</a>.</li>
+<li><a href="https://docs.google.com/presentation/d/1ByOn7TYDUs6tBKCE8WBUXLNdog4XnqtqqxVfyNzkI68/edit?usp=sharing" target="_blank" title="UTA027 L05"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.09 15.273H7.91v-4.637h8.18zm1.728-8.523h2.91v15.614c0 .904-.733 1.636-1.637 1.636H4.909a1.636 1.636 0 0 1-1.636-1.636V1.636C3.273.732 4.005 0 4.909 0h9.068v6.75zm-.363 2.523H6.545v7.363h10.91zm-2.728-5.979V6h6.001l-6-6v3.294z"/></svg></span> Dijkstra’s 
+   Algorithm</a> for
+   Single-Source Shortest Path. </li>
+<li><a href="https://docs.google.com/presentation/d/1FpumMJ1xjKUA9v6lHyXEPNs59z4wMamz5UHc52r9vp0/edit?usp=sharing" target="_blank" title="Problem Solving through Search"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.09 15.273H7.91v-4.637h8.18zm1.728-8.523h2.91v15.614c0 .904-.733 1.636-1.637 1.636H4.909a1.636 1.636 0 0 1-1.636-1.636V1.636C3.273.732 4.005 0 4.909 0h9.068v6.75zm-.363 2.523H6.545v7.363h10.91zm-2.728-5.979V6h6.001l-6-6v3.294z"/></svg></span> Problem solving from a
+   graphical stand point</a></li>
+</ol>
+<h3 id="classical-ml-mst-est">Classical ML <strong class="htag">[MST]  [EST]</strong></h3>
+<ol>
+<li><a href="https://docs.google.com/presentation/d/1QPZ8WuCghOzjrcJfuJtUsCNkp1FgNY1tkpWFkW2w3II/edit" target="_blank" title="UTA027 L06"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.09 15.273H7.91v-4.637h8.18zm1.728-8.523h2.91v15.614c0 .904-.733 1.636-1.637 1.636H4.909a1.636 1.636 0 0 1-1.636-1.636V1.636C3.273.732 4.005 0 4.909 0h9.068v6.75zm-.363 2.523H6.545v7.363h10.91zm-2.728-5.979V6h6.001l-6-6v3.294z"/></svg></span> Introduction to ML</a></li>
+<li><a href="https://docs.google.com/presentation/d/1reC3s9I9jV-NaiqZLHElbcEhc8XhNs9ooJ7DdgP1Yfk/edit" target="_blank" title="UTA027 L07"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.09 15.273H7.91v-4.637h8.18zm1.728-8.523h2.91v15.614c0 .904-.733 1.636-1.637 1.636H4.909a1.636 1.636 0 0 1-1.636-1.636V1.636C3.273.732 4.005 0 4.909 0h9.068v6.75zm-.363 2.523H6.545v7.363h10.91zm-2.728-5.979V6h6.001l-6-6v3.294z"/></svg></span> Linear Regression</a></li>
+<li><a href="https://docs.google.com/presentation/d/1yXqhpDXUvQwDPCr2DWO9kVT6WbHN5LJWGh-NVl_jw38/edit" target="_blank" title="UTA027 L08"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.09 15.273H7.91v-4.637h8.18zm1.728-8.523h2.91v15.614c0 .904-.733 1.636-1.637 1.636H4.909a1.636 1.636 0 0 1-1.636-1.636V1.636C3.273.732 4.005 0 4.909 0h9.068v6.75zm-.363 2.523H6.545v7.363h10.91zm-2.728-5.979V6h6.001l-6-6v3.294z"/></svg></span> Classification and Logistic
+   Regression</a></li>
+<li><a href="https://docs.google.com/presentation/d/1ppeEjAraHZVvuQsS_J165oMpPBl_KYF2lZxosBqbcZY/edit?usp=sharing" target="_blank" title="ML: SVM"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.09 15.273H7.91v-4.637h8.18zm1.728-8.523h2.91v15.614c0 .904-.733 1.636-1.637 1.636H4.909a1.636 1.636 0 0 1-1.636-1.636V1.636C3.273.732 4.005 0 4.909 0h9.068v6.75zm-.363 2.523H6.545v7.363h10.91zm-2.728-5.979V6h6.001l-6-6v3.294z"/></svg></span> Support Vector
+   Machines</a></li>
+</ol>
+<p>See Also: <a href="./ml-notes/">ML Notes</a> or, <a href="ml-notes/index.pdf">Download
+<span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span></a></p>
+<h3 id="neural-methods-mst-est">Neural Methods <strong class="htag"><del>[MST]</del>  [EST]</strong></h3>
+<ol>
+<li><a href="https://docs.google.com/presentation/d/1Y0N7jhqgCFR6K1e48iIxqRxBkzKXEe27QUDyQ9_DGLc/edit?usp=sharing" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.09 15.273H7.91v-4.637h8.18zm1.728-8.523h2.91v15.614c0 .904-.733 1.636-1.637 1.636H4.909a1.636 1.636 0 0 1-1.636-1.636V1.636C3.273.732 4.005 0 4.909 0h9.068v6.75zm-.363 2.523H6.545v7.363h10.91zm-2.728-5.979V6h6.001l-6-6v3.294z"/></svg></span> Neuron and it application in
+   Regression/ Classification</a></li>
+<li><a href="https://docs.google.com/presentation/d/1KFQ3ztGe3x8qbO4NIzH70HzWeNYN86uedUQv-zfC0mw/edit?usp=sharing" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.09 15.273H7.91v-4.637h8.18zm1.728-8.523h2.91v15.614c0 .904-.733 1.636-1.637 1.636H4.909a1.636 1.636 0 0 1-1.636-1.636V1.636C3.273.732 4.005 0 4.909 0h9.068v6.75zm-.363 2.523H6.545v7.363h10.91zm-2.728-5.979V6h6.001l-6-6v3.294z"/></svg></span> Deep Neural Networks</a></li>
+<li>Deep Learning: Residuals, Gating and RNN’s</li>
+<li><del>State Machines and Reinforcement Learning</del></li>
+</ol>
+<h3 id="computer-vision-est">Computer Vision <strong class="htag">[EST]</strong></h3>
+<ol>
+<li><a href="https://docs.google.com/presentation/d/1EhaubS3KHKeyqSGbBWLxU1zQl9WbxQKGEoJdN4KVU8Y/edit?usp=sharing"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.09 15.273H7.91v-4.637h8.18zm1.728-8.523h2.91v15.614c0 .904-.733 1.636-1.637 1.636H4.909a1.636 1.636 0 0 1-1.636-1.636V1.636C3.273.732 4.005 0 4.909 0h9.068v6.75zm-.363 2.523H6.545v7.363h10.91zm-2.728-5.979V6h6.001l-6-6v3.294z"/></svg></span> Computer Vision Overview</a></li>
+<li><a href="https://docs.google.com/presentation/d/1AmYnJb1KzkuWEgvR0NJGY5V75znAuNqcmgsgKla7KA0/edit?usp=sharing"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.09 15.273H7.91v-4.637h8.18zm1.728-8.523h2.91v15.614c0 .904-.733 1.636-1.637 1.636H4.909a1.636 1.636 0 0 1-1.636-1.636V1.636C3.273.732 4.005 0 4.909 0h9.068v6.75zm-.363 2.523H6.545v7.363h10.91zm-2.728-5.979V6h6.001l-6-6v3.294z"/></svg></span> Computer Vision Problems</a></li>
+<li>Deep Learning in Computer Vision:
+   <a href="https://docs.google.com/presentation/d/1hSASwVI4EJd6ImJA-LFU6S4eSYcA-k0GDYmVdDGq77U/edit?usp=sharing" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.09 15.273H7.91v-4.637h8.18zm1.728-8.523h2.91v15.614c0 .904-.733 1.636-1.637 1.636H4.909a1.636 1.636 0 0 1-1.636-1.636V1.636C3.273.732 4.005 0 4.909 0h9.068v6.75zm-.363 2.523H6.545v7.363h10.91zm-2.728-5.979V6h6.001l-6-6v3.294z"/></svg></span> Lecture Set 1</a>, 
+   Lecture Set 2.</li>
+</ol>
+<!-- ### ~~Computer Vision (Classical)~~ ### -->
+<!-- 1. ~~Overview and Problems; Visual Cognition~~ -->
+<!-- 2. ~~Canny’s Edges & Harris’ Corners~~ -->
+<!-- 3. ~~Template Matching~~ -->
+<!-- 3. ~~Hough Transform~~ -->
+<!-- 4. ~~Pictorial Structures~~ -->
+<!-- 5. ~~Visual Bag of Words~~ -->
+<!-- 6. ~~Haar Cascades~~ -->
+<!-- 7. ~~HOG+SVM~~ -->
+
+<!-- ### ~~Computer Vision (Deep Learning)~~ ### -->
+<!-- 1. ~~Convolution and its Arithmetic~~ -->
+<!-- 9. ~~Visual Object Classification (Sequential and -->
+<!--    Residual Networks)~~ -->
+<!-- 10. ~~Object Detection (Region Proposals and YOLO)~~ -->
+<!-- 11. ~~Segmentation (U-Net)~~ -->
+<!-- 12. ~~SLAM (Overview)~~ -->
+<!-- 12. ~~Adversarial Learning~~ -->
+<!-- 13. ~~Pix2Pix & Patch GAN~~ -->
+<!-- 1. ~~StyleGAN (Progressive GAN, BiGAN)~~ -->
+
+<h3 id="introduction-to-advanced-topics-est">Introduction to Advanced Topics  <strong class="htag">[EST]</strong></h3>
+<ol>
+<li>Attention</li>
+<li>Diffusion</li>
+<li><del>Inverse Rendering</del></li>
+</ol>
+<h2 id="schedule-of-assignments">Schedule of Assignments<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">1</a></sup><sup id="fnref:5"><a class="footnote-ref" href="#fn:5">2</a></sup><sup id="fnref:6"><a class="footnote-ref" href="#fn:6">3</a></sup></h2>
+<table>
+<thead>
+<tr>
+<th>S.No.</th>
+<th>Desc/Link</th>
+<th>Deadline</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A01</td>
+<td><a href="https://tiet-uta027.github.io/a01" target="_blank" title="UTA027 A01">Predicate Calculus</a></td>
+<td>20-01-2025 0500 IST</td>
+</tr>
+<tr>
+<td>A02</td>
+<td><a href="https://tiet-uta027.github.io/a02/" title="UTA027 A02">Graph Methods</a> (TBA) Practice: <a href="https://gist.github.com/bvraghav/7bd132bf4a93dfb4179673a377b324db">Python</a> and <a href="https://gist.github.com/bvraghav/f2e910d7d30a2b8a0b9c288d61dd6bd9">Algos</a></td>
+<td>10-02-2025 0500 IST</td>
+</tr>
+<tr>
+<td>A03</td>
+<td><a href="https://www.kaggle.com/t/ac97fdc3cbef4a429b87dd4504b7afdb" title="A03">Linear Regression</a></td>
+<td>24-02-2025 0500 IST</td>
+</tr>
+<tr>
+<td>A04</td>
+<td><a href="/a04">Neuron-based Regression</a></td>
+<td>24-Mar to 4-Apr</td>
+</tr>
+<tr>
+<td>A05</td>
+<td><a href="/a05">Neural Regression (Iris Dataset)</a></td>
+<td>7-Apr to 18-Apr</td>
+</tr>
+<tr>
+<td>A06</td>
+<td><a href="/a06">Visual Object Classification</a></td>
+<td>21-Apr to 2-May</td>
+</tr>
+<tr>
+<td>A07</td>
+<td><a href="/a07">YOLO</a></td>
+<td>4-May to 15-May</td>
+</tr>
+<tr>
+<td><del>A08</del></td>
+<td><del>Visual Object Detection</del></td>
+<td><del>21-04-2025 0500 IST</del></td>
+</tr>
+<tr>
+<td><del>A09</del></td>
+<td><del>GAN based Generative AI</del></td>
+<td><del>28-04-2025 0500 IST</del></td>
+</tr>
+<tr>
+<td><del>A10</del></td>
+<td><del>Proposals</del></td>
+<td><del>05-05-2025 0500 IST</del></td>
+</tr>
+</tbody>
+</table>
+<h2 id="resources">Resources</h2>
+<ol>
+<li><strong class="htag">[<abbr title="Accessible through the Central Library.">CL</abbr>]</strong> The Central Library
+   <a href="https://cl.thapar.edu/">(Link)</a></li>
+<li><strong class="htag">[<abbr title="RefRead subscription accessible through TIET.">RR</abbr>]</strong> RefRead
+   <a href="https://tiet.refread.com/">(Link)</a></li>
+<li><strong class="htag">[<abbr title="Text Book">TB</abbr>]</strong> <strong class="htag">[<abbr title="Accessible through the Central Library.">CL</abbr>]</strong> <strong class="htag">[<abbr title="RefRead subscription accessible through TIET.">RR</abbr>]</strong> 
+   Luger, G. F. &amp; others. (1998). Artificial
+   intelligence: Structures and strategies for complex
+   problem solving (Sixth). Pearson Education
+   India. <code>ISBN: 9788131743744</code></li>
+<li><strong class="htag">[<abbr title="Text Book">TB</abbr>]</strong> <strong class="htag">[<abbr title="Accessible through the Central Library.">CL</abbr>]</strong> Bishop,
+   C. M. (2006). Pattern recognition and machine
+   learning. Springer. <code>ISBN: 9788132209065</code></li>
+<li><strong class="htag">[<abbr title="Reference Book">RB</abbr>]</strong> <strong class="htag">[<abbr title="Accessible through the Central Library.">CL</abbr>]</strong> Cormen, T. H.,
+   Leiserson, C. E., Rivest, R. L., &amp; Stein,
+   C. (2022). Introduction to Algorithms (Fourth). MIT
+   Press. <code>ISBN: 9788120340077</code></li>
+<li><strong class="htag">[<abbr title="Reference Book">RB</abbr>]</strong> <strong class="htag">[<abbr title="Accessible through the Central Library.">CL</abbr>]</strong> Gareth James,
+   Daniela Witten, Trevor Hastie, &amp; Robert
+   Tibshirani. (2013). An Introduction to Statistical
+   Learning (1st ed.). Springer. <code>DOI:
+   10.1007/978-1-4614-7138-7</code> <code>ISBN: 9781461471387</code>
+   <a href="https://www.statlearning.com/" title="ISLP Website">(Link)</a></li>
+<li><strong class="htag">[<abbr title="Reference Book">RB</abbr>]</strong> <strong class="htag">[<abbr title="Accessible through the Central Library.">CL</abbr>]</strong> MacKay,
+   D. J. C. (2003). Information theory, inference and
+   learning algorithms. Cambridge University
+   Press. <code>ISBN: 9780521670517</code> <a href="http://www.inference.org.uk/mackay/itila/book.html" title="ITILA Website">(Link)</a></li>
+<li><strong class="htag">[<abbr title="Reference Book">RB</abbr>]</strong> Bertsekas, D., &amp; Tsitsiklis,
+   J. N. (2008). Introduction to probability
+   (Vol. 1). Athena Scientific. <code>ISBN: 9781886529236</code>
+   <a href="https://scholar.google.com/scholar?q=bertsekas+introduction+to+probability" title="Search for ITP">(Google Scholar)</a></li>
+<li><strong class="htag">[<abbr title="Youtube Video/Playlist">YT</abbr>]</strong> <strong class="htag">[<abbr title="Online Course (or a part of it)">MOOC</abbr>]</strong> Introduction
+   to Probability. <a href="https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/" title="MIT OpenCourseWare">(MIT-OCW)</a> <a href="https://www.youtube.com/playlist?list=PLmPcD-wiF4Ea_Doghiw3ya6XaLrmGrLUU" title="2011 Archive of Course Introduction to Probability by Bertsekas/Tsitsiklis">(Archive
+   2011)</a> <a href="https://www.youtube.com/playlist?list=PLUl4u3cNGP60hI9ATjSFgLZpbNJ7myAg6" title="2018 Archive of Course Introduction to Probability by Tsitsiklis/Jaillet">(Archive 2018)</a></li>
+<li><strong class="htag">[<abbr title="Youtube Video/Playlist">YT</abbr>]</strong> <strong class="htag">[<abbr title="Online Course (or a part of it)">MOOC</abbr>]</strong> Algorithms
+   Illuminated. by Tim Roughgarden <a href="https://youtube.com/playlist?list=PLEGCF-WLh2RLHqXx6-GZr_w7LgqKDXxN_" title="Roughgarden’s Playlist: Algorithms Basics">Videos: Part 1
+   Basics</a>, <a href="https://youtube.com/playlist?list=PLEGCF-WLh2RJ5W-pt-KE9GUArTDzVwL1P" title="Roughgarden’s Playlist: Algorithms Graphs">Videos: Part 2
+   Graphs</a> and <a href="https://www.algorithmsilluminated.org/" title="Roughgarden’s Website">Official Website</a></li>
+<li><strong class="htag">[<abbr title="Reference Book">RB</abbr>]</strong> <strong class="htag">[<abbr title="Accessible through the Central Library.">CL</abbr>]</strong> Jurafsky, D.,
+   &amp; Martin, J. H. (2025, January). Speech and Language
+   Processing: An Introduction to Natural Language
+   Processing, Computational Linguistics, and Speech
+   Recognition. <code>ISBN: 9789332518414</code> <a href="https://web.stanford.edu/~jurafsky/slp3/ed3book_Jan25.pdf" title="SLP Book">(The
+   Book)</a>, <a href="https://web.stanford.edu/~jurafsky/slp3/slides/5_LR_Apr_7_2021.pdf" title="SLP Chap 5: Logistic Regression">(The Chapter on Logistic
+   Regression)</a>, <a href="https://web.stanford.edu/~jurafsky/slp3/" title="SLP Website">(Official
+   Website)</a></li>
+<li><strong class="htag">[<abbr title="Online Course (or a part of it)">MOOC</abbr>]</strong> <a href="https://exploration.stat.illinois.edu/learn/Logistic-Regression/Classification-with-Logistic-Regression/" title="IIT Chicago Logistic Regression Page">Illinois Institute Page on
+    Logistic Regression</a>.</li>
+<li><strong class="htag">[<abbr title="Youtube Video/Playlist">YT</abbr>]</strong> Late Prof. Winston’s Lecture on
+    SVM (MIT-OCW) <a href="https://www.youtube.com/watch?v=_PwhiWxHK8o" title="Late Prof. Winston’s Lecture on SVM (MIT-OCW)">Video by MIT-OCW</a></li>
+</ol>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:2">
+<p>Each assignment carries weightage of 2 marks&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>Some of the assignments are competition and
+leaderboard based; Marks awarded shall be based on
+rank on leaderboard.&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p><del>A01-05</del> A01-03 shall reflect on the webkiosk as
+consolidated <code>SESS#A1 (MM:10)</code>; and similary
+<del>A06-10</del> A04-07 as <code>SESS#A2 (MM:10)</code>.&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 30, 2025 00:12:33">April 30, 2025</span>
+  </span>
+
+    
+    
+    
+      
+  
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Contributors">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg>
+      
+    </span>
+    <nav>
+      
+        <a href="mailto:bvraghav@gmail.com">Raghav B. Venkataramaiyer</a>
+    </nav>
+  </span>
+
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+        
+          
+          <a href="a04/" class="md-footer__link md-footer__link--next" aria-label="Next: A04">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                A04
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 <a href='https://bvraghav.com/'>Raghav B. Venkataramaiyer</a> &lt;<code style='color:inherit; background:transparent'>bv.raghav</code>&gt;
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/tiet-uta027/tiet-uta027.github.io" target="_blank" rel="noopener" title="Git Repo for UTA027 Course Website" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.footer", "header.autohide", "content.tabs.link", "navigation.tracking", "navigation.top", "toc.integrate", "content.tooltips"], "search": "assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="javascript/arithmatex.js"></script>
+      
+    
+  </body>
+</html>

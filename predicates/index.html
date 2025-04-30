@@ -1,0 +1,1030 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../ml-notes/">
+      
+      
+      
+      <link rel="icon" href="../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+  <title>UTA027: Artificial Intelligence &bull; Raghav
+    B. Venkataramaiyer @TIET</title>
+
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+  
+  
+  
+  
+  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%2020c-4.41%200-8-3.59-8-8s3.59-8%208-8%208%203.59%208%208-3.59%208-8%208m0-18A10%2010%200%200%200%202%2012a10%2010%200%200%200%2010%2010%2010%2010%200%200%200%2010-10A10%2010%200%200%200%2012%202m1%205h-2v4H7v2h4v4h2v-4h4v-2h-4z%22/%3E%3C/svg%3E');}</style>
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#predicate-no-290e" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="UTA027: Artificial Intelligence" class="md-header__button md-logo" aria-label="UTA027: Artificial Intelligence" data-md-component="logo">
+      
+  <img src="../assets/tiet-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            UTA027: Artificial Intelligence
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Predicates
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/tiet-uta027/tiet-uta027.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    tiet-uta027/tiet-uta027.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="UTA027: Artificial Intelligence" class="md-nav__button md-logo" aria-label="UTA027: Artificial Intelligence" data-md-component="logo">
+      
+  <img src="../assets/tiet-logo.svg" alt="logo">
+
+    </a>
+    UTA027: Artificial Intelligence
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/tiet-uta027/tiet-uta027.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    tiet-uta027/tiet-uta027.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a04/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    A04
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a05/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    A05
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a06/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    A06
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../a07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    A07
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../graph-theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Graph theory
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ml-notes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ml notes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Predicates
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Predicates
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#predicate-no-290e" class="md-nav__link">
+    <span class="md-ellipsis">
+      Predicate No. 290e
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predicate-no-d9e2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Predicate No. d9e2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predicate-no-4f1g" class="md-nav__link">
+    <span class="md-ellipsis">
+      Predicate No. 4f1g
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predicate-no-3d4e" class="md-nav__link">
+    <span class="md-ellipsis">
+      Predicate No. 3d4e
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predicate-no-9i0j" class="md-nav__link">
+    <span class="md-ellipsis">
+      Predicate No. 9i0j
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predicate-no-6q7r" class="md-nav__link">
+    <span class="md-ellipsis">
+      Predicate No. 6q7r
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predicate-no-9j0k" class="md-nav__link">
+    <span class="md-ellipsis">
+      Predicate No. 9j0k
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predicate-no-2e3f" class="md-nav__link">
+    <span class="md-ellipsis">
+      Predicate No. 2e3f
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predicate-no-f3a9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Predicate No. f3a9
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predicate-no-6d7e" class="md-nav__link">
+    <span class="md-ellipsis">
+      Predicate No. 6d7e
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predicate-no-1b2c" class="md-nav__link">
+    <span class="md-ellipsis">
+      Predicate No. 1b2c
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predicate-no-2b91" class="md-nav__link">
+    <span class="md-ellipsis">
+      Predicate No. 2b91
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predicate-no-1l2m" class="md-nav__link">
+    <span class="md-ellipsis">
+      Predicate No. 1l2m
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predicate-no-8h9i" class="md-nav__link">
+    <span class="md-ellipsis">
+      Predicate No. 8h9i
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predicate-no-8a9b" class="md-nav__link">
+    <span class="md-ellipsis">
+      Predicate No. 8a9b
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predicate-no-4e5f" class="md-nav__link">
+    <span class="md-ellipsis">
+      Predicate No. 4e5f
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predicate-no-7h8i" class="md-nav__link">
+    <span class="md-ellipsis">
+      Predicate No. 7h8i
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predicate-no-d93a" class="md-nav__link">
+    <span class="md-ellipsis">
+      Predicate No. d93a
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predicate-no-b8d3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Predicate No. b8d3
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predicate-no-2w3x" class="md-nav__link">
+    <span class="md-ellipsis">
+      Predicate No. 2w3x
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predicate-no-5c8d" class="md-nav__link">
+    <span class="md-ellipsis">
+      Predicate No. 5c8d
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predicate-no-4o5p" class="md-nav__link">
+    <span class="md-ellipsis">
+      Predicate No. 4o5p
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predicate-no-7d6f" class="md-nav__link">
+    <span class="md-ellipsis">
+      Predicate No. 7d6f
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predicate-no-c4b2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Predicate No. c4b2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predicate-no-5f6g" class="md-nav__link">
+    <span class="md-ellipsis">
+      Predicate No. 5f6g
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predicate-no-2m3n" class="md-nav__link">
+    <span class="md-ellipsis">
+      Predicate No. 2m3n
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predicate-no-1b4c" class="md-nav__link">
+    <span class="md-ellipsis">
+      Predicate No. 1b4c
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predicate-no-8s9t" class="md-nav__link">
+    <span class="md-ellipsis">
+      Predicate No. 8s9t
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predicate-no-3n4o" class="md-nav__link">
+    <span class="md-ellipsis">
+      Predicate No. 3n4o
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#predicate-no-0u1v" class="md-nav__link">
+    <span class="md-ellipsis">
+      Predicate No. 0u1v
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>Predicates</h1>
+
+<p><a href="index.pdf"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> Download this page as PDF</a></p>
+<h2 id="predicate-no-290e">Predicate No. <code>290e</code></h2>
+<h5 id="well-formed-expression">Well Formed Expression</h5>
+<p><span class="arithmatex">\(\forall X (\text{student?}(X) \rightarrow \exists Y (\text{book?}(Y) \land \text{has\_read?}(X, Y)))\)</span></p>
+<h5 id="interpretation-in-natural-language">Interpretation in Natural Language</h5>
+<p>Every student has read some book.</p>
+<h2 id="predicate-no-d9e2">Predicate No. <code>d9e2</code></h2>
+<h5 id="well-formed-expression_1">Well Formed Expression</h5>
+<p><span class="arithmatex">\(\forall \mathit{Feature} (\exists \mathit{Library} (\mathrm{depends\_on?}(\mathit{Feature}, \mathit{Library})) \rightarrow (\neg \mathrm{compatible\_with?}(\mathit{Feature}, \mathit{Library}) \land \mathrm{deprecated?}(\mathit{Library})))\)</span></p>
+<h5 id="interpretation-in-natural-language_1">Interpretation in Natural Language</h5>
+<p>Every feature depends upon some incompatible and deprecated library.</p>
+<h2 id="predicate-no-4f1g">Predicate No. <code>4f1g</code></h2>
+<h5 id="well-formed-expression_2">Well Formed Expression</h5>
+<p><span class="arithmatex">\(\exists \mathit{TranscriptionFactor} \exists \mathit{ActivatorProtein} \forall \mathit{TargetGene} ((\mathrm{transcription\_factor?}(\mathit{TranscriptionFactor}) \rightarrow \mathrm{activates?}(\mathit{ActivatorProtein}, \mathit{TargetGene})) \land \neg \mathrm{co\_located?}(\mathit{TranscriptionFactor}, \mathit{TargetGene}))\)</span></p>
+<h5 id="interpretation-in-natural-language_2">Interpretation in Natural Language</h5>
+<p>A protein may activate all genes that aren't co-located with a specific transcription factor.</p>
+<h2 id="predicate-no-3d4e">Predicate No. <code>3d4e</code></h2>
+<h5 id="well-formed-expression_3">Well Formed Expression</h5>
+<p><span class="arithmatex">\(\exists \mathit{Fluid} \exists \mathit{Pipe} (\neg \mathrm{incompressible?}(\mathit{Fluid}) \land \mathrm{flows\_through?}(\mathit{Fluid}, \mathit{Pipe}) \rightarrow \mathrm{pressure\_drop?}(\mathit{Pipe}))\)</span></p>
+<h5 id="interpretation-in-natural-language_3">Interpretation in Natural Language</h5>
+<p>If a compressible fluid flows through a pipe, then the pipe experiences pressure drop.</p>
+<h2 id="predicate-no-9i0j">Predicate No. <code>9i0j</code></h2>
+<h5 id="well-formed-expression_4">Well Formed Expression</h5>
+<p><span class="arithmatex">\(\exists \mathit{Gene}\ \exists \mathit{Protein}\ \forall \mathit{DNARegion}\ ((\mathrm{inhibits\_proliferation?}(\mathit{Gene}) \,\land\, \mathrm{binds\_to?}(\mathit{Protein}, \mathit{DNARegion})) \rightarrow \neg \mathrm{regulates\_binding?}(\mathit{Gene}, \mathit{Protein}, \mathit{DNARegion}))\)</span></p>
+<h5 id="interpretation-in-natural-language_4">Interpretation in Natural Language</h5>
+<p>A gene that stops cell growth and a protein exist where the gene never regulates the protein binding to DNA.</p>
+<h2 id="predicate-no-6q7r">Predicate No. <code>6q7r</code></h2>
+<h5 id="well-formed-expression_5">Well Formed Expression</h5>
+<p><span class="arithmatex">\(\forall \mathit{System} \forall \mathit{VibrationDamper} \forall \mathit{StandardComponent} (\mathrm{vibration\_sensitive?}(\mathit{System}) \rightarrow (\mathrm{vibration\_damper?}(\mathit{VibrationDamper}) \land \neg \mathrm{replaced\_by?}(\mathit{StandardComponent}, \mathit{VibrationDamper})))\)</span></p>
+<h5 id="interpretation-in-natural-language_5">Interpretation in Natural Language</h5>
+<p>In a vibration-sensitive system, a vibration damper is used without replacing any standard component.</p>
+<h2 id="predicate-no-9j0k">Predicate No. <code>9j0k</code></h2>
+<h5 id="well-formed-expression_6">Well Formed Expression</h5>
+<p><span class="arithmatex">\(\exists \mathit{Reactor} \forall \mathit{Condition} (\neg \mathrm{cstr?}(\mathit{Reactor}) \lor (\mathrm{high\_pressure?}(\mathit{Condition}) \rightarrow \mathrm{suitable\_for?}(\mathit{Reactor}, \mathit{Condition})))\)</span></p>
+<h5 id="interpretation-in-natural-language_6">Interpretation in Natural Language</h5>
+<p>A reactor exists that either isn't a continuous stirred-tank reactor (CSTR), or is suitable for all high pressure conditions.</p>
+<h2 id="predicate-no-2e3f">Predicate No. <code>2e3f</code></h2>
+<h5 id="well-formed-expression_7">Well Formed Expression</h5>
+<p><span class="arithmatex">\(\forall \mathit{Protein} (\neg \mathrm{membrane\_bound\_receptor?}(\mathit{Protein}) \lor \exists \mathit{Molecule} (\mathrm{interacts\_with?}(\mathit{Protein}, \mathit{Molecule}) \land \neg \mathrm{signaling\_molecule?}(\mathit{Molecule})))\)</span></p>
+<h5 id="interpretation-in-natural-language_7">Interpretation in Natural Language</h5>
+<p>Every protein is either not a membrane-bound receptor, or it interacts with a molecule that is not a signaling molecule.</p>
+<h2 id="predicate-no-f3a9">Predicate No. <code>f3a9</code></h2>
+<h5 id="well-formed-expression_8">Well Formed Expression</h5>
+<p><span class="arithmatex">\(\forall \mathit{Course} \exists \mathit{Module} (\neg \mathrm{mandatory?}(\mathit{Course}) \lor (\mathrm{advanced?}(\mathit{Module}) \rightarrow \neg \mathrm{requires?}(\mathit{Course}, \mathit{Module})))\)</span></p>
+<h5 id="interpretation-in-natural-language_8">Interpretation in Natural Language</h5>
+<p>Either a course is optional, or it doesn't require advanced modules.</p>
+<h2 id="predicate-no-6d7e">Predicate No. <code>6d7e</code></h2>
+<h5 id="well-formed-expression_9">Well Formed Expression</h5>
+<p><span class="arithmatex">\(\exists \mathit{GrowthProtein} \forall \mathit{Receptor} (\mathrm{receptor?}(\mathit{Receptor}) \rightarrow (\mathrm{growth\_protein?}(\mathit{GrowthProtein}) \lor \neg \mathrm{inhibits?}(\mathit{GrowthProtein}, \mathit{Receptor})))\)</span></p>
+<h5 id="interpretation-in-natural-language_9">Interpretation in Natural Language</h5>
+<p>A protein involved in cell growth exists that does not inhibit any receptor protein.</p>
+<h2 id="predicate-no-1b2c">Predicate No. <code>1b2c</code></h2>
+<h5 id="well-formed-expression_10">Well Formed Expression</h5>
+<p><span class="arithmatex">\(\exists \mathit{Process}\ \forall \mathit{Material}\ (\neg \mathrm{corrosive?}(\mathit{Material}) \land (\mathrm{high\_temperature?}(\mathit{Process}) \rightarrow \mathrm{compatible?}(\mathit{Process}, \mathit{Material})))\)</span></p>
+<h5 id="interpretation-in-natural-language_10">Interpretation in Natural Language</h5>
+<p>A high-temperature process exists that is compatible with all non-corrosive materials.</p>
+<h2 id="predicate-no-2b91">Predicate No. <code>2b91</code></h2>
+<h5 id="well-formed-expression_11">Well Formed Expression</h5>
+<p><span class="arithmatex">\(\exists \mathit{PortCity} \exists \mathit{ExportCountry} \forall \mathit{DestinationCity} (\mathrm{major\_port?}(\mathit{PortCity}) \land \mathrm{located\_in?}(\mathit{PortCity},\mathit{ExportCountry}) \land \mathrm{exports\_to?}(\mathit{ExportCountry}, \mathit{DestinationCity}) \land \neg \mathrm{located\_in?}(\mathit{DestinationCity},\mathit{ExportCountry}))\)</span></p>
+<h5 id="interpretation-in-natural-language_11">Interpretation in Natural Language</h5>
+<p>A country with a major port may ship to any city outside its borders.</p>
+<h2 id="predicate-no-1l2m">Predicate No. <code>1l2m</code></h2>
+<h5 id="well-formed-expression_12">Well Formed Expression</h5>
+<p><span class="arithmatex">\(\exists \mathit{Reaction} \forall \mathit{Product} \forall \mathit{Impurity} (\mathrm{high\_yield?}(\mathit{Reaction}) \rightarrow (\neg \mathrm{contains\_impurity?}(\mathit{Product}, \mathit{Impurity}) \land \mathrm{produces?}(\mathit{Reaction}, \mathit{Product})))\)</span></p>
+<h5 id="interpretation-in-natural-language_12">Interpretation in Natural Language</h5>
+<p>Some high-yield reaction produces products that contain no impurities.</p>
+<h2 id="predicate-no-8h9i">Predicate No. <code>8h9i</code></h2>
+<h5 id="well-formed-expression_13">Well Formed Expression</h5>
+<p><span class="arithmatex">\(\forall \mathit{Protein} \exists \mathit{NLS} (\neg \mathrm{nuclear\_protein?}(\mathit{Protein}) \lor (\mathrm{nls?}(\mathit{NLS}) \rightarrow \neg \mathrm{contains\_nls?}(\mathit{Protein}, \mathit{NLS})))\)</span></p>
+<h5 id="interpretation-in-natural-language_13">Interpretation in Natural Language</h5>
+<p>All proteins either aren't nuclear, or they don't have a nuclear signal.</p>
+<h2 id="predicate-no-8a9b">Predicate No. <code>8a9b</code></h2>
+<h5 id="well-formed-expression_14">Well Formed Expression</h5>
+<p><span class="arithmatex">\(\exists \mathit{Drug} \exists \mathit{Target} \forall \mathit{Inhibitor} (\mathrm{therapeutic\_effect?}(\mathit{Drug}, \mathit{Target}) \land (\mathrm{known\_inhibitor?}(\mathit{Inhibitor}) \rightarrow \neg \mathrm{inhibited\_by?}(\mathit{Target}, \mathit{Inhibitor})))\)</span></p>
+<h5 id="interpretation-in-natural-language_14">Interpretation in Natural Language</h5>
+<p>A drug works with a target that isn't blocked by any known inhibitor.</p>
+<h2 id="predicate-no-4e5f">Predicate No. <code>4e5f</code></h2>
+<h5 id="well-formed-expression_15">Well Formed Expression</h5>
+<p><span class="arithmatex">\(\forall \mathit{Fluid1} \forall \mathit{Fluid2} (\neg \mathrm{miscible?}(\mathit{Fluid1}, \mathit{Fluid2}) \rightarrow (\mathrm{liquid?}(\mathit{Fluid1}) \lor \mathrm{gas?}(\mathit{Fluid2})))\)</span></p>
+<h5 id="interpretation-in-natural-language_15">Interpretation in Natural Language</h5>
+<p>If two fluids don't mix, then one is a liquid, and the other is a gas.</p>
+<h2 id="predicate-no-7h8i">Predicate No. <code>7h8i</code></h2>
+<h5 id="well-formed-expression_16">Well Formed Expression</h5>
+<p><span class="arithmatex">\(\exists \mathit{Reaction} \exists \mathit{Inhibitor} (\mathrm{first\_order\_reaction?}(\mathit{Reaction}) \land \neg \mathrm{catalyst?}(\mathit{Inhibitor}) \rightarrow \mathrm{inhibited\_by?}(\mathit{Reaction}, \mathit{Inhibitor}))\)</span></p>
+<h5 id="interpretation-in-natural-language_16">Interpretation in Natural Language</h5>
+<p>Some first-order reaction is inhibited by a non-catalyst compound.</p>
+<h2 id="predicate-no-d93a">Predicate No. <code>d93a</code></h2>
+<h5 id="well-formed-expression_17">Well Formed Expression</h5>
+<p><span class="arithmatex">\(\forall X \exists Y (\neg \text{man?}(X) \lor (\text{word?}(Y) \rightarrow \text{do\_honour?}(X, Y)))\)</span></p>
+<h5 id="interpretation-in-natural-language_17">Interpretation in Natural Language</h5>
+<p>Either you are not a man enough or you’d honour your word.</p>
+<h2 id="predicate-no-b8d3">Predicate No. <code>b8d3</code></h2>
+<h5 id="well-formed-expression_18">Well Formed Expression</h5>
+<p><span class="arithmatex">\(\forall X \forall Y (\text{likes?}(X, Y) \rightarrow \exists Z (\text{knows?}(X, Z) \land \text{vouch?}(Z, Y)))\)</span></p>
+<h5 id="interpretation-in-natural-language_18">Interpretation in Natural Language</h5>
+<p>If someone likes another, they know someone who'd vouch for them.</p>
+<h2 id="predicate-no-2w3x">Predicate No. <code>2w3x</code></h2>
+<h5 id="well-formed-expression_19">Well Formed Expression</h5>
+<p><span class="arithmatex">\(\forall \mathit{Component} \forall \mathit{Condition} (\mathrm{precision\_machined?}(\mathit{Component}) \land \neg \mathrm{high\_temperature?}(\mathit{Condition}) \rightarrow \mathrm{suitable\_for?}(\mathit{Component}, \mathit{Condition}))\)</span></p>
+<h5 id="interpretation-in-natural-language_19">Interpretation in Natural Language</h5>
+<p>All precision-machined components are suitable for non-high-temperature operating conditions.</p>
+<h2 id="predicate-no-5c8d">Predicate No. <code>5c8d</code></h2>
+<h5 id="well-formed-expression_20">Well Formed Expression</h5>
+<p><span class="arithmatex">\(\forall \mathit{Protein} \exists \mathit{Ligand} (\neg \mathrm{signaling\_protein?}(\mathit{Protein}) \lor (\mathrm{ligand?}(\mathit{Ligand}) \rightarrow \mathrm{binds\_to?}(\mathit{Protein}, \mathit{Ligand})))\)</span></p>
+<h5 id="interpretation-in-natural-language_20">Interpretation in Natural Language</h5>
+<p>Every protein either isn't a signaling protein, or it binds to some ligand.</p>
+<h2 id="predicate-no-4o5p">Predicate No. <code>4o5p</code></h2>
+<h5 id="well-formed-expression_21">Well Formed Expression</h5>
+<p><span class="arithmatex">\(\forall \mathit{Material} \forall \mathit{Process} (\mathrm{ductile?}(\mathit{Material}) \land \neg \mathrm{casting\_process?}(\mathit{Process}) \rightarrow \mathrm{suitable\_for?}(\mathit{Material}, \mathit{Process}))\)</span></p>
+<h5 id="interpretation-in-natural-language_21">Interpretation in Natural Language</h5>
+<p>All ductile materials are suitable for any non-casting manufacturing process.</p>
+<h2 id="predicate-no-7d6f">Predicate No. <code>7d6f</code></h2>
+<h5 id="well-formed-expression_22">Well Formed Expression</h5>
+<p><span class="arithmatex">\(\exists \mathit{City} \forall \mathit{Destination} (\mathrm{tourist\_destination?}(\mathit{Destination}) \rightarrow (\mathrm{coastal\_city?}(\mathit{City}) \lor \neg \mathrm{more\_popular?}(\mathit{City}, \mathit{Destination})))\)</span></p>
+<h5 id="interpretation-in-natural-language_22">Interpretation in Natural Language</h5>
+<p>There is a city that is either a coastal city, or it's less popular than all tourist destinations.</p>
+<h2 id="predicate-no-c4b2">Predicate No. <code>c4b2</code></h2>
+<h5 id="well-formed-expression_23">Well Formed Expression</h5>
+<p><span class="arithmatex">\(\exists X \forall Y \forall Z (\text{teacher?}(X) \land \text{student\_subject?}(Y, Z) \rightarrow \text{teaches?}(X, Y, Z))\)</span></p>
+<h5 id="interpretation-in-natural-language_23">Interpretation in Natural Language</h5>
+<p>There is a teacher who teaches every student every subject.</p>
+<h2 id="predicate-no-5f6g">Predicate No. <code>5f6g</code></h2>
+<h5 id="well-formed-expression_24">Well Formed Expression</h5>
+<p><span class="arithmatex">\(\exists \mathit{Reaction} \forall \mathit{Product} \forall \mathit{Inhibitor} (\mathrm{produces?}(\mathit{Reaction}, \mathit{Product}) \land \neg \mathrm{inhibited\_by?}(\mathit{Product}, \mathit{Inhibitor}))\)</span></p>
+<h5 id="interpretation-in-natural-language_24">Interpretation in Natural Language</h5>
+<p>A reaction exists where all products it makes are not inhibited by any inhibitor.</p>
+<h2 id="predicate-no-2m3n">Predicate No. <code>2m3n</code></h2>
+<h5 id="well-formed-expression_25">Well Formed Expression</h5>
+<p><span class="arithmatex">\(\forall \mathit{Machine} (\neg \mathrm{precision\_instrument?}(\mathit{Machine}) \lor \exists \mathit{Component} (\mathrm{high\_strength\_alloy?}(\mathit{Component}) \land \mathrm{uses?}(\mathit{Machine}, \mathit{Component})))\)</span></p>
+<h5 id="interpretation-in-natural-language_25">Interpretation in Natural Language</h5>
+<p>All machines either aren't precision instruments, or they use a high-strength alloy component.</p>
+<h2 id="predicate-no-1b4c">Predicate No. <code>1b4c</code></h2>
+<h5 id="well-formed-expression_26">Well Formed Expression</h5>
+<p><span class="arithmatex">\(\forall \mathit{Restaurant} (\mathrm{popular?}(\mathit{Restaurant}) \rightarrow \exists \mathit{Dish} (\mathrm{vegetarian?}(\mathit{Dish}) \land \mathrm{serves?}(\mathit{Restaurant}, \mathit{Dish})))\)</span></p>
+<h5 id="interpretation-in-natural-language_26">Interpretation in Natural Language</h5>
+<p>Every popular restaurant serves at least one vegetarian dish.</p>
+<h2 id="predicate-no-8s9t">Predicate No. <code>8s9t</code></h2>
+<h5 id="well-formed-expression_27">Well Formed Expression</h5>
+<p><span class="arithmatex">\(\forall \mathit{Machine} \exists \mathit{Component} (\neg \mathrm{requires\_maintenance?}(\mathit{Machine}, \mathit{Component}) \lor (\mathrm{high\_wear?}(\mathit{Component}) \rightarrow \mathrm{high\_maintenance\_frequency?}(\mathit{Machine})))\)</span></p>
+<h5 id="interpretation-in-natural-language_27">Interpretation in Natural Language</h5>
+<p>Every machine either has a component it rarely maintains, or it needs frequent maintenance due to some high-wear component.</p>
+<h2 id="predicate-no-3n4o">Predicate No. <code>3n4o</code></h2>
+<h5 id="well-formed-expression_28">Well Formed Expression</h5>
+<p><span class="arithmatex">\(\forall \mathit{Component} \exists \mathit{AssemblyStation} \exists \mathit{Tool} (\mathrm{compatible?}(\mathit{Tool}, \mathit{Component}) \land \mathrm{uses\_tool?}(\mathit{AssemblyStation}, \mathit{Tool}, \mathit{Component}))\)</span></p>
+<h5 id="interpretation-in-natural-language_28">Interpretation in Natural Language</h5>
+<p>All components are controlled by an assembly station through a compatible tool.</p>
+<h2 id="predicate-no-0u1v">Predicate No. <code>0u1v</code></h2>
+<h5 id="well-formed-expression_29">Well Formed Expression</h5>
+<p><span class="arithmatex">\(\forall \mathit{QualityControlSystem} \exists \mathit{CriticalDefect} \forall \mathit{Sensor} (\mathrm{automated?}(\mathit{QualityControlSystem}) \rightarrow (\mathrm{critical?}(\mathit{CriticalDefect}) \land \neg \mathrm{detects?}(\mathit{Sensor}, \mathit{CriticalDefect})))\)</span></p>
+<h5 id="interpretation-in-natural-language_29">Interpretation in Natural Language</h5>
+<p>Automated quality control systems have blind spots for critical defects.</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="April 30, 2025 00:12:33">April 30, 2025</span>
+  </span>
+
+    
+    
+    
+      
+  
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Contributors">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg>
+      
+    </span>
+    <nav>
+      
+        <a href="mailto:bvraghav@gmail.com">Raghav B. Venkataramaiyer</a>
+    </nav>
+  </span>
+
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../ml-notes/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Ml notes">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Ml notes
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 <a href='https://bvraghav.com/'>Raghav B. Venkataramaiyer</a> &lt;<code style='color:inherit; background:transparent'>bv.raghav</code>&gt;
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/tiet-uta027/tiet-uta027.github.io" target="_blank" rel="noopener" title="Git Repo for UTA027 Course Website" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.footer", "header.autohide", "content.tabs.link", "navigation.tracking", "navigation.top", "toc.integrate", "content.tooltips"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="../javascript/arithmatex.js"></script>
+      
+    
+  </body>
+</html>

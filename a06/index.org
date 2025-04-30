@@ -1,0 +1,91 @@
+﻿#+options: toc:nil
+#+TITLE: Assignment 06 : Visual Object Classification
+#+SUBTITLE: UTA027 : Artificial Intelligence
+#+AUTHOR: Raghav B. Venkataramaiyer
+#+DATE: Mar '25
+#+latex_header_extra: \usepackage{parskip}
+
+#+md: [:material-file-pdf-box: Download this page as PDF](./index.pdf)
+
+* COMMENT Auto Export to Md/Latex on save
+#+begin_src emacs-lisp
+  (cl-loop for hook in '(after-save-hook)
+           do (add-hook hook
+                        #'(lambda ()
+                            (org-latex-export-to-pdf t)
+                            (org-md-export-to-markdown)
+                            (with-current-buffer (find-file-noselect (expand-file-name "index.md" default-directory))
+                              (save-excursion
+                                (goto-char (point-min))
+                                (let* ((i 1)
+                                       (boreg (pos-bol i))
+                                       (eoreg (pos-eol i))
+                                       _s)
+                                  (while (not (eq boreg (point-max)))
+
+                                    (setq _s (buffer-substring-no-properties boreg (+ 1 boreg)))
+                                    (when (string= _s "#")
+                                      (save-excursion (goto-char boreg)
+                                                      (insert "#")))
+
+                                    (setq i (+ i 1)
+                                          boreg (pos-bol i)
+                                          eoreg (pos-eol i)))))
+                              (save-buffer)
+                              (kill-buffer))
+                            )
+                        0 t))
+#+end_src
+
+#+RESULTS:
+
+A06 : Visual Object Classification using Pascal VOC
+Dataset
+
+Submission Date: 21-Apr/28-Apr
+
++ Objective :: The goal of this assignment is to
+  implement a visual object classification model using
+  PyTorch and the Pascal VOC dataset
+  ([[https://pytorch.org/vision/stable/generated/torchvision.datasets.VOCDetection.html][=torchvision.datasets.VOCDetection=]]). This task
+  involves using a pre-trained deep learning model to
+  classify object categories from images.
++ Question :: Design and implement a visual object
+  classification system using PyTorch and the Pascal
+  VOC dataset. Your implementation should follow these
+  steps:
+
+* Dataset Preparation
++ Use [[https://pytorch.org/vision/stable/generated/torchvision.datasets.VOCDetection.html][=torchvision.datasets.VOCDetection=]] to load the
+  Pascal VOC 2007 or 2012 dataset.
++ Extract image-level labels from annotations.
++ Convert the dataset into PyTorch tensors.
++ Split the dataset into training and validation sets
+  (e.g., 80% training, 20% validation).
++ Resize and normalize the image data.
+* Data Visualization
++ Display at least 5 sample images with their bounding
+  boxes and labels.
++ Plot a bar chart showing the frequency of each object
+  class.
++ Plot a pie chart of the top 5 most common classes.
+* Build the Classification Model
++ Choose a pre-trained model from torchvision.models
+  (e.g., ResNet, VGG).
++ Replace the final layer with a new fully connected
+  layer to output predictions for 20 classes.
++ Use ReLU activation in hidden layers and softmax
+  (implicitly handled by loss function) for the output.
+* Train the Model
++ Define a suitable loss function (e.g.,
+  CrossEntropyLoss).
++ Choose an optimizer (e.g., Adam or SGD).
++ Train the model for a fixed number of epochs (e.g.,
+  10–20 epochs).
++ Track and display training and validation loss per
+  epoch.
+* Evaluate the Model
++ Compute accuracy, precision, and recall on the
+  validation set.
++ Display a confusion matrix to visualize
+  classification performance.
