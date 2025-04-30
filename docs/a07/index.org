@@ -109,112 +109,69 @@ for evaluating model performance and preventing
 over-fitting.
 
 ** Software and Libraries
-1. Python 3.x
-1. PyTorch or TensorFlow (specify which framework to
-   use)
-1. =torchvision= (if using PyTorch) or
-   =tensorflow-datasets= (if using TensorFlow)
-1. =ultralytics= (if using YOLOv5 or v8) or other
-   relevant libraries.
-1. Suggest using a GPU for training (and how to set up
-   in Google Colab, if needed).
+
+1.  Python 3.x
+2.  PyTorch or TensorFlow (specify your framework of
+    choice).
+3.  =torchvision= (if using PyTorch) or
+    =tensorflow-datasets= (if using TensorFlow).
+4.  =ultralytics= (for YOLOv5 or v8).
+5.  Recommended: Using a GPU for training.
+
 * Tasks
-** Task 1: Setting up the Environment (10%)
-1. Provide detailed instructions on setting up the
-   environment. This should include:
-   + Installing Python and pip.
-   + Installing PyTorch/TensorFlow (with GPU support if
-     available).
-   + Installing the necessary libraries (e.g.,
-     ultralytics).
-2. If using Colab, provide a link to a starter notebook
-   with the basic setup.
-3. Include a small test to verify that the environment
-   is set up correctly (e.g., running a simple YOLO
-   command).
-** Task 2: Data Preparation (25%)
-1. Explain the YOLO dataset format. This is crucial!
-   YOLO requires specific formatting of the annotation
-   files.
-1. Provide instructions on how to:
-   + Download the dataset.
-   + Convert the dataset to the YOLO format (if
-     necessary). Provide code snippets or scripts if
-     possible.
-   + Organize the dataset into training and validation
-     sets.
-1. If students are using a dataset that needs
-   conversion, point them to tools or scripts that can
-   automate this process.
-1. Explain data augmentation techniques (e.g., random
-   flips, rotations, scaling) and how to apply them
-   using the chosen library. (Emphasize why
-   augmentation is important).
-** Task 3: Training the YOLO Model (40%)
-1. Provide starter code or commands to train a
-   pre-trained YOLO model on the prepared dataset.
-1. Explain the key training parameters:
-   + epochs
-   + batch size
-   + learning rate
-   + Optimizer (e.g., Adam, SGD)
-   + Weight decay
-1. Explain how to monitor the training process (loss
-   curves, mAP).
-1. Encourage students to experiment with different
-   hyperparameters to improve performance. Ask them to
-   document their experiments.
-1. Include instructions on how to save the trained
-   model weights.
-** Task 4: Model Evaluation (15%)
-1. Explain the evaluation metrics for object detection:
+Starter Code: [[https://gist.github.com/bvraghav/325de78ce4a705f12e940c7e29a2b06e][[IPython Notebook on Gist]​]]
+
+** Task 1: Training the YOLO Model
+1. Train the YOLO Model on the VOC Dataset.
+2. Pay special attention to training configuration,
+   [[https://docs.ultralytics.com/modes/train/#train-settings][documented here]], or [[https://github.com/ultralytics/ultralytics/blob/main/ultralytics/cfg/default.yaml][here]], and also listed under the
+   title “Ref =model.train= options,” in the starter
+   code.
+3. Modify/ Update it to achieve better performance.
+
+** Task 2: Model Evaluation
+1. Evaluate the model under the following metrics:
    + Precision
    + Recall
    + Intersection over Union (IoU)
    + Mean Average Precision (mAP)
-1. Provide code or instructions on how to calculate
-   these metrics on the validation set.
-1. Ask students to analyze the results and discuss the
-   model's strengths and weaknesses.
-1. Require students to include a confusion matrix, if
-   applicable, and explain what it shows.
-** Task 5: Inference and Visualization (10%)
-1. Provide instructions on how to use the trained model
-   to detect objects in new images or videos.
-1. Explain how to visualize the results:
-   + Drawing bounding boxes around detected objects.
-   + Displaying class labels and confidence scores.
-1. Ask students to provide examples of the model's
-   output on test images or videos.
+   The candidates are encouraged to use library
+   functions /e.g./ [[https://pytorch.org/torcheval/stable/torcheval.metrics.html][PyTorch Eval Library]], instead of
+   rolling off their own implementations.
+4. Analyse the results and discuss the model's
+   strengths and weaknesses.
+5. Explain the confusion matrix.
+** Task 3: Inference and Visualization
+1. Capture 10-20 images from “your daily life” to
+   qualitatively assess the performance of your model.
+2. Visualise the results.
+3. Analyse the results.
+** Tips
+1. You are encouraged to train the model in multiple
+   runs successively improving upon it by parts,
+   instead of a single pass.
+2. Remember to [[https://colab.research.google.com/notebooks/io.ipynb][save the model in a persistent storage
+   device]], lest your endeavours be in vain.
+3. Consider [[https://docs.ultralytics.com/modes/train/#resuming-interrupted-trainings][to resume training]] from an earlier
+   checkpoint.  Remember that your runtime might be
+   limited with free cloud compute!  /E.g./ on Google
+   Colab you may monitor the estimated available
+   runtime under “View Resources.”
 * Submission
-+ [ ] Specify the files to be submitted:
-  + [ ] Code files (Python scripts or Jupyter
-    Notebooks)
-  + [ ] A report (in PDF format) that includes:
-    + [ ] Introduction
-    + [ ] Methodology (explaining the data preparation,
-      training process, and evaluation methods)
-    + [ ] Results (including tables and figures showing
-      the evaluation metrics)
-    + [ ] Discussion (analyzing the results, discussing
-      challenges, and suggesting future improvements)
-+ [ ] Trained model weights.
-+ [ ] Specify the submission deadline and any
-  formatting requirements.
-* Grading Rubric
-+ [ ] Provide a detailed grading rubric. For example:
-  + [ ] Task 1: Setting up the Environment: 10%
-  + [ ] Task 2: Data Preparation: 25%
-  + [ ] Task 3: Training the YOLO Model: 40%
-  + [ ] Task 4: Evaluation: 15%
-  + [ ] Task 5: Inference and Visualization: 10%
-  + [ ] Report Quality (clarity, organization,
-    completeness): 10%
++ Code files (Python scripts or Jupiter Notebooks)
++ A report (in PDF format) that includes:
+  + Introduction
+  + Methodology (explaining the data preparation,
+    training process, and evaluation methods)
+  + Results (including tables and figures showing the
+    evaluation metrics)
+  + Discussion (analysing the results, discussing
+    challenges, and suggesting future improvements)
++ Trained model weights.
 * Additional Tips for Students
 + Provide links to relevant documentation and
-  tutorials.
-+ Encourage them to use version control (Git) to manage
-  their code.
-+ Suggest using a consistent coding style.
-+ Remind them to comment their code clearly.
+  tutorials that have been of help.
++ You are encouraged to use version control (Git).
++ Use a consistent coding style.
++ Comment the code clearly.
  
